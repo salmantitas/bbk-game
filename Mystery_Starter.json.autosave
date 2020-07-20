@@ -747,7 +747,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5844
+        "zoomFactor": 0.8004
       },
       "objectsGroups": [
         {
@@ -962,8 +962,8 @@
           "locked": false,
           "name": "HUD_Todo",
           "width": 0,
-          "x": 27,
-          "y": 360,
+          "x": 59,
+          "y": 215,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -1706,7 +1706,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Todo: \n- Implement 'inventory'\n- Change selection of inventory item to manual\n- Make inventory item addition abstract\n- Implement Rescue Puzzle 1\n- Replace test map with actual map",
+          "string": "Todo: \n- Implement 'inspection'\n- Implement 'use'\n- Implement 'inventory'\n- Implement Rescue Puzzle 1\n- Fix text to UI Layer\n- Replace test map with actual map",
           "font": "",
           "characterSize": 20,
           "color": {

@@ -14,7 +14,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "E:\\GDevelop\\Mystery_Starter.json",
+    "projectFile": "E:\\BBK\\bbk-game\\Mystery_Starter.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -1687,7 +1687,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Mystery Game Starter: Proof Of Concept\nRight now, the purpose is to implement an interactive room.\nHovering over an object will tell you what it is.\nRight clicking will give a short description.\nLeft clicking will try to interact with it.\nThis level is beatable, you just have to \nfind the key that opens the door!",
+          "string": "Mystery Game Starter: Proof Of Concept\nRight now, the purpose is to implement an interactive room.\n- Hovering over an object will tell you what it is.\n- Right clicking will give a short description.\n- Left clicking will try to interact with it.\nThis level is beatable, you just have to \nfind the key that opens the door!",
           "font": "",
           "characterSize": 20,
           "color": {

@@ -403,6 +403,25 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "HUD_ObjectName",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Name",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsGroups": [
@@ -420,26 +439,6 @@
     {
       "name": "InvisibleMarkers",
       "objects": [
-        {
-          "name": "ChippyOffice"
-        },
-        {
-          "name": "WallCLevel"
-        }
-      ]
-    },
-    {
-      "name": "Interactives",
-      "objects": [
-        {
-          "name": "RobotChippy"
-        },
-        {
-          "name": "RobotSecurity"
-        },
-        {
-          "name": "Table"
-        },
         {
           "name": "ChippyOffice"
         },
@@ -2681,6 +2680,20 @@
               "name": "InventoryKey"
             }
           ]
+        },
+        {
+          "name": "Interactives",
+          "objects": [
+            {
+              "name": "RobotChippy"
+            },
+            {
+              "name": "RobotSecurity"
+            },
+            {
+              "name": "Table"
+            }
+          ]
         }
       ],
       "variables": [],
@@ -3486,25 +3499,6 @@
               ]
             }
           ]
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "HUD_ObjectName",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Name",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
         },
         {
           "bold": false,

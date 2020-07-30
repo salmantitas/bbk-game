@@ -403,6 +403,44 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "HUD_ObjectName",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Name",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "BackToReception",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Reception",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsGroups": [
@@ -414,29 +452,6 @@
         },
         {
           "name": "TopFloor"
-        }
-      ]
-    },
-    {
-      "name": "Interactives",
-      "objects": [
-        {
-          "name": "RobotChippy"
-        },
-        {
-          "name": "RobotSecurity"
-        },
-        {
-          "name": "Table"
-        },
-        {
-          "name": "Computer"
-        },
-        {
-          "name": "WallCLevel"
-        },
-        {
-          "name": "ChippyOffice"
         }
       ]
     },
@@ -922,6 +937,30 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "chippyOfficeDoorLock",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "chippyOfficeKeyFound",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1295,7 +1334,19 @@
         "windowMask": false,
         "zoomFactor": 0.8088
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Interactives",
+          "objects": [
+            {
+              "name": "ChippyOffice"
+            },
+            {
+              "name": "WallCLevel"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
@@ -1429,6 +1480,21 @@
           "x": 7,
           "y": 105,
           "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HUD_ObjectName",
+          "width": 0,
+          "x": 452,
+          "y": 16,
+          "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1652,7 +1718,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Normal",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1704,7 +1770,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Normal",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1803,12 +1869,47 @@
           "events": []
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "chippyOfficeKeyFound",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "WallCLevel",
+                "use",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "LOCATIONS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2005,17 +2106,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "MettreXY"
                   },
                   "parameters": [
@@ -2024,6 +2114,17 @@
                     "Interactives.PointX(\"Right\")+Interactives.Width()",
                     "=",
                     "Interactives.PointY(\"Center\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 }
@@ -2042,19 +2143,6 @@
                       "parameters": [
                         "",
                         "Right"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "description",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -2088,19 +2176,6 @@
                       "parameters": [
                         "",
                         "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "use",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -2181,25 +2256,24 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "ModVarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "Interactives.VariableString(name) + \" is empty.\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
                                 "value": "TextObject::String"
                               },
                               "parameters": [
                                 "HUD_Description",
                                 "=",
                                 "\"You found a key!\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "chippyOfficeDoorLock",
+                                "=",
+                                "0"
                               ],
                               "subInstructions": []
                             }
@@ -2227,13 +2301,12 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarObjetTxt"
+                                "value": "VarGlobal"
                               },
                               "parameters": [
-                                "InventorySlot",
-                                "slot",
+                                "chippyOfficeDoorLocked",
                                 "=",
-                                "\"key\""
+                                "0"
                               ],
                               "subInstructions": []
                             }
@@ -2328,7 +2401,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Show/Hide",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2767,6 +2840,18 @@
                         "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "chippyOfficeKeyFound",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -2836,6 +2921,20 @@
           "objects": [
             {
               "name": "InventoryKey"
+            }
+          ]
+        },
+        {
+          "name": "Interactives",
+          "objects": [
+            {
+              "name": "RobotChippy"
+            },
+            {
+              "name": "RobotSecurity"
+            },
+            {
+              "name": "Table"
             }
           ]
         }
@@ -3083,6 +3182,21 @@
           "x": 414,
           "y": 317,
           "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "width": 0,
+          "x": 280,
+          "y": 538,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3647,25 +3761,6 @@
         {
           "bold": false,
           "italic": false,
-          "name": "HUD_ObjectName",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Name",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
           "name": "HUD_Inventory",
           "smoothed": true,
           "tags": "",
@@ -3719,6 +3814,15 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "NewObject",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": []
         }
       ],
       "events": [
@@ -3981,17 +4085,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "MettreXY"
                   },
                   "parameters": [
@@ -4000,6 +4093,17 @@
                     "Interactives.PointX(\"Right\")+Interactives.Width()",
                     "=",
                     "Interactives.PointY(\"Center\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 }
@@ -4018,19 +4122,6 @@
                       "parameters": [
                         "",
                         "Right"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "description",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -4064,19 +4155,6 @@
                       "parameters": [
                         "",
                         "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "use",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -4151,19 +4229,6 @@
                                 "picked_item",
                                 "=",
                                 "Interactives.VariableString(use)"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "Interactives.VariableString(name) + \" is empty.\""
                               ],
                               "subInstructions": []
                             },
@@ -4741,8 +4806,46 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         }
       ],

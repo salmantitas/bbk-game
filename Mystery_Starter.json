@@ -384,6 +384,25 @@
         "g": 0,
         "r": 0
       }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "HUD_Description",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Description",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "objectsGroups": [
@@ -415,6 +434,9 @@
         },
         {
           "name": "WallCLevel"
+        },
+        {
+          "name": "ChippyOffice"
         }
       ]
     }
@@ -1260,7 +1282,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 3.2458
+        "zoomFactor": 1.7012
       },
       "objectsGroups": [],
       "variables": [],
@@ -1366,6 +1388,36 @@
           "x": 326,
           "y": 105,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HUD_Description",
+          "width": 0,
+          "x": 17,
+          "y": 10,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 158,
+          "layer": "",
+          "locked": false,
+          "name": "ChippyOffice",
+          "width": 275,
+          "x": 7,
+          "y": 105,
+          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1508,6 +1560,97 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Hover-1-2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "InventoryKey",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "InventoryKey",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "InventoryKey-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ChippyOffice",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Chippy's Office"
+            },
+            {
+              "name": "description",
+              "value": "This is the office of Chippy Blipman, the CEO."
+            },
+            {
+              "name": "use",
+              "value": "The door is locked."
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-10.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2053,7 +2196,7 @@
                                 "value": "SourisSurObjet"
                               },
                               "parameters": [
-                                "RobotChippy",
+                                "ChippyOffice",
                                 "",
                                 "",
                                 ""
@@ -2082,7 +2225,7 @@
                               },
                               "parameters": [
                                 "",
-                                "\"Puzzle 1\"",
+                                "\"Top Floor\"",
                                 ""
                               ],
                               "subInstructions": []
@@ -2533,6 +2676,21 @@
                 {
                   "disabled": false,
                   "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "KEY",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2582,10 +2740,10 @@
                         "value": "ModVarObjetTxt"
                       },
                       "parameters": [
-                        "RobotChippy",
+                        "ChippyOffice",
                         "description",
                         "=",
-                        "\"Chippy Blipman is not moving. There is a tiny keyhole in his chestplate. And you have a key!\""
+                        "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
                       ],
                       "subInstructions": []
                     }
@@ -3476,25 +3634,6 @@
           "variables": [],
           "behaviors": [],
           "string": "Name",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "HUD_Description",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Description",
           "font": "",
           "characterSize": 20,
           "color": {

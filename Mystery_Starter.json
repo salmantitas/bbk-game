@@ -365,7 +365,27 @@
     ],
     "resourceFolders": []
   },
-  "objects": [],
+  "objects": [
+    {
+      "bold": false,
+      "italic": false,
+      "name": "HUD_LocationName",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Location",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    }
+  ],
   "objectsGroups": [
     {
       "name": "Locations",
@@ -1237,7 +1257,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.09
+        "zoomFactor": 0.59
       },
       "objectsGroups": [],
       "variables": [],
@@ -1316,6 +1336,21 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HUD_LocationName",
+          "width": 0,
+          "x": 405,
+          "y": 550,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1324,7 +1359,12 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "name",
+              "value": "Map"
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -1573,7 +1613,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "LOCATIONS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3089,25 +3129,6 @@
           "variables": [],
           "behaviors": [],
           "string": "Inventory: ",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "HUD_LocationName",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Location",
           "font": "",
           "characterSize": 20,
           "color": {

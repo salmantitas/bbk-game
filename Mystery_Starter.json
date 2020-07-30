@@ -439,6 +439,17 @@
           "name": "ChippyOffice"
         }
       ]
+    },
+    {
+      "name": "InvisibleMarkers",
+      "objects": [
+        {
+          "name": "ChippyOffice"
+        },
+        {
+          "name": "WallCLevel"
+        }
+      ]
     }
   ],
   "variables": [],
@@ -1282,7 +1293,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.7012
+        "zoomFactor": 0.8088
       },
       "objectsGroups": [],
       "variables": [],
@@ -1295,7 +1306,7 @@
           "locked": false,
           "name": "Map",
           "width": 866,
-          "x": -30,
+          "x": -32,
           "y": 46,
           "zOrder": 1,
           "numberProperties": [],
@@ -1775,6 +1786,16 @@
                 "HUD_LocationName",
                 "=",
                 "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "InvisibleMarkers"
               ],
               "subInstructions": []
             }

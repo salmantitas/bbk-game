@@ -418,6 +418,17 @@
       ]
     },
     {
+      "name": "InvisibleMarkers",
+      "objects": [
+        {
+          "name": "ChippyOffice"
+        },
+        {
+          "name": "WallCLevel"
+        }
+      ]
+    },
+    {
       "name": "Interactives",
       "objects": [
         {
@@ -430,13 +441,10 @@
           "name": "Table"
         },
         {
-          "name": "Computer"
+          "name": "ChippyOffice"
         },
         {
           "name": "WallCLevel"
-        },
-        {
-          "name": "ChippyOffice"
         }
       ]
     }
@@ -1282,7 +1290,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 3.2458
+        "zoomFactor": 0.8088
       },
       "objectsGroups": [],
       "variables": [],
@@ -1295,7 +1303,7 @@
           "locked": false,
           "name": "Map",
           "width": 866,
-          "x": -30,
+          "x": -32,
           "y": 46,
           "zOrder": 1,
           "numberProperties": [],
@@ -1641,7 +1649,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Normal",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1693,7 +1701,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Normal",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1775,6 +1783,16 @@
                 "HUD_LocationName",
                 "=",
                 "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "InvisibleMarkers"
               ],
               "subInstructions": []
             }
@@ -1919,79 +1937,16 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Normal\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "conditions": [],
+              "actions": [],
               "events": []
             },
             {
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "conditions": [],
               "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_ObjectName",
-                    "=",
-                    "Interactives.VariableString(name)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
@@ -2023,35 +1978,9 @@
                         "Right"
                       ],
                       "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "description",
-                        "!=",
-                        "ToString(0)"
-                      ],
-                      "subInstructions": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "HUD_Description",
-                        "=",
-                        "Interactives.VariableString(description)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": []
                 },
                 {
@@ -2069,35 +1998,9 @@
                         "Left"
                       ],
                       "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "use",
-                        "!=",
-                        "ToString(0)"
-                      ],
-                      "subInstructions": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "HUD_Description",
-                        "=",
-                        "Interactives.VariableString(use)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "colorB": 228,
@@ -2129,47 +2032,8 @@
                           "disabled": false,
                           "folded": false,
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "VarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "\"key\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
+                          "conditions": [],
                           "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarSceneTxt"
-                              },
-                              "parameters": [
-                                "picked_item",
-                                "=",
-                                "Interactives.VariableString(use)"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "Interactives.VariableString(name) + \" is empty.\""
-                              ],
-                              "subInstructions": []
-                            },
                             {
                               "type": {
                                 "inverted": false,
@@ -3871,7 +3735,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3960,17 +3824,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "MettreXY"
                   },
                   "parameters": [
@@ -3979,6 +3832,17 @@
                     "Interactives.PointX(\"Right\")+Interactives.Width()",
                     "=",
                     "Interactives.PointY(\"Center\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 }
@@ -3997,19 +3861,6 @@
                       "parameters": [
                         "",
                         "Right"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "description",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -4043,19 +3894,6 @@
                       "parameters": [
                         "",
                         "Left"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjetTxt"
-                      },
-                      "parameters": [
-                        "Interactives",
-                        "use",
-                        "!=",
-                        "ToString(0)"
                       ],
                       "subInstructions": []
                     }
@@ -4130,19 +3968,6 @@
                                 "picked_item",
                                 "=",
                                 "Interactives.VariableString(use)"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "Interactives.VariableString(name) + \" is empty.\""
                               ],
                               "subInstructions": []
                             },

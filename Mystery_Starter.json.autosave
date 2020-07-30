@@ -357,7 +357,36 @@
     "resourceFolders": []
   },
   "objects": [],
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "Locations",
+      "objects": [
+        {
+          "name": "Map"
+        },
+        {
+          "name": "TopFloor"
+        }
+      ]
+    },
+    {
+      "name": "Interactives",
+      "objects": [
+        {
+          "name": "RobotChippy"
+        },
+        {
+          "name": "RobotSecurity"
+        },
+        {
+          "name": "Table"
+        },
+        {
+          "name": "Computer"
+        }
+      ]
+    }
+  ],
   "variables": [],
   "layouts": [
     {
@@ -1994,34 +2023,6 @@
         "zoomFactor": 0.6924
       },
       "objectsGroups": [
-        {
-          "name": "Interactives",
-          "objects": [
-            {
-              "name": "RobotChippy"
-            },
-            {
-              "name": "RobotSecurity"
-            },
-            {
-              "name": "Table"
-            },
-            {
-              "name": "Computer"
-            }
-          ]
-        },
-        {
-          "name": "Locations",
-          "objects": [
-            {
-              "name": "Map"
-            },
-            {
-              "name": "TopFloor"
-            }
-          ]
-        },
         {
           "name": "InventoryItems",
           "objects": [

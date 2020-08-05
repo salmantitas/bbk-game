@@ -488,6 +488,15 @@
         },
         {
           "name": "SpareParts"
+        },
+        {
+          "name": "Motherboard"
+        },
+        {
+          "name": "RobotCubicles"
+        },
+        {
+          "name": "Accounting"
         }
       ]
     }
@@ -530,6 +539,7 @@
           "layer": "",
           "locked": false,
           "name": "Desk",
+          "persistentUuid": "1178c993-10d4-4c79-a5db-68c0b4a04b03",
           "width": 780,
           "x": 3,
           "y": 144,
@@ -545,6 +555,7 @@
           "layer": "",
           "locked": false,
           "name": "Title",
+          "persistentUuid": "71ba9ad3-1cee-463f-b800-b8ea0474d2b5",
           "width": 0,
           "x": 45,
           "y": 52,
@@ -719,6 +730,7 @@
           "layer": "",
           "locked": false,
           "name": "text",
+          "persistentUuid": "511d0be8-28e7-4e20-9965-0aa1d51e591a",
           "width": 600,
           "x": 76,
           "y": 167,
@@ -734,6 +746,7 @@
           "layer": "",
           "locked": false,
           "name": "text1",
+          "persistentUuid": "34d351c8-61a7-45d5-b77c-99dd2f08b133",
           "width": 0,
           "x": 876,
           "y": 18,
@@ -749,6 +762,7 @@
           "layer": "",
           "locked": false,
           "name": "Computer",
+          "persistentUuid": "8fb273ee-d7b7-4969-a900-0db7dfeaded5",
           "width": 0,
           "x": 78,
           "y": 120,
@@ -764,9 +778,10 @@
           "layer": "",
           "locked": false,
           "name": "TypingText",
+          "persistentUuid": "41fc7f8f-cdd0-4299-bbd3-d513b2338231",
           "width": 0,
-          "x": 237,
-          "y": 244,
+          "x": 100,
+          "y": 161,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -881,7 +896,7 @@
           "variables": [
             {
               "name": "line1",
-              "value": "THIS \nIS \nMY \nREVENGE!"
+              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! \nCEO, Chippy Blipman, and the other Robots, have been \ncompromised and you need to act fast.\nI am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to \ndefrag Chippy’s motherboard and reboot the system before it’s too \nlate?\nYou have 60minutes to unlock the rooms, solve the puzzles and \nrestart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
             }
           ],
           "behaviors": [],
@@ -952,20 +967,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "play",
-                "365",
-                "540",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
@@ -1008,6 +1009,18 @@
                 "countdown",
                 "=",
                 "60*60*60"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "typing",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }
@@ -1061,52 +1074,31 @@
           "events": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Gives a typing effect for the text",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Timer"
-              },
-              "parameters": [
-                "",
-                "0.3",
-                "\"textTimer\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"textTimer\""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "name": "TYPING",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Gives a typing effect for the text",
+              "comment2": ""
+            },
             {
               "disabled": false,
               "folded": false,
@@ -1118,7 +1110,189 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "lineState",
+                    "typing",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "0.1",
+                        "\"textTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"textTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(line1), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnyKeyPressed"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "TypingText",
+                        "=",
+                        "TypingText.VariableString(line1)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "typing",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "charPos",
+                    "=",
+                    "StrLength(TypingText.VariableString(line1))"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "typing",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "When tiping is over",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "typing",
                     "=",
                     "0"
                   ],
@@ -1129,31 +1303,22 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "TypingText",
-                    "+",
-                    "SubStr(TypingText.VariableString(line1), Variable(charPos), 1)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "charPos",
-                    "+",
-                    "1"
+                    "",
+                    "play",
+                    "365",
+                    "540",
+                    ""
                   ],
                   "subInstructions": []
                 }
               ],
               "events": []
             }
-          ]
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -1201,7 +1366,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4208
+        "zoomFactor": 2.2568
       },
       "objectsGroups": [
         {
@@ -1218,6 +1383,15 @@
             },
             {
               "name": "SpareParts"
+            },
+            {
+              "name": "Motherboard"
+            },
+            {
+              "name": "RobotCubicles"
+            },
+            {
+              "name": "Accounting"
             }
           ]
         }
@@ -1231,6 +1405,7 @@
           "layer": "",
           "locked": false,
           "name": "Map",
+          "persistentUuid": "ba76f57c-ea6a-42cd-b9ff-a2b08260ab1b",
           "width": 866,
           "x": -32,
           "y": 46,
@@ -1246,6 +1421,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "abb6508c-2a37-4672-b30e-6f3340858160",
           "width": 0,
           "x": 8,
           "y": 54,
@@ -1261,6 +1437,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "85a08936-3bef-4f32-9108-552445264a58",
           "width": 0,
           "x": 8,
           "y": 134,
@@ -1276,6 +1453,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventoryBackground",
+          "persistentUuid": "6ad4376e-a0c4-400f-b227-0072616292c5",
           "width": 0,
           "x": 0,
           "y": 46,
@@ -1291,6 +1469,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "afd7e19d-ede9-434e-af04-4e5ee4620b76",
           "width": 0,
           "x": 9,
           "y": 92,
@@ -1306,6 +1485,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_LocationName",
+          "persistentUuid": "c3793c9c-e60b-4cbe-9d0c-a26298ea7bae",
           "width": 0,
           "x": 405,
           "y": 550,
@@ -1321,6 +1501,7 @@
           "layer": "",
           "locked": false,
           "name": "WallCLevel",
+          "persistentUuid": "fb1bf829-2413-413c-93d5-1cc199f5acd1",
           "width": 158,
           "x": 324,
           "y": 105,
@@ -1336,6 +1517,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_Description",
+          "persistentUuid": "7e92b1f0-18d8-4a34-b620-84f07a7357f6",
           "width": 0,
           "x": 17,
           "y": 10,
@@ -1351,6 +1533,7 @@
           "layer": "",
           "locked": false,
           "name": "ChippyOffice",
+          "persistentUuid": "1bcb2229-01bc-4a07-834c-aa590a8fbe58",
           "width": 275,
           "x": 7,
           "y": 105,
@@ -1366,6 +1549,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_ObjectName",
+          "persistentUuid": "b6aedcc4-abcc-4829-96e3-bd243726c422",
           "width": 0,
           "x": 452,
           "y": 16,
@@ -1381,6 +1565,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_Timer",
+          "persistentUuid": "7ff0f470-18e1-40d3-ad85-629844a16dc3",
           "width": 0,
           "x": 352,
           "y": 14,
@@ -1396,6 +1581,7 @@
           "layer": "",
           "locked": false,
           "name": "Cafeteria",
+          "persistentUuid": "969ee040-cb88-48b5-8cae-6d272e59b3ca",
           "width": 182,
           "x": 612,
           "y": 105,
@@ -1411,6 +1597,7 @@
           "layer": "",
           "locked": false,
           "name": "SpareParts",
+          "persistentUuid": "714b8ec4-a35b-4f0e-b661-b55fba627338",
           "width": 183,
           "x": 612,
           "y": 286,
@@ -1426,10 +1613,59 @@
           "layer": "",
           "locked": false,
           "name": "sparePartsCodePrompt",
+          "persistentUuid": "90fd0bfc-38d9-48ae-b6a3-d39ec96e8ca3",
           "width": 0,
           "x": 618,
           "y": 555,
           "zOrder": 28,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 105,
+          "layer": "",
+          "locked": false,
+          "name": "Motherboard",
+          "persistentUuid": "69b2f985-e079-4f5a-9be4-91180722ad37",
+          "width": 245,
+          "x": 3,
+          "y": 428,
+          "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 97,
+          "layer": "",
+          "locked": false,
+          "name": "RobotCubicles",
+          "persistentUuid": "12a262a9-b3a0-41f9-9f98-6bdb3d6235ac",
+          "width": 146,
+          "x": 4,
+          "y": 301,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 106,
+          "layer": "",
+          "locked": false,
+          "name": "Accounting",
+          "persistentUuid": "fb9fbb71-6e6c-40d9-8401-fb4ef295b907",
+          "width": 183,
+          "x": 613,
+          "y": 427,
+          "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1788,6 +2024,162 @@
           ]
         },
         {
+          "name": "Motherboard",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Motherboard Room"
+            },
+            {
+              "name": "description",
+              "value": "Motherboard room"
+            },
+            {
+              "name": "use",
+              "value": "motherboard"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RobotCubicles",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Robot Cubicles"
+            },
+            {
+              "name": "description",
+              "value": "Robot Cubicles"
+            },
+            {
+              "name": "use",
+              "value": "cubicles"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Accounting",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Accounting Office"
+            },
+            {
+              "name": "description",
+              "value": "Accounting Office"
+            },
+            {
+              "name": "use",
+              "value": "accounting"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-10.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "WallCLevel",
           "tags": "",
           "type": "Sprite",
@@ -1927,6 +2319,18 @@
               },
               "parameters": [
                 "InvisibleMarkers"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "motherboardDoorLocked",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -2561,6 +2965,123 @@
                             }
                           ],
                           "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Motherboard",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "motherboardDoorLocked = 0",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Motherboard Room\"",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "RobotCubicles",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Robot Cubicles\"",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Accounting",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Accounting Office\"",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
                         }
                       ],
                       "parameters": []
@@ -3128,6 +3649,38 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Escape"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "sparePartsCodeEntry",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -3193,6 +3746,7 @@
           "layer": "",
           "locked": false,
           "name": "BackToReception",
+          "persistentUuid": "2709aee5-5660-42ac-b6c2-0443e3aad3a8",
           "width": 0,
           "x": 339,
           "y": 572,
@@ -3208,6 +3762,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_Timer",
+          "persistentUuid": "9ecd20df-5890-4207-af7f-26701835964b",
           "width": 0,
           "x": 347,
           "y": 5,
@@ -3223,6 +3778,7 @@
           "layer": "",
           "locked": false,
           "name": "Code",
+          "persistentUuid": "84010379-0f42-48d4-bb50-503acc1db124",
           "width": 0,
           "x": 335,
           "y": 280,
@@ -3469,6 +4025,378 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
+      "mangledName": "Robot_32Cubicles",
+      "name": "Robot Cubicles",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.604
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "a6f39402-12a3-4556-9222-0f65f14e4a76",
+          "width": 0,
+          "x": 366,
+          "y": 557,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Spare_32Parts_32Room",
+      "name": "Spare Parts Room",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.604
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "b5047598-caea-42f5-ab3b-fa8fa08a7f1d",
+          "width": 0,
+          "x": 337,
+          "y": 570,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Motherboard_32Room",
+      "name": "Motherboard Room",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.604
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "762a13b9-b455-405b-87e5-e1188bc3252b",
+          "width": 0,
+          "x": 349,
+          "y": 568,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
       "mangledName": "Top_32Floor",
       "name": "Top Floor",
       "oglFOV": 90,
@@ -3525,6 +4453,7 @@
           "layer": "",
           "locked": false,
           "name": "Map",
+          "persistentUuid": "3d33d408-bc23-4bc5-990c-1cb2b252003a",
           "width": 0,
           "x": 258,
           "y": 157,
@@ -3540,6 +4469,7 @@
           "layer": "",
           "locked": false,
           "name": "TopFloor",
+          "persistentUuid": "49bb4e21-171f-4427-8c52-0eed50a1bf18",
           "width": 301,
           "x": 256,
           "y": 192,
@@ -3555,6 +4485,7 @@
           "layer": "UI",
           "locked": false,
           "name": "HUD_ObjectName",
+          "persistentUuid": "723c7e7e-eaec-4173-b754-3508a4b53ce1",
           "width": 202,
           "x": 141,
           "y": 384,
@@ -3570,6 +4501,7 @@
           "layer": "",
           "locked": false,
           "name": "RobotChippy",
+          "persistentUuid": "d17c056e-a22f-4802-a98f-8e3169153578",
           "width": 0,
           "x": 394,
           "y": 206,
@@ -3585,6 +4517,7 @@
           "layer": "",
           "locked": false,
           "name": "RobotSecurity",
+          "persistentUuid": "b36befbe-0fb7-4624-803e-c4f9cf59500d",
           "width": 0,
           "x": 484,
           "y": 425,
@@ -3600,6 +4533,7 @@
           "layer": "",
           "locked": false,
           "name": "RobotSecurity",
+          "persistentUuid": "dc27f2ed-4cce-4605-945b-97d1c9f530d6",
           "width": 0,
           "x": 345,
           "y": 422,
@@ -3615,6 +4549,7 @@
           "layer": "UI",
           "locked": false,
           "name": "HUD_Description",
+          "persistentUuid": "7ca98c60-e30e-46ff-bc8d-05c8da31dbee",
           "width": 313,
           "x": 255,
           "y": 53,
@@ -3630,6 +4565,7 @@
           "layer": "",
           "locked": false,
           "name": "Table",
+          "persistentUuid": "8ddd9742-d586-4050-a4be-bbfad9f41b18",
           "width": 97,
           "x": 377,
           "y": 291,
@@ -3645,6 +4581,7 @@
           "layer": "",
           "locked": false,
           "name": "Computer",
+          "persistentUuid": "4e68d042-b8e0-477a-a788-4d2a0acd187e",
           "width": 0,
           "x": 412,
           "y": 301,
@@ -3660,6 +4597,7 @@
           "layer": "UI",
           "locked": false,
           "name": "HUD_LocationName",
+          "persistentUuid": "ca7ec5f5-0ff9-41de-adae-b843413d121e",
           "width": 0,
           "x": 260,
           "y": 486,
@@ -3675,6 +4613,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventoryBackground",
+          "persistentUuid": "3595f741-c714-46a5-b945-db468403cea5",
           "width": 0,
           "x": 201,
           "y": 157,
@@ -3690,6 +4629,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "027421d6-482e-446b-8255-f05d322e61eb",
           "width": 0,
           "x": 209,
           "y": 162,
@@ -3710,6 +4650,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "736a5aa0-9e88-4868-ae8a-35462303d984",
           "width": 0,
           "x": 209,
           "y": 202,
@@ -3725,6 +4666,7 @@
           "layer": "UI",
           "locked": false,
           "name": "InventorySlot",
+          "persistentUuid": "b6ecf883-2237-4301-8992-21cac08e5ece",
           "width": 0,
           "x": 209,
           "y": 243,
@@ -3740,9 +4682,10 @@
           "layer": "",
           "locked": false,
           "name": "BackToReception",
+          "persistentUuid": "c3e73e0a-8254-4959-9f9f-f444589dfee8",
           "width": 0,
-          "x": 75,
-          "y": 464,
+          "x": 380,
+          "y": 569,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -3755,6 +4698,7 @@
           "layer": "",
           "locked": false,
           "name": "HUD_Timer",
+          "persistentUuid": "72c42034-1653-46c4-9b2d-ae484c80351e",
           "width": 0,
           "x": 361,
           "y": 7,
@@ -5521,6 +6465,130 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
+      "mangledName": "Accounting_32Office",
+      "name": "Accounting Office",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "da6bd015-ff3d-439c-bcb5-4fc7a177b09a",
+          "width": 0,
+          "x": 337,
+          "y": 565,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
       "mangledName": "Puzzle_321",
       "name": "Puzzle 1",
       "oglFOV": 90,
@@ -5616,6 +6684,7 @@
           "layer": "",
           "locked": false,
           "name": "End",
+          "persistentUuid": "53b7928e-4293-4975-9ec4-fc5e188a8b0b",
           "width": 0,
           "x": 20,
           "y": 186,
@@ -5631,6 +6700,7 @@
           "layer": "",
           "locked": false,
           "name": "Play",
+          "persistentUuid": "533bb69c-f6d3-4deb-b798-0b4657dcc140",
           "width": 0,
           "x": 224,
           "y": 436,

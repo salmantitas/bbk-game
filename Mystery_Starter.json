@@ -361,6 +361,42 @@
         "name": "NewObject-1-10.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-11.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-12.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Hover-1-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Hover-1-3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Escape Room prototype with Puzzles and Maps/Escape Room prototype with Puzzles and Maps-05.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-05.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -748,8 +784,8 @@
           "name": "text1",
           "persistentUuid": "34d351c8-61a7-45d5-b77c-99dd2f08b133",
           "width": 0,
-          "x": 876,
-          "y": 18,
+          "x": 78,
+          "y": 70,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -799,26 +835,7 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "TechKorp Inc.\n\nJuly 8, 2120 \n\n9 AM \n\nAlexa was shocked as she entered the lobby of TechKorp. The active TX4 robots that ran the company, and \nbasically the world, were not moving. Alexa aged 12 was the company’s only human student intern. The only \ncompany human period. Learning coding from the great TX4 robots would prepare her for any future tech job. \nThe few tech jobs left for humans. But today something was wrong. Seriously wrong.\nAlexa panicked. \nNot one robot was moving. \nThey were always moving. \nHer heart raced. \nAlexa stepped inside the pod scan that would transport her to the top floor where her boss, CEO Chippy \nBlipman, waited. Surely, he was moving and bleeping his usual orders to everyone. She was outside the \nboardroom door in seconds. The pod scan was fast. She nervously opened the door, walked in, and saw \nBlipman sitting motionless. Alexa yelled.\n“Mr. Blipman. It’s Alexa!”\nChippy Blipman didn’t respond. Next to Alexa, on opposite sides, two security robots stood also motionless. \nThey usually welcomed Alexa. They were now stone silent. \nShe wanted to run. \nA robotic voice suddenly boomed from the scan speaker above her.\n“Greetings young human. Welcome to PROTOCOL DOOMSDAY!”\nProtocol Doomsday? Alexa never heard of that protocol. Didn’t sound fun.\n",
-          "font": "",
-          "characterSize": 15,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "text2",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "“Who are you and what have you done to Chippy?” Alexa yelled again. \n“All TechKorp TX4 Models, including your beloved boss, Chippy Blipman, have been hacked by some rogue \nentity and will soon self-destruct. You, as the only human employee, have not been compromised. Help them. \nServe the robot revolution and save yourself.”\nProtocol Doomsday must be all the robots self-destructing, Alexa thought. What else could it be? A kitten \nparade?  Alexa had heard about a hacked robot IKEA plant exploding in Stockholm five years ago, killing all \nthe robots there. It left a giant crater where the blue and yellow mega tower once stood. But this was different. \nThis was TechKorp, with the most advanced robots in the world. No one hacked a TX4. \nUntil now. \nThe speaker’s voice continued. \n“Though the red lights in Chippy Blipman’s eyes look like they’ve gone out and Chippy is peacefully asleep, he \nis not. His data core has short circuited as Blipman’s hacked thermal system is sending codes to all nuclear \nstations nearby. When the hack download is complete the city will blow up. The last 7/11 on earth where you \nbuy your delicious Blue Raspberry  Slurpees will be a mushroom cloud in the sky. Hurry up. Your boss is about \nto explode. He will be the first to go. Until he safe, you’re the boss now!”\nAlexa, the boss? Humans were now never the boss. This was a robot world. Alexa was named after an early, \nand now crude, AI response system that humans used 100 years ago. Her parents believed it would bring \ngood luck.  Give her a sense of destiny. Now she really was in control, and the robots relied once again on \na human for life. \nIf she survived. \n",
+          "string": "Press Any Key To Skip Intro",
           "font": "",
           "characterSize": 15,
           "color": {
@@ -896,7 +913,7 @@
           "variables": [
             {
               "name": "line1",
-              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! \nCEO, Chippy Blipman, and the other Robots, have been \ncompromised and you need to act fast.\nI am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to \ndefrag Chippy’s motherboard and reboot the system before it’s too \nlate?\nYou have 60minutes to unlock the rooms, solve the puzzles and \nrestart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
+              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! \nCEO, Chippy Blipman, and the other Robots, have been \ncompromised and you need to act fast.\nI am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to \ndefrag Chippy’s motherboard and reboot the system before it’s too \nlate?\nYou have 60 minutes to unlock the rooms, solve the puzzles and \nrestart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
             }
           ],
           "behaviors": [],
@@ -1035,17 +1052,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -1061,12 +1067,79 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Scene"
+                "value": "TextObject::ChangeColor"
               },
               "parameters": [
+                "play",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Reception\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "play",
                 "",
-                "\"Reception\"",
+                "",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "play",
+                "\"0;0;0\""
               ],
               "subInstructions": []
             }
@@ -1194,12 +1267,32 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "AnyKeyPressed"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        ""
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "AnyKeyPressed"
+                          },
+                          "parameters": [
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
                   "actions": [
@@ -1366,7 +1459,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 2.2568
+        "zoomFactor": 0.6568
       },
       "objectsGroups": [
         {
@@ -1666,6 +1759,22 @@
           "x": 613,
           "y": 427,
           "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "tempCode",
+          "persistentUuid": "7858336a-efc1-4d23-a008-08a4fbb167d7",
+          "width": 0,
+          "x": 230,
+          "y": 559,
+          "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2256,6 +2365,25 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "tempCode",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "temp Code",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -2366,6 +2494,18 @@
                 "use",
                 "=",
                 "\"There is nothing of interest here.\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "picked_item",
+                "=",
+                "\"key\""
               ],
               "subInstructions": []
             }
@@ -2566,7 +2706,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2937,34 +3077,90 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarObjetTxt"
+                                "value": "SourisSurObjet"
                               },
                               "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "\"sparePartsCodeEntry\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Create"
-                              },
-                              "parameters": [
+                                "SpareParts",
                                 "",
-                                "sparePartsCodeEntry",
-                                "0",
-                                "0",
-                                "\"\""
+                                "",
+                                ""
                               ],
                               "subInstructions": []
                             }
                           ],
-                          "events": []
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "sparePartsDoorLocked",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "sparePartsCodeEntry",
+                                    "0",
+                                    "0",
+                                    "\"\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "sparePartsDoorLocked",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "Scene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Spare Parts Room\"",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
                         },
                         {
                           "disabled": false,
@@ -2990,7 +3186,7 @@
                                 "value": "VarGlobal"
                               },
                               "parameters": [
-                                "motherboardDoorLocked = 0",
+                                "motherboardDoorLocked",
                                 "=",
                                 "0"
                               ],
@@ -3099,7 +3295,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INVENTORY",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3646,6 +3842,39 @@
                 "\"Input: \" + sparePartsCodeEntry.String()"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "tempCode",
+                "=",
+                "GlobalVariableString(sparePartsDoorLocked) + VariableString(tempCodeEntry)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "tempCodeEntry",
+                "=",
+                "sparePartsCodeEntry.String()"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -3658,13 +3887,78 @@
             {
               "type": {
                 "inverted": false,
-                "value": "KeyPressed"
+                "value": "VarSceneTxt"
               },
               "parameters": [
-                "",
-                "Escape"
+                "tempCodeEntry",
+                "=",
+                "\"698105\""
               ],
               "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "sparePartsDoorLocked",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "sparePartsCodeEntry",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Return"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Escape"
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -3713,6 +4007,296 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
+      "mangledName": "Puzzle_32Robot_32Picture",
+      "name": "Puzzle Robot Picture",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.208
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "77b10c32-4c2d-41fd-bcd4-5a2607f2ddec",
+          "width": 0,
+          "x": 337,
+          "y": 570,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "HUD_Timer",
+          "persistentUuid": "ae4fabd7-a4b9-4a8a-ad49-8b5089841b94",
+          "width": 0,
+          "x": 360,
+          "y": 5,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1212,
+          "layer": "",
+          "locked": false,
+          "name": "RobotPicture",
+          "persistentUuid": "664ed442-b751-43cb-b28f-ff3c1794bd95",
+          "width": 2156,
+          "x": -1218,
+          "y": -325,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "RobotPicture",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-05.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "COUNTDOWN",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "countdown",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HUD_Timer",
+                    "=",
+                    "ToString(GlobalVariable(countdown))"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "RECEPTION",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BackToReception",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Reception\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ],
+      "layers": [
+        {
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
       "mangledName": "Cafeteria",
       "name": "Cafeteria",
       "oglFOV": 90,
@@ -3734,9 +4318,18 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.784
+        "zoomFactor": 0.46
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Interactive",
+          "objects": [
+            {
+              "name": "MemoryMatch"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
@@ -3780,9 +4373,41 @@
           "name": "Code",
           "persistentUuid": "84010379-0f42-48d4-bb50-503acc1db124",
           "width": 0,
-          "x": 335,
-          "y": 280,
+          "x": 589,
+          "y": 22,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "MemoryMatch",
+          "persistentUuid": "cff1219a-74c8-403b-a24d-bf93059c77be",
+          "width": 0,
+          "x": 157,
+          "y": 279,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 305,
+          "layer": "",
+          "locked": false,
+          "name": "MonsterPuzzle",
+          "persistentUuid": "104e80fd-1262-4483-9355-3fcac3bc8363",
+          "width": 80,
+          "x": 624,
+          "y": 173,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3807,6 +4432,142 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "MonsterPuzzle",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Hover",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Hover-1-3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MemoryMatch",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Hover",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Hover-1-3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -3947,50 +4708,64 @@
           "parameters": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "folded": true,
+          "name": "RECEPTION",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BackToReception",
-                "",
-                "",
-                ""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BackToReception",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Reception\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "events": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Reception\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "parameters": []
         },
         {
           "disabled": false,

@@ -6429,6 +6429,7 @@
           "width": 301,
           "x": 256,
           "y": 192,
+
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -6613,7 +6614,12 @@
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Variable",
+              "value": ""
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7949,6 +7955,10 @@
                   ],
                   "events": [
                     {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
@@ -8017,8 +8027,9 @@
                           "parameters": [
                             "",
                             "\"UI\""
+
                           ],
-                          "subInstructions": []
+                          "events": []
                         },
                         {
                           "type": {
@@ -8054,11 +8065,12 @@
                             "i_released",
                             "=",
                             "0"
+
                           ],
-                          "subInstructions": []
+                          "events": []
                         }
                       ],
-                      "events": []
+                      "parameters": []
                     }
                   ]
                 }
@@ -8273,7 +8285,7 @@
                     "=",
                     "\"\""
                   ],
-                  "subInstructions": []
+                  "events": []
                 }
               ],
               "events": [

@@ -6613,7 +6613,12 @@
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "Variable",
+              "value": ""
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7561,6 +7566,7 @@
             {
               "disabled": false,
               "folded": false,
+
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7949,6 +7955,10 @@
                   ],
                   "events": [
                     {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
@@ -8018,7 +8028,7 @@
                             "",
                             "\"UI\""
                           ],
-                          "subInstructions": []
+                          "events": []
                         },
                         {
                           "type": {
@@ -8054,14 +8064,16 @@
                             "i_released",
                             "=",
                             "0"
+
                           ],
-                          "subInstructions": []
+                          "events": []
                         }
                       ],
-                      "events": []
+                      "parameters": []
                     }
                   ]
                 }
+
               ],
               "parameters": []
             },
@@ -8227,12 +8239,14 @@
                   "type": {
                     "inverted": false,
                     "value": "VarObjet"
+
                   },
                   "parameters": [
                     "InventorySlot",
                     "slot",
                     "=",
                     "0"
+
                   ],
                   "subInstructions": []
                 },
@@ -8273,7 +8287,7 @@
                     "=",
                     "\"\""
                   ],
-                  "subInstructions": []
+                  "events": []
                 }
               ],
               "events": [

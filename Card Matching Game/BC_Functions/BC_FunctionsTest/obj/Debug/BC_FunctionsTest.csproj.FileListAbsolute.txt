@@ -1,0 +1,56 @@
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.xml
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2012\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.pdb
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.xml
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Brian Chaves\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.pdb
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.xml
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio 2013\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.dll
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.dll
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.pdb
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.xml
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csprojResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.pdb
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.dll
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_Functions.pdb
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\nunit.framework.xml
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csprojAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csproj.CoreCompileInputs.cache
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.csproj.CopyComplete
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.dll
+C:\Users\Brian\Documents\Visual Studio Projects\BC_Functions\BC_FunctionsTest\obj\Debug\BC_FunctionsTest.pdb

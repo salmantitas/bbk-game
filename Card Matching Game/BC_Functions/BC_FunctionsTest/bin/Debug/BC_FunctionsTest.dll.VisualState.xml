@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1151]C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll</TopNode>
+  <SelectedNode>[0-1075]BC_FunctionsTest.StringFunctionTest</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1151]C:\Users\Brian\Documents\Visual Studio 2015\Projects\BC_Functions\BC_FunctionsTest\bin\Debug\BC_FunctionsTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1152]BC_FunctionsTest" Expanded="true" />
+    <Node UniqueName="[0-1075]BC_FunctionsTest.StringFunctionTest" Expanded="true" />
+  </Nodes>
+</VisualState>

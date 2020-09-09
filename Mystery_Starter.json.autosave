@@ -8971,7 +8971,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.8856
+        "zoomFactor": 0.8436
       },
       "objectsGroups": [
         {
@@ -9535,6 +9535,150 @@
           "width": 127,
           "x": 588,
           "y": 343,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "00cffad4-5f7d-4f56-acd7-489acce10f5c",
+          "width": 13,
+          "x": 530,
+          "y": 358,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "bcb25681-79d4-41b5-91c9-26353fd65f18",
+          "width": 13,
+          "x": 460,
+          "y": 357,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 58,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "7d96cb40-9109-4bb7-ba82-b6b995e8b50a",
+          "width": 13,
+          "x": 403,
+          "y": 299,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 46,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "41c4bd33-0c32-4e88-8dc8-b779a5ad25bc",
+          "width": 13,
+          "x": 418,
+          "y": 173,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 43,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "98fcbc91-749e-4c7e-a91d-dcd10199442f",
+          "width": 13,
+          "x": 559,
+          "y": 173,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 43,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "a00ea80c-206c-447d-aa94-08d85b6618fb",
+          "width": 13,
+          "x": 488,
+          "y": 129,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 43,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "c173623d-4986-45a8-9575-4389afd0d277",
+          "width": 13,
+          "x": 631,
+          "y": 129,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 369,
+          "layer": "",
+          "locked": false,
+          "name": "WallV",
+          "persistentUuid": "3a03f551-4649-4099-a5f0-9f781859c5a7",
+          "width": 13,
+          "x": 701,
+          "y": 116,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 14,
+          "layer": "",
+          "locked": false,
+          "name": "WallH",
+          "persistentUuid": "460d4ead-2922-44cf-a5a7-59b3e3b4fcde",
+          "width": 58,
+          "x": 649,
+          "y": 471,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -11090,6 +11234,21 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "RobotRight WallLeft",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -11100,7 +11259,7 @@
                   "parameters": [
                     "Robot",
                     ">=",
-                    "WallV.X()"
+                    "WallV.X() - Robot.Width()"
                   ],
                   "subInstructions": []
                 },
@@ -11149,10 +11308,35 @@
               "comment2": ""
             },
             {
-              "disabled": true,
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Robot",
+                    "<=",
+                    "WallV.X() + WallV.Width()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "lastX",
+                    ">=",
+                    "WallV.X()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "actions": [
                 {
                   "type": {

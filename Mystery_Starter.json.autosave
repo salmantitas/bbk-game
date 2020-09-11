@@ -517,15 +517,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "NewObject-1-15.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewObject-1-15.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "arrow_left-1.png",
         "kind": "image",
         "metadata": "",
@@ -602,6 +593,24 @@
         "kind": "image",
         "metadata": "",
         "name": "Wall-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-15.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Finish-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Finish-1.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -1436,6 +1445,18 @@
               },
               "parameters": [
                 "monsterSolved",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "motherboardSolved",
                 "=",
                 "0"
               ],
@@ -8971,7 +8992,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.8436
+        "zoomFactor": 0.8796
       },
       "objectsGroups": [
         {
@@ -9035,7 +9056,7 @@
           "name": "Robot",
           "persistentUuid": "ef08dc2f-2aec-4daa-890f-291155b9f0f4",
           "width": 0,
-          "x": 590,
+          "x": 603,
           "y": 430,
           "zOrder": 3,
           "numberProperties": [],
@@ -9263,7 +9284,7 @@
           "name": "maze",
           "persistentUuid": "56560ee9-3b22-49e9-9fb5-fab77e36eabb",
           "width": 384,
-          "x": 340,
+          "x": 353,
           "y": 109,
           "zOrder": 0,
           "numberProperties": [],
@@ -9300,7 +9321,7 @@
           "name": "WallH",
           "persistentUuid": "7945e880-a06a-40bc-8dab-be56dae500dd",
           "width": 127,
-          "x": 530,
+          "x": 543,
           "y": 401,
           "zOrder": 18,
           "numberProperties": [],
@@ -9316,7 +9337,7 @@
           "name": "WallH",
           "persistentUuid": "d795afd5-0797-49d8-b7d2-eab06cae3ea3",
           "width": 240,
-          "x": 347,
+          "x": 360,
           "y": 472,
           "zOrder": 18,
           "numberProperties": [],
@@ -9332,7 +9353,7 @@
           "name": "WallV",
           "persistentUuid": "671dfadf-1d5b-4f30-93fb-8632ec1094a5",
           "width": 13,
-          "x": 644,
+          "x": 657,
           "y": 416,
           "zOrder": 19,
           "numberProperties": [],
@@ -9348,7 +9369,7 @@
           "name": "WallV",
           "persistentUuid": "d8e178f5-a966-4335-8371-042c73d270ac",
           "width": 13,
-          "x": 346,
+          "x": 359,
           "y": 116,
           "zOrder": 19,
           "numberProperties": [],
@@ -9385,8 +9406,8 @@
           "name": "arrow_empty",
           "persistentUuid": "7eccc07c-c413-449e-ac05-acc48c19218d",
           "width": 0,
-          "x": 350.371,
-          "y": 70,
+          "x": 150,
+          "y": 110,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -9406,8 +9427,8 @@
           "name": "arrow_empty",
           "persistentUuid": "1ea9ed23-cff7-4054-bd5a-c2256153de55",
           "width": 0,
-          "x": 390,
-          "y": 70,
+          "x": 190,
+          "y": 110,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -9427,8 +9448,8 @@
           "name": "arrow_empty",
           "persistentUuid": "4eac7c55-86bb-411f-9a69-f4e49da25290",
           "width": 0,
-          "x": 430,
-          "y": 70,
+          "x": 230,
+          "y": 110,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -9448,8 +9469,8 @@
           "name": "arrow_empty",
           "persistentUuid": "a336b6ac-247d-409c-86ad-60b132620ac1",
           "width": 0,
-          "x": 470,
-          "y": 70,
+          "x": 270,
+          "y": 110,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -9469,7 +9490,7 @@
           "name": "WallH",
           "persistentUuid": "6f06017d-e4b7-4607-ae08-e19ac209a220",
           "width": 294,
-          "x": 418,
+          "x": 431,
           "y": 215,
           "zOrder": 18,
           "numberProperties": [],
@@ -9485,7 +9506,7 @@
           "name": "WallH",
           "persistentUuid": "e77b333f-f525-4440-a4e8-681f40d602ed",
           "width": 327,
-          "x": 345,
+          "x": 358,
           "y": 115,
           "zOrder": 18,
           "numberProperties": [],
@@ -9500,8 +9521,8 @@
           "locked": false,
           "name": "WallH",
           "persistentUuid": "1fc578dd-6c92-4bdd-8192-b9e51931b8a9",
-          "width": 294,
-          "x": 307,
+          "width": 271,
+          "x": 343,
           "y": 287,
           "zOrder": 18,
           "numberProperties": [],
@@ -9517,7 +9538,7 @@
           "name": "WallH",
           "persistentUuid": "b63b8f6c-4a2a-45ff-9e5d-00c28bde4464",
           "width": 122,
-          "x": 351,
+          "x": 364,
           "y": 400,
           "zOrder": 18,
           "numberProperties": [],
@@ -9533,7 +9554,7 @@
           "name": "WallH",
           "persistentUuid": "063d9a76-7fa4-40ee-bf2f-afc3408b6189",
           "width": 127,
-          "x": 588,
+          "x": 601,
           "y": 343,
           "zOrder": 18,
           "numberProperties": [],
@@ -9549,7 +9570,7 @@
           "name": "WallV",
           "persistentUuid": "00cffad4-5f7d-4f56-acd7-489acce10f5c",
           "width": 13,
-          "x": 530,
+          "x": 543,
           "y": 358,
           "zOrder": 19,
           "numberProperties": [],
@@ -9565,7 +9586,7 @@
           "name": "WallV",
           "persistentUuid": "bcb25681-79d4-41b5-91c9-26353fd65f18",
           "width": 13,
-          "x": 460,
+          "x": 473,
           "y": 357,
           "zOrder": 19,
           "numberProperties": [],
@@ -9581,7 +9602,7 @@
           "name": "WallV",
           "persistentUuid": "7d96cb40-9109-4bb7-ba82-b6b995e8b50a",
           "width": 13,
-          "x": 403,
+          "x": 416,
           "y": 299,
           "zOrder": 19,
           "numberProperties": [],
@@ -9597,7 +9618,7 @@
           "name": "WallV",
           "persistentUuid": "41c4bd33-0c32-4e88-8dc8-b779a5ad25bc",
           "width": 13,
-          "x": 418,
+          "x": 431,
           "y": 173,
           "zOrder": 19,
           "numberProperties": [],
@@ -9613,7 +9634,7 @@
           "name": "WallV",
           "persistentUuid": "98fcbc91-749e-4c7e-a91d-dcd10199442f",
           "width": 13,
-          "x": 559,
+          "x": 572,
           "y": 173,
           "zOrder": 19,
           "numberProperties": [],
@@ -9629,7 +9650,7 @@
           "name": "WallV",
           "persistentUuid": "a00ea80c-206c-447d-aa94-08d85b6618fb",
           "width": 13,
-          "x": 488,
+          "x": 501,
           "y": 129,
           "zOrder": 19,
           "numberProperties": [],
@@ -9645,7 +9666,7 @@
           "name": "WallV",
           "persistentUuid": "c173623d-4986-45a8-9575-4389afd0d277",
           "width": 13,
-          "x": 631,
+          "x": 644,
           "y": 129,
           "zOrder": 19,
           "numberProperties": [],
@@ -9661,7 +9682,7 @@
           "name": "WallV",
           "persistentUuid": "3a03f551-4649-4099-a5f0-9f781859c5a7",
           "width": 13,
-          "x": 701,
+          "x": 714,
           "y": 116,
           "zOrder": 19,
           "numberProperties": [],
@@ -9677,9 +9698,214 @@
           "name": "WallH",
           "persistentUuid": "460d4ead-2922-44cf-a5a7-59b3e3b4fcde",
           "width": 58,
-          "x": 649,
+          "x": 662,
           "y": 471,
           "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "bc178030-67c2-4a88-91fe-cfd6c602b8bd",
+          "width": 0,
+          "x": 110,
+          "y": 110,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "dc3eae88-5668-48f8-bcb2-ba8eabfede6b",
+          "width": 0,
+          "x": 310,
+          "y": 110,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "1bf0c0eb-8257-4cec-8dd6-fa82f3746cf3",
+          "width": 0,
+          "x": 110,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "cdb7472b-d857-4bc0-a90c-a6119085ad10",
+          "width": 0,
+          "x": 150,
+          "y": 110,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "95c23c56-9e06-4db6-b737-2cc3251536fe",
+          "width": 0,
+          "x": 150,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "97397860-a20c-42e0-b2c0-495d4e5b9efc",
+          "width": 0,
+          "x": 190,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "13"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "52089fec-4165-4e7f-a2c7-db5af798fb93",
+          "width": 0,
+          "x": 230,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "0e770c1a-0c84-42d1-971a-93a2b7a849ae",
+          "width": 0,
+          "x": 270,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "15"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "arrow_empty",
+          "persistentUuid": "3ad0e13f-599e-4f54-8726-b467df89e51d",
+          "width": 0,
+          "x": 310,
+          "y": 150,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "index",
+              "value": "16"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "Finish",
+          "persistentUuid": "6886f54a-41cf-419e-b7a6-a73df992c42e",
+          "width": 70,
+          "x": 655,
+          "y": 117,
+          "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -10003,7 +10229,7 @@
           ]
         },
         {
-          "name": "Robot",
+          "name": "Finish",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -10021,6 +10247,45 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "NewObject-1-15.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Robot",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Finish",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Finish-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10393,9 +10658,21 @@
                 "value": "ModVarScene"
               },
               "parameters": [
+                "VEL_FACTOR",
+                "=",
+                "3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
                 "force",
                 "=",
-                "3300"
+                "Robot.Width() * Variable(VEL_FACTOR)"
               ],
               "subInstructions": []
             },
@@ -10464,7 +10741,7 @@
               "parameters": [
                 "idx",
                 "=",
-                "VariableString(lastX)"
+                "VariableString(index)"
               ],
               "subInstructions": []
             },
@@ -10476,7 +10753,7 @@
               "parameters": [
                 "playidx",
                 "=",
-                "VariableString(lastY)"
+                "VariableString(playIndex)"
               ],
               "subInstructions": []
             }
@@ -10571,6 +10848,78 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "arrow_empty",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "temp",
+                        "=",
+                        "arrow_empty.Variable(index)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Animation"
+                          },
+                          "parameters": [
+                            "arrow_empty",
+                            "!=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeAnimation"
+                          },
+                          "parameters": [
+                            "arrow_empty",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -10700,6 +11049,17 @@
                         "1"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"MovementTimer\""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -10709,24 +11069,8 @@
             {
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "MOVEMENT LOOP",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "infiniteLoopWarning": true,
-              "type": "BuiltinCommonInstructions::While",
-              "whileConditions": [
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "inverted": false,
@@ -10752,59 +11096,7 @@
                   "subInstructions": []
                 }
               ],
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "arrow_empty",
-                    "index",
-                    "=",
-                    "Variable(playIndex)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "playIndex",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "lastX",
-                    "=",
-                    "Robot.X()"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "lastY",
-                    "=",
-                    "Robot.Y()"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -10813,15 +11105,93 @@
                   "conditions": [
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "CollisionNP"
+                        "inverted": false,
+                        "value": "Timer"
                       },
                       "parameters": [
-                        "Robot",
-                        "WallH",
                         "",
+                        "1 / Variable(VEL_FACTOR)",
+                        "\"MovementTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "playIndex",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "lastX",
+                        "=",
+                        "Robot.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "lastY",
+                        "=",
+                        "Robot.Y()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
                         "",
-                        ""
+                        "\"MovementTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "Robot"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "arrow_empty",
+                        "index",
+                        "=",
+                        "Variable(playIndex)"
                       ],
                       "subInstructions": []
                     }
@@ -10832,211 +11202,228 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "arrow_empty",
-                            "\"arrow_left\""
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "arrow_empty",
+                                "\"arrow_left\""
+                              ],
+                              "subInstructions": []
+                            }
                           ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "Robot",
+                                "-Variable(force)",
+                                "0",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "AddForceXY"
-                          },
-                          "parameters": [
-                            "Robot",
-                            "-Variable(force)",
-                            "0",
-                            ""
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "arrow_empty",
+                                "\"arrow_right\""
+                              ],
+                              "subInstructions": []
+                            }
                           ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "Robot",
+                                "Variable(force)",
+                                "0",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "arrow_empty",
-                            "\"arrow_right\""
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "arrow_empty",
+                                "\"arrow_up\""
+                              ],
+                              "subInstructions": []
+                            }
                           ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "Robot",
+                                "0",
+                                "-Variable(force)",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
                         {
-                          "type": {
-                            "inverted": false,
-                            "value": "AddForceXY"
-                          },
-                          "parameters": [
-                            "Robot",
-                            "Variable(force)",
-                            "0",
-                            ""
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AnimationName"
+                              },
+                              "parameters": [
+                                "arrow_empty",
+                                "\"arrow_down\""
+                              ],
+                              "subInstructions": []
+                            }
                           ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "arrow_empty",
-                            "\"arrow_up\""
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "AddForceXY"
+                              },
+                              "parameters": [
+                                "Robot",
+                                "0",
+                                "Variable(force)",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
                           ],
-                          "subInstructions": []
+                          "events": []
                         }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "AddForceXY"
-                          },
-                          "parameters": [
-                            "Robot",
-                            "0",
-                            "-Variable(force)",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "AnimationName"
-                          },
-                          "parameters": [
-                            "arrow_empty",
-                            "\"arrow_down\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "AddForceXY"
-                          },
-                          "parameters": [
-                            "Robot",
-                            "0",
-                            "Variable(force)",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "playIndex",
+                        ">=",
+                        "Variable(index)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "start",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "playIndex",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "index",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeAnimation"
+                      },
+                      "parameters": [
+                        "arrow_empty",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "playIndex",
-                    ">=",
-                    "Variable(index)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "start",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "playIndex",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "index",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "arrow_empty",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ],
           "parameters": []
@@ -11102,7 +11489,7 @@
                   "parameters": [
                     "Robot",
                     "<=",
-                    "WallH.Y() + WallH.Height()"
+                    "WallH.Y() + WallH.Height() + 1"
                   ],
                   "subInstructions": []
                 },
@@ -11114,7 +11501,7 @@
                   "parameters": [
                     "lastY",
                     ">=",
-                    "WallH.Y() + WallH.Height()"
+                    "WallH.Y() + WallH.Height() + 1"
                   ],
                   "subInstructions": []
                 }
@@ -11163,7 +11550,7 @@
                   "parameters": [
                     "Robot",
                     ">=",
-                    "WallH.Y() - Robot.Height()"
+                    "WallH.Y() - Robot.Height() - 1"
                   ],
                   "subInstructions": []
                 },
@@ -11354,6 +11741,42 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Robot",
+                "Finish",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "motherboardSolved",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -12586,7 +13009,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12787,55 +13210,8 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "KEY",
+                          "comment": "Chippy Back Panel",
                           "comment2": ""
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "VarObjetTxt"
-                              },
-                              "parameters": [
-                                "Interactives",
-                                "use",
-                                "=",
-                                "\"key\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarSceneTxt"
-                              },
-                              "parameters": [
-                                "picked_item",
-                                "=",
-                                "Interactives.VariableString(use)"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TextObject::String"
-                              },
-                              "parameters": [
-                                "HUD_Description",
-                                "=",
-                                "\"You found a key!\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
                         },
                         {
                           "disabled": false,
@@ -12858,13 +13234,12 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarObjetTxt"
+                                "value": "VarGlobal"
                               },
                               "parameters": [
-                                "InventorySlot",
-                                "slot",
+                                "motherboardSolved",
                                 "=",
-                                "\"key\""
+                                "1"
                               ],
                               "subInstructions": []
                             }

@@ -703,6 +703,13 @@
         "name": "Robotbody4.jpg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "screenla.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "screenla.wav",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -972,6 +979,25 @@
           ]
         }
       ]
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "Correct",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "CORRECT!",
+      "font": "",
+      "characterSize": 50,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 255
+      }
     }
   ],
   "objectsGroups": [
@@ -1563,6 +1589,20 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "screenla.wav",
+                "",
+                "100",
+                ""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1795,7 +1835,7 @@
                       },
                       "parameters": [
                         "",
-                        "0.1",
+                        "1 * 1/20 * 1/2",
                         "\"textTimer\""
                       ],
                       "subInstructions": []
@@ -2055,7 +2095,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5128
+        "zoomFactor": 0.2386
       },
       "objectsGroups": [
         {
@@ -2433,7 +2473,7 @@
             },
             {
               "name": "description",
-              "value": "This is the office of Chippy Blipman, the CEO."
+              "value": "This is the office of Chippy Blipman. To deactivate this threat, I have to get in there."
             },
             {
               "name": "use",
@@ -2485,11 +2525,11 @@
             },
             {
               "name": "description",
-              "value": "This is the cafeteria"
+              "value": "The cafeteria is where the robots go to eat microchips."
             },
             {
               "name": "use",
-              "value": "cafeteria"
+              "value": ""
             }
           ],
           "behaviors": [],
@@ -2537,11 +2577,11 @@
             },
             {
               "name": "description",
-              "value": "This room contains spare parts"
+              "value": "This room contains spare parts from construction and destruction of robots."
             },
             {
               "name": "use",
-              "value": "sparePartsCodeEntry"
+              "value": "This door is locked and requires a keycode to open."
             }
           ],
           "behaviors": [],
@@ -2589,7 +2629,7 @@
             },
             {
               "name": "description",
-              "value": "Motherboard room"
+              "value": "The Motherboard Room has access to all the motherboards of every robot in the company."
             },
             {
               "name": "use",
@@ -2641,11 +2681,11 @@
             },
             {
               "name": "description",
-              "value": "Robot Cubicles"
+              "value": "Here are the offices of the many robot employees who work here."
             },
             {
               "name": "use",
-              "value": "cubicles"
+              "value": ""
             }
           ],
           "behaviors": [],
@@ -2693,11 +2733,11 @@
             },
             {
               "name": "description",
-              "value": "Accounting Office"
+              "value": "This is where all the calculations take place. Clearance for certain actions can also be received from here."
             },
             {
               "name": "use",
-              "value": "accounting"
+              "value": ""
             }
           ],
           "behaviors": [],
@@ -2745,7 +2785,7 @@
             },
             {
               "name": "description",
-              "value": "Picture of Robot Team"
+              "value": "This is a picture of the robots in the staff team. I can take a closer look."
             },
             {
               "name": "use",
@@ -2930,19 +2970,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "WallCLevel",
-                "use",
-                "=",
-                "\"There is nothing of interest here.\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "ModVarSceneTxt"
               },
               "parameters": [
@@ -2958,10 +2985,36 @@
                 "value": "ModVarObjetTxt"
               },
               "parameters": [
+                "WallCLevel",
+                "use",
+                "=",
+                "\"There is nothing of interest here.\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
                 "ChippyOffice",
                 "use",
                 "=",
                 "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "ChippyOffice",
+                "description",
+                "=",
+                "\"This is the office of Chippy Blipman. To deactivate this threat, I have the key!\""
               ],
               "subInstructions": []
             }
@@ -3286,6 +3339,17 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Interactives",
+                    "\"Hover\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "MettreXY"
                   },
                   "parameters": [
@@ -3296,20 +3360,43 @@
                     "Interactives.PointY(\"Center\")"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        ">=",
+                        "ScreenWidth()-10"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "HUD_ObjectName.X()-300"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -3487,7 +3574,7 @@
                               },
                               "parameters": [
                                 "",
-                                "\"Top Floor\"",
+                                "\"Chippy's Office\"",
                                 ""
                               ],
                               "subInstructions": []
@@ -3730,6 +3817,19 @@
                                     ""
                                   ],
                                   "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjetTxt"
+                                  },
+                                  "parameters": [
+                                    "SpareParts",
+                                    "use",
+                                    "=",
+                                    "\"\""
+                                  ],
+                                  "subInstructions": []
                                 }
                               ],
                               "events": []
@@ -3830,45 +3930,35 @@
                                 ""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "accountingDoorLocked",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
                             }
                           ],
-                          "actions": [],
-                          "events": [
+                          "actions": [
                             {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarGlobal"
-                                  },
-                                  "parameters": [
-                                    "accountingDoorLocked",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                }
+                              "type": {
+                                "inverted": false,
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "\"Accounting Office\"",
+                                ""
                               ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Scene"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Accounting Office\"",
-                                    ""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
+                              "subInstructions": []
                             }
-                          ]
+                          ],
+                          "events": []
                         }
                       ],
                       "parameters": []
@@ -3886,7 +3976,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INVENTORY",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4532,6 +4622,31 @@
                     "sparePartsCodePrompt"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Correct",
+                    "270",
+                    "270",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"correctTimer\""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -4592,6 +4707,51 @@
                   },
                   "parameters": [
                     "sparePartsCodePrompt"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "sparePartsDoorLocked",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"correctTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Correct",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -5160,7 +5320,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5404,7 +5564,7 @@
                               "parameters": [
                                 "HUD_Description",
                                 "=",
-                                "\"You found a key!\""
+                                "\"I found a key!\""
                               ],
                               "subInstructions": []
                             }
@@ -7119,6 +7279,63 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
+      "mangledName": "Memory_32Match",
+      "name": "Memory Match",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 9808128,
+          "ambientLightColorG": 6006536,
+          "ambientLightColorR": 6007456,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
       "mangledName": "Monster_32Puzzle",
       "name": "Monster Puzzle",
       "oglFOV": 90,
@@ -7340,7 +7557,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7360,6 +7582,10 @@
             {
               "name": "correct",
               "value": "1"
+            },
+            {
+              "name": "column",
+              "value": "1"
             }
           ]
         },
@@ -7377,7 +7603,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7393,7 +7624,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7409,7 +7645,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7425,7 +7666,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "2"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7441,7 +7687,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "2"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7461,6 +7712,10 @@
             {
               "name": "correct",
               "value": "1"
+            },
+            {
+              "name": "column",
+              "value": "2"
             }
           ]
         },
@@ -7478,7 +7733,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "2"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7494,7 +7754,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "2"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7514,6 +7779,10 @@
             {
               "name": "correct",
               "value": "1"
+            },
+            {
+              "name": "column",
+              "value": "3"
             }
           ]
         },
@@ -7531,7 +7800,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "3"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7547,7 +7821,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "3"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7563,7 +7842,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "3"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7579,7 +7863,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "3"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7595,7 +7884,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "4"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7611,7 +7905,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "4"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7627,7 +7926,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "4"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7643,7 +7947,12 @@
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "column",
+              "value": "4"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -7662,7 +7971,7 @@
           "initialVariables": [
             {
               "name": "correct",
-              "value": "1"
+              "value": "4"
             }
           ]
         },
@@ -7712,6 +8021,10 @@
             },
             {
               "name": "correct",
+              "value": "0"
+            },
+            {
+              "name": "column",
               "value": "0"
             }
           ],
@@ -8114,43 +8427,52 @@
               "subInstructions": []
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "MonsterSlot",
-                "state",
-                "=",
-                "mod((MonsterSlot.Variable(state)+1), 2)"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "MonsterSlot",
+                    "state",
+                    "=",
+                    "mod((MonsterSlot.Variable(state)+1), 2)"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+              "events": []
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "MonsterSlot",
-                "=",
-                "MonsterSlot.Variable(state)"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "MonsterSlot",
+                    "=",
+                    "MonsterSlot.Variable(state)"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "disabled": false,
@@ -8924,6 +9246,31 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Correct",
+                    "270",
+                    "270",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"correctTimer\""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -8969,7 +9316,53 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"correctTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Correct",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Reception\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -10643,6 +11036,18 @@
                     "1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Spare Parts Room\"",
+                    ""
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -10857,7 +11262,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5436
+        "zoomFactor": 0.5076
       },
       "objectsGroups": [
         {
@@ -12021,6 +12426,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "RobotEnableText",
+          "persistentUuid": "9add09fa-2648-4fe1-ae2e-82b021ddd78d",
+          "width": 0,
+          "x": 43,
+          "y": 71,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -12650,6 +13071,25 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "RobotEnableText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Robot Controls are disabled. \nPlease visit the accounting room \nfor clearance.",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -12782,9 +13222,9 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "move",
+                "moveH",
                 "=",
-                "3/2* Robot.Width()"
+                "5/4* Robot.Width()"
               ],
               "subInstructions": []
             },
@@ -12794,9 +13234,33 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "force",
+                "moveV",
                 "=",
-                "Variable(move) * Variable(VEL_FACTOR)"
+                "3/2 * Robot.Width()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "forceH",
+                "=",
+                "Variable(moveH) * Variable(VEL_FACTOR)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "forceV",
+                "=",
+                "Variable(moveV) * Variable(VEL_FACTOR)"
               ],
               "subInstructions": []
             },
@@ -12895,7 +13359,7 @@
                 "value": "VarGlobal"
               },
               "parameters": [
-                "robotControl",
+                "sparePartsSolved",
                 "=",
                 "0"
               ],
@@ -12906,7 +13370,114 @@
             {
               "type": {
                 "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "Robot"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "robotControl",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "motherboardSolved",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
                 "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"UI\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "RobotEnableText",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "robotControl",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "RobotEnableText"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ShowLayer"
               },
               "parameters": [
                 "",
@@ -13686,7 +14257,7 @@
                               },
                               "parameters": [
                                 "Robot",
-                                "-Variable(force)",
+                                "-Variable(forceH)",
                                 "0",
                                 ""
                               ],
@@ -13732,7 +14303,7 @@
                               },
                               "parameters": [
                                 "Robot",
-                                "Variable(force)",
+                                "Variable(forceH)",
                                 "0",
                                 ""
                               ],
@@ -13779,7 +14350,7 @@
                               "parameters": [
                                 "Robot",
                                 "0",
-                                "-Variable(force)",
+                                "-Variable(forceV)",
                                 "0"
                               ],
                               "subInstructions": []
@@ -13825,7 +14396,7 @@
                               "parameters": [
                                 "Robot",
                                 "0",
-                                "Variable(force)",
+                                "Variable(forceV)",
                                 ""
                               ],
                               "subInstructions": []
@@ -13925,7 +14496,61 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "RESET ROBOT",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Robot",
+                            "Finish",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "Robot",
+                            "=",
+                            "Variable(ogX)",
+                            "=",
+                            "Variable(ogY)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ]
             }
@@ -14323,8 +14948,633 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Top_32Floor",
-      "name": "Top Floor",
+      "mangledName": "Accounting_32Office",
+      "name": "Accounting Office",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.4514
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "BackToReception",
+          "persistentUuid": "da6bd015-ff3d-439c-bcb5-4fc7a177b09a",
+          "width": 0,
+          "x": 337,
+          "y": 565,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 918,
+          "layer": "",
+          "locked": false,
+          "name": "background",
+          "persistentUuid": "feed4400-e1f6-4abf-a81b-baee3de18d7e",
+          "width": 1632,
+          "x": -411,
+          "y": -180,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "HUD_Timer",
+          "persistentUuid": "781d17c9-3fcc-4b85-9d66-9953f8239a61",
+          "width": 0,
+          "x": 714,
+          "y": 13,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "accountingEntry",
+          "persistentUuid": "43c28290-11de-4f53-aa0c-0bfb32fb1f88",
+          "width": 0,
+          "x": 821,
+          "y": 486,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "accountingInput",
+          "persistentUuid": "55a694a8-b965-4540-b196-9f418bbf3cfa",
+          "width": 0,
+          "x": 709,
+          "y": 511,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-08.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "accountingEntry",
+          "tags": "",
+          "type": "TextEntryObject::TextEntry",
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "accountingInput",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "__",
+          "font": "",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BackToReception",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Reception\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "COUNTDOWN",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "countdown",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HUD_Timer",
+                    "=",
+                    "ToString(GlobalVariable(countdown))"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "INPUT",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextEntryObject::String"
+                  },
+                  "parameters": [
+                    "accountingEntry",
+                    "!=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "accountingInput",
+                    "=",
+                    "accountingEntry.String()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextEntryObject::String"
+                  },
+                  "parameters": [
+                    "accountingEntry",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "accountingInput",
+                    "=",
+                    "\"__\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Return"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "KeyReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Escape"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextEntryObject::String"
+                  },
+                  "parameters": [
+                    "accountingEntry",
+                    "=",
+                    "\"\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextEntryObject::String"
+                  },
+                  "parameters": [
+                    "accountingEntry",
+                    "=",
+                    "\"19\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "robotControl",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Correct",
+                    "270",
+                    "270",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"correctTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "robotControl",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "accountingEntry",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "accountingInput"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"correctTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Correct",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Reception\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Chippy_39s_32Office",
+      "name": "Chippy's Office",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -14365,7 +15615,7 @@
               "name": "RobotSecurity"
             },
             {
-              "name": "Table"
+              "name": "Board"
             }
           ]
         }
@@ -14487,31 +15737,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 38,
+          "height": 155,
           "layer": "",
           "locked": false,
-          "name": "Table",
+          "name": "Board",
           "persistentUuid": "8ddd9742-d586-4050-a4be-bbfad9f41b18",
-          "width": 97,
-          "x": 377,
-          "y": 291,
+          "width": 6,
+          "x": 260,
+          "y": 251,
           "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Computer",
-          "persistentUuid": "4e68d042-b8e0-477a-a788-4d2a0acd187e",
-          "width": 0,
-          "x": 412,
-          "y": 301,
-          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14634,6 +15868,38 @@
           "x": 361,
           "y": 7,
           "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WhiteBoardText",
+          "persistentUuid": "61444a02-d679-45b3-9810-3f1cd2b3f4b1",
+          "width": 0,
+          "x": 371,
+          "y": 92,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "chippyInputDisplay",
+          "persistentUuid": "4ab2de67-ca9e-45c2-967f-0265d462ef58",
+          "width": 0,
+          "x": 368,
+          "y": 297,
+          "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14891,22 +16157,22 @@
           ]
         },
         {
-          "name": "Table",
+          "name": "Board",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
             {
               "name": "name",
-              "value": "Table"
+              "value": "White Board"
             },
             {
               "name": "use",
-              "value": "key"
+              "value": ""
             },
             {
               "name": "description",
-              "value": "This is a table."
+              "value": "There appears to be a message on this board."
             }
           ],
           "behaviors": [],
@@ -15236,14 +16502,14 @@
         {
           "bold": false,
           "italic": false,
-          "name": "HUD_Todo",
+          "name": "WhiteBoardText",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Todo: \n- Change selection of inventory item to manual\n- Make inventory item addition abstract\n- Implement Rescue Puzzle 1\n- Replace test map with actual map",
+          "string": "This evening I came home and the cat\nwas gone. Can you stuff ours in the car?",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -15253,13 +16519,30 @@
           }
         },
         {
-          "name": "NewObject",
+          "name": "chippyEntry",
           "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
+          "type": "TextEntryObject::TextEntry",
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "chippyInputDisplay",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
           "variables": [],
           "behaviors": [],
-          "animations": []
+          "string": "_ _ _",
+          "font": "",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
         }
       ],
       "events": [
@@ -15313,6 +16596,92 @@
                 "HUD_LocationName",
                 "=",
                 "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "WhiteBoardText"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "chippyInputDisplay"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "chippyOfficeKeyFound",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarSceneTxt"
+              },
+              "parameters": [
+                "picked_item",
+                "=",
+                "\"key\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "4",
+                "\"textFade\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "WhiteBoardText"
               ],
               "subInstructions": []
             }
@@ -15714,7 +17083,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "Chippy Back Panel",
+                          "comment": "White Board",
                           "comment2": ""
                         },
                         {
@@ -15728,7 +17097,7 @@
                                 "value": "SourisSurObjet"
                               },
                               "parameters": [
-                                "RobotChippy",
+                                "Board",
                                 "",
                                 "",
                                 ""
@@ -15752,11 +17121,84 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "Scene"
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "WhiteBoardText",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ResetTimer"
                               },
                               "parameters": [
                                 "",
-                                "\"Puzzle 1\"",
+                                "\"textFade\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Chippy Back Panel",
+                          "comment2": ""
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "RobotChippy",
+                                "",
+                                "",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "chippyEntry",
+                                "0",
+                                "0",
+                                ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "Montre"
+                              },
+                              "parameters": [
+                                "chippyInputDisplay",
                                 ""
                               ],
                               "subInstructions": []
@@ -15838,7 +17280,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "Show/Hide",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -16316,268 +17758,6 @@
             }
           ],
           "events": []
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        },
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "UI",
-          "visibility": true,
-          "cameras": [],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": []
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "Accounting_32Office",
-      "name": "Accounting Office",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 0.4154
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "BackToReception",
-          "persistentUuid": "da6bd015-ff3d-439c-bcb5-4fc7a177b09a",
-          "width": 0,
-          "x": 337,
-          "y": 565,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 918,
-          "layer": "",
-          "locked": false,
-          "name": "background",
-          "persistentUuid": "feed4400-e1f6-4abf-a81b-baee3de18d7e",
-          "width": 1632,
-          "x": -411,
-          "y": -180,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "HUD_Timer",
-          "persistentUuid": "781d17c9-3fcc-4b85-9d66-9953f8239a61",
-          "width": 0,
-          "x": 714,
-          "y": 13,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "accountingEntry",
-          "persistentUuid": "43c28290-11de-4f53-aa0c-0bfb32fb1f88",
-          "width": 0,
-          "x": 821,
-          "y": 486,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "accountingInput",
-          "persistentUuid": "55a694a8-b965-4540-b196-9f418bbf3cfa",
-          "width": 0,
-          "x": 709,
-          "y": 511,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "name": "background",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-08.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "accountingEntry",
-          "tags": "",
-          "type": "TextEntryObject::TextEntry",
-          "variables": [],
-          "behaviors": []
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "accountingInput",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 255
-          }
-        }
-      ],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BackToReception",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Reception\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         },
         {
           "colorB": 228,
@@ -16585,8 +17765,8 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
+          "folded": false,
+          "name": "CHIPPY INPUT",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -16598,12 +17778,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Timer"
+                    "value": "TextEntryObject::String"
                   },
                   "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
+                    "chippyEntry",
+                    "!=",
+                    "\"\""
                   ],
                   "subInstructions": []
                 }
@@ -16612,23 +17792,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ResetTimer"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
+                    "chippyInputDisplay",
+                    "=",
+                    "chippyEntry.String()"
                   ],
                   "subInstructions": []
                 }
@@ -16639,52 +17808,76 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "conditions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
+                    "value": "TextEntryObject::String"
                   },
                   "parameters": [
-                    "HUD_Timer",
+                    "chippyEntry",
                     "=",
-                    "ToString(GlobalVariable(countdown))"
+                    "\"714\""
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "INPUT",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
-                    "accountingInput",
+                    "win",
                     "=",
-                    "accountingEntry.String()"
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "chippyEntry",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "chippyInputDisplay"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Correct",
+                    "270",
+                    "270",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"correctTimer\""
                   ],
                   "subInstructions": []
                 }
@@ -16732,46 +17925,33 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextEntryObject::String"
+                    "value": "Delete"
                   },
                   "parameters": [
-                    "accountingEntry",
-                    "=",
-                    "\"\""
+                    "chippyEntry",
+                    ""
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextEntryObject::String"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "accountingEntry",
-                    "=",
-                    "\"19\""
+                    "chippyInputDisplay"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "actions": [
+                },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarGlobal"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "robotControl",
+                    "chippyInputDisplay",
                     "=",
-                    "1"
+                    "\"_ _ _\""
                   ],
                   "subInstructions": []
                 }
@@ -16789,9 +17969,21 @@
                     "value": "VarGlobal"
                   },
                   "parameters": [
-                    "robotControl",
+                    "win",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"correctTimer\""
                   ],
                   "subInstructions": []
                 }
@@ -16803,18 +17995,8 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "accountingEntry",
+                    "Correct",
                     ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "accountingInput"
                   ],
                   "subInstructions": []
                 }
@@ -16823,6 +18005,14 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
@@ -16865,8 +18055,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Puzzle_321",
-      "name": "Puzzle 1",
+      "mangledName": "Chippy_32Puzzle",
+      "name": "Chippy Puzzle",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,

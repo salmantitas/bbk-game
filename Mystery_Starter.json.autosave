@@ -7752,6 +7752,19 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "MonsterPuzzle",
+                "use",
+                "=",
+                "\"There is nothing of any interest here.\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -21056,8 +21069,8 @@
           "name": "MonsterSlot",
           "persistentUuid": "1fc1edef-5336-418b-824b-e1b59be22513",
           "width": 104,
-          "x": 182,
-          "y": 261,
+          "x": 183,
+          "y": 262,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21544,6 +21557,10 @@
           "initialVariables": [
             {
               "name": "correct",
+              "value": "1"
+            },
+            {
+              "name": "column",
               "value": "4"
             }
           ]
@@ -22148,29 +22165,29 @@
                 }
               ],
               "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeAnimation"
-                  },
-                  "parameters": [
-                    "MonsterSlot",
-                    "=",
-                    "MonsterSlot.Variable(state)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "MonsterSlot",
+                "=",
+                "MonsterSlot.Variable(state)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,

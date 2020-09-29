@@ -977,6 +977,15 @@
         "name": "res\\location_receptionDesk.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/BBK_Game_Receptionist.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\BBK_Game_Receptionist.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1379,7 +1388,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.404
+        "zoomFactor": 0.548
       },
       "objectsGroups": [],
       "variables": [],
@@ -1388,7 +1397,7 @@
           "angle": 0,
           "customSize": true,
           "height": 167,
-          "layer": "",
+          "layer": "Background",
           "locked": false,
           "name": "Desk",
           "persistentUuid": "1178c993-10d4-4c79-a5db-68c0b4a04b03",
@@ -1452,7 +1461,7 @@
           "angle": 0,
           "customSize": true,
           "height": 480,
-          "layer": "",
+          "layer": "Background",
           "locked": false,
           "name": "background",
           "persistentUuid": "0df0767f-bfed-4f79-9652-75fc44c30657",
@@ -1460,6 +1469,38 @@
           "x": 0,
           "y": 0,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 126,
+          "layer": "Background",
+          "locked": false,
+          "name": "Receptionist",
+          "persistentUuid": "cc0c7e8a-ab04-4dae-a145-a1c8587f2b35",
+          "width": 132,
+          "x": 357,
+          "y": 137,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 101,
+          "layer": "Background",
+          "locked": false,
+          "name": "Screen",
+          "persistentUuid": "05860d91-1d5a-43a0-a386-d2fb9b831ea8",
+          "width": 128,
+          "x": 359,
+          "y": 257,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1509,6 +1550,94 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "res\\reception.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Screen",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "use",
+              "value": "Intro"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "screen",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Screen.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Receptionist",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "use",
+              "value": "Intro"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "reception",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Receptionist.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1677,7 +1806,7 @@
                 "\"MoveRight\"",
                 "30",
                 "\"linear\"",
-                "700",
+                "2000",
                 ""
               ],
               "subInstructions": []
@@ -2989,7 +3118,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.37
+        "zoomFactor": 0.55
       },
       "objectsGroups": [
         {
@@ -3028,7 +3157,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "Inventory",
           "locked": false,
           "name": "InventorySlot",
           "persistentUuid": "abb6508c-2a37-4672-b30e-6f3340858160",
@@ -3044,7 +3173,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "Inventory",
           "locked": false,
           "name": "InventorySlot",
           "persistentUuid": "85a08936-3bef-4f32-9108-552445264a58",
@@ -3060,7 +3189,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "Inventory",
           "locked": false,
           "name": "InventoryBackground",
           "persistentUuid": "6ad4376e-a0c4-400f-b227-0072616292c5",
@@ -3076,7 +3205,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "Inventory",
           "locked": false,
           "name": "InventorySlot",
           "persistentUuid": "afd7e19d-ede9-434e-af04-4e5ee4620b76",
@@ -3327,6 +3456,38 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 126,
+          "layer": "Background",
+          "locked": false,
+          "name": "receptionist",
+          "persistentUuid": "c504f7d3-cccf-454d-aa8d-d0bd27557a2b",
+          "width": 132,
+          "x": 357,
+          "y": 137,
+          "zOrder": 43,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 101,
+          "layer": "Background",
+          "locked": false,
+          "name": "Screen",
+          "persistentUuid": "95062f5f-e57f-49e4-a779-137c1029940c",
+          "width": 128,
+          "x": 359,
+          "y": 257,
+          "zOrder": 44,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -3370,6 +3531,50 @@
           ]
         },
         {
+          "name": "Screen",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "use",
+              "value": "Intro"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "screen",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Screen.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "desk",
           "tags": "",
           "type": "Sprite",
@@ -3388,6 +3593,45 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "res\\reception.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "receptionist",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Receptionist.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3819,7 +4063,7 @@
             },
             {
               "name": "use",
-              "value": ""
+              "value": "\"\""
             }
           ],
           "behaviors": [],
@@ -3871,7 +4115,7 @@
             },
             {
               "name": "use",
-              "value": ""
+              "value": "This door is locked and has to be opened from elsewhere."
             }
           ],
           "behaviors": [],
@@ -4186,6 +4430,19 @@
                 "\"There is nothing of interest here.\""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "Accounting",
+                "use",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -4409,23 +4666,45 @@
                     "\"Hover\""
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "HUD_ObjectName",
-                    "=",
-                    "Interactives.PointX(\"Right\")+Interactives.Width()",
-                    "=",
-                    "Interactives.PointY(\"Center\")"
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        ">=",
+                        "ScreenWidth()-100"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "Interactives.PointX(\"Left\")",
+                        "=",
+                        "Interactives.PointY(\"Right\")"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -4448,12 +4727,14 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "MettreX"
+                        "value": "MettreXY"
                       },
                       "parameters": [
                         "HUD_ObjectName",
                         "=",
-                        "HUD_ObjectName.X()-300"
+                        "Interactives.PointX(\"Left\") - Interactives.Width()",
+                        "=",
+                        "Interactives.PointY(\"Bottom\")"
                       ],
                       "subInstructions": []
                     }
@@ -5113,6 +5394,14 @@
                   ]
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
             }
           ],
           "parameters": []
@@ -5123,7 +5412,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "INVENTORY",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5181,7 +5470,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "Show/Hide",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5230,7 +5519,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"UI\""
+                            "\"Inventory\""
                           ],
                           "subInstructions": []
                         },
@@ -5255,7 +5544,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"UI\""
+                            "\"Inventory\""
                           ],
                           "subInstructions": []
                         },
@@ -5286,7 +5575,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"UI\""
+                            "\"Inventory\""
                           ],
                           "subInstructions": []
                         },
@@ -5311,7 +5600,7 @@
                           },
                           "parameters": [
                             "",
-                            "\"UI\""
+                            "\"Inventory\""
                           ],
                           "subInstructions": []
                         },
@@ -5944,6 +6233,17 @@
           "effects": []
         },
         {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Inventory",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
@@ -5986,7 +6286,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.424
+        "zoomFactor": 0.316
       },
       "objectsGroups": [
         {
@@ -6009,8 +6309,8 @@
           "name": "BackToReception",
           "persistentUuid": "77b10c32-4c2d-41fd-bcd4-5a2607f2ddec",
           "width": 0,
-          "x": 337,
-          "y": 570,
+          "x": 698,
+          "y": 9,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -7247,7 +7547,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.532
+        "zoomFactor": 0.352
       },
       "objectsGroups": [
         {
@@ -7268,13 +7568,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "BackToReception",
           "persistentUuid": "2709aee5-5660-42ac-b6c2-0443e3aad3a8",
           "width": 0,
           "x": 339,
-          "y": 572,
+          "y": 450,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -7284,7 +7584,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "Code",
           "persistentUuid": "84010379-0f42-48d4-bb50-503acc1db124",
@@ -7306,7 +7606,7 @@
           "persistentUuid": "cff1219a-74c8-403b-a24d-bf93059c77be",
           "width": 0,
           "x": 157,
-          "y": 279,
+          "y": 224,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -7322,7 +7622,7 @@
           "persistentUuid": "104e80fd-1262-4483-9355-3fcac3bc8363",
           "width": 80,
           "x": 624,
-          "y": 173,
+          "y": 118,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -7332,7 +7632,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "HUD_LocationName",
           "persistentUuid": "304441f1-511b-412c-a6b4-5af125369e19",
@@ -7348,7 +7648,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "HUD_Description",
           "persistentUuid": "3a91f977-7a74-4734-add4-88676b8cd481",
@@ -7364,7 +7664,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "HUD_ObjectName",
           "persistentUuid": "65768bce-21c6-4a77-8973-001f3b77251f",
@@ -7386,7 +7686,7 @@
           "persistentUuid": "46143734-0be2-48ab-8c54-f23b0b058be1",
           "width": 637,
           "x": 89,
-          "y": 139,
+          "y": 84,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -7396,7 +7696,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "Hints",
           "persistentUuid": "3dfc6c77-e9b8-43b0-8982-596427bd1f0e",
@@ -8618,6 +8918,17 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 9373896,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -8646,7 +8957,7 @@
         "gridWidth": 16,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.34
+        "zoomFactor": 0.232
       },
       "objectsGroups": [
         {
@@ -9554,110 +9865,13 @@
       ],
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "CAFETERIA",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "BackToCafeteria",
-                    "375",
-                    "570",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "=",
-                    "30"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Cafeteria\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnCafeteria"
         },
         {
           "disabled": false,
@@ -11272,6 +11486,17 @@
           "visibility": false,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -12503,163 +12728,13 @@
       ],
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnCafeteria"
         },
         {
           "disabled": false,
@@ -14274,6 +14349,17 @@
           "visibility": false,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -15801,113 +15887,16 @@
           "include": {
             "includeConfig": 0
           },
-          "target": "Countdown"
+          "target": "ReturnCafeteria"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "CAFETERIA",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "BackToCafeteria",
-                    "375",
-                    "570",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "=",
-                    "30"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Cafeteria\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -17513,6 +17502,17 @@
           "visibility": false,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -17618,7 +17618,7 @@
           "persistentUuid": "34b6c772-015d-4159-b753-e9acf1f3cf58",
           "width": 0,
           "x": 320,
-          "y": 96,
+          "y": 22,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -17778,7 +17778,7 @@
           "persistentUuid": "b3ac845a-5ee4-4ce4-b188-1d5cf7cbfa13",
           "width": 0,
           "x": 496,
-          "y": 224,
+          "y": 150,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17794,7 +17794,7 @@
           "persistentUuid": "18e5c6e7-efec-4596-9a32-fb77acea7b93",
           "width": 0,
           "x": 304,
-          "y": 224,
+          "y": 150,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17810,7 +17810,7 @@
           "persistentUuid": "6b960c23-9db9-4634-b273-134b9eb20a13",
           "width": 0,
           "x": 368,
-          "y": 224,
+          "y": 150,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17826,7 +17826,7 @@
           "persistentUuid": "6d84e543-906e-43d7-9044-0f5fd61c2fa2",
           "width": 0,
           "x": 432,
-          "y": 224,
+          "y": 150,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17842,7 +17842,7 @@
           "persistentUuid": "a851ab2e-89f1-4773-877e-15fe0f529e2e",
           "width": 0,
           "x": 496,
-          "y": 288,
+          "y": 214,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17858,7 +17858,7 @@
           "persistentUuid": "142a04cb-2812-4f32-8205-8f009aa62d7f",
           "width": 0,
           "x": 304,
-          "y": 288,
+          "y": 214,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17874,7 +17874,7 @@
           "persistentUuid": "7053dab0-2712-4ebe-94e8-37645747cbde",
           "width": 0,
           "x": 368,
-          "y": 288,
+          "y": 214,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17890,7 +17890,7 @@
           "persistentUuid": "a5ef55ea-eb4c-4108-9685-2b688fafcf2a",
           "width": 0,
           "x": 432,
-          "y": 288,
+          "y": 214,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17970,7 +17970,7 @@
           "persistentUuid": "f474b1d7-6d93-4e46-9498-27396ea78ab2",
           "width": 0,
           "x": 304,
-          "y": 416,
+          "y": 342,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -17986,7 +17986,7 @@
           "persistentUuid": "90bf9369-812d-4c29-8d0f-28cfb4ba7b51",
           "width": 0,
           "x": 368,
-          "y": 417,
+          "y": 343,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18002,7 +18002,7 @@
           "persistentUuid": "5ecbb034-82ec-43a9-aeed-10c7b39ea535",
           "width": 0,
           "x": 432,
-          "y": 417,
+          "y": 343,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18018,7 +18018,7 @@
           "persistentUuid": "e7da1bad-1e9a-458d-ba99-c52ee0e4255f",
           "width": 0,
           "x": 496,
-          "y": 417,
+          "y": 343,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18066,7 +18066,7 @@
           "persistentUuid": "e21fa85c-36d2-4108-84e8-108b27b081ac",
           "width": 0,
           "x": 304,
-          "y": 352,
+          "y": 278,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18082,7 +18082,7 @@
           "persistentUuid": "d922ef2e-0012-439b-bcab-2586b18816ef",
           "width": 0,
           "x": 368,
-          "y": 352,
+          "y": 278,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18098,7 +18098,7 @@
           "persistentUuid": "1b1f0ada-2a23-4004-893c-a56ac0ce8922",
           "width": 0,
           "x": 432,
-          "y": 352,
+          "y": 278,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18114,7 +18114,7 @@
           "persistentUuid": "7693e03c-061a-4aac-a78c-e5c44384b5cb",
           "width": 0,
           "x": 496,
-          "y": 352,
+          "y": 278,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18194,7 +18194,7 @@
           "persistentUuid": "49a2be4f-9e53-4113-82a0-99e7bb9a91a7",
           "width": 0,
           "x": 496,
-          "y": 480,
+          "y": 406,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18210,7 +18210,7 @@
           "persistentUuid": "cfab86ef-8b46-471d-9240-d47bf85d8907",
           "width": 0,
           "x": 432,
-          "y": 480,
+          "y": 406,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18226,7 +18226,7 @@
           "persistentUuid": "0f54e2fc-327b-4791-8bb9-8548f6c0e28f",
           "width": 0,
           "x": 368,
-          "y": 480,
+          "y": 406,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -18242,7 +18242,7 @@
           "persistentUuid": "52dccc15-5015-485d-86f9-2a58b62138d0",
           "width": 0,
           "x": 304,
-          "y": 480,
+          "y": 406,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -19333,110 +19333,13 @@
           "target": "Countdown"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "CAFETERIA",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "BackToCafeteria",
-                    "375",
-                    "570",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "=",
-                    "30"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Cafeteria\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnCafeteria"
         },
         {
           "colorB": 228,
@@ -21042,6 +20945,17 @@
           "visibility": false,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -21075,7 +20989,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.496
+        "zoomFactor": 0.568
       },
       "objectsGroups": [],
       "variables": [],
@@ -21131,14 +21045,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "80d8050e-a0a5-496a-9f7f-bdaa99a06e5e",
-          "width": 104,
-          "x": 182,
-          "y": 181,
+          "width": 79,
+          "x": 337,
+          "y": 163,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21147,14 +21061,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 1150,
+          "height": 883,
           "layer": "",
           "locked": false,
           "name": "MonsterBackground",
           "persistentUuid": "2263d6b2-cee1-4b1d-a045-a80d618d8d18",
-          "width": 2094,
-          "x": -1350,
-          "y": -323,
+          "width": 1609,
+          "x": -839,
+          "y": -227,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -21163,14 +21077,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "1fc1edef-5336-418b-824b-e1b59be22513",
-          "width": 104,
-          "x": 183,
-          "y": 262,
+          "width": 79,
+          "x": 337,
+          "y": 224,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21184,14 +21098,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "6624a096-d7f6-4529-9d07-bf203574bf70",
-          "width": 104,
-          "x": 182,
-          "y": 346,
+          "width": 79,
+          "x": 337,
+          "y": 287,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21200,14 +21114,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "d952b54e-9f2d-48ef-95b9-75422f982802",
-          "width": 104,
-          "x": 181,
-          "y": 434,
+          "width": 79,
+          "x": 336,
+          "y": 354,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21216,14 +21130,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "9414b148-21be-40c3-82e5-7b9562bf8ce4",
-          "width": 104,
-          "x": 181,
-          "y": 518,
+          "width": 79,
+          "x": 336,
+          "y": 417,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21232,14 +21146,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "6ba14f5c-3160-42d9-9917-3b16ef67c7a0",
-          "width": 104,
-          "x": 287,
-          "y": 518,
+          "width": 79,
+          "x": 416,
+          "y": 417,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21253,14 +21167,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "f9501238-05c2-4ece-b277-6ee08bbdfc56",
-          "width": 104,
-          "x": 287,
-          "y": 434,
+          "width": 79,
+          "x": 416,
+          "y": 354,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21278,14 +21192,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "45c3dfc7-3c5b-48eb-9f14-5a45d5ea64fc",
-          "width": 104,
-          "x": 287,
-          "y": 346,
+          "width": 79,
+          "x": 416,
+          "y": 287,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21299,14 +21213,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "4a6df007-db82-4d59-a94c-f55925a2fdf4",
-          "width": 104,
-          "x": 287,
-          "y": 261,
+          "width": 79,
+          "x": 416,
+          "y": 223,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21320,14 +21234,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "a65da474-c09a-44b6-8b93-b8b0e3fab7e0",
-          "width": 104,
-          "x": 287,
-          "y": 181,
+          "width": 79,
+          "x": 416,
+          "y": 163,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21341,14 +21255,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "bf3c323c-3229-415b-804b-49db9bba38a5",
-          "width": 104,
-          "x": 392,
-          "y": 518,
+          "width": 79,
+          "x": 497,
+          "y": 417,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21362,14 +21276,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "7a407da5-3ae8-4735-b88e-aac11b627dd0",
-          "width": 104,
-          "x": 392,
-          "y": 434,
+          "width": 79,
+          "x": 497,
+          "y": 354,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21383,14 +21297,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "1290565f-c2d4-47c6-ae92-62d3e3651b76",
-          "width": 104,
-          "x": 392,
-          "y": 346,
+          "width": 79,
+          "x": 497,
+          "y": 287,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21408,14 +21322,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "8606fa02-e1f8-4c3a-8f3d-8edead9c9c11",
-          "width": 104,
-          "x": 392,
-          "y": 261,
+          "width": 79,
+          "x": 497,
+          "y": 223,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21429,14 +21343,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "89b1922a-a8f5-4e8c-a3e2-203514903b18",
-          "width": 104,
-          "x": 392,
-          "y": 181,
+          "width": 79,
+          "x": 497,
+          "y": 163,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21450,14 +21364,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "53ca895b-994e-4e48-a195-d47eecdcd937",
-          "width": 104,
-          "x": 495,
-          "y": 518,
+          "width": 79,
+          "x": 577,
+          "y": 417,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21475,14 +21389,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "0be44685-92a1-40cb-9241-1b9738dc53e7",
-          "width": 104,
-          "x": 494,
-          "y": 434,
+          "width": 79,
+          "x": 576,
+          "y": 354,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21496,14 +21410,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "d793f52a-a1c8-4f4f-a51d-2903b0e6a15c",
-          "width": 104,
-          "x": 495,
-          "y": 346,
+          "width": 79,
+          "x": 577,
+          "y": 287,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21517,14 +21431,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "c38dfd16-5270-4a01-9ab5-f7977b2a9d5b",
-          "width": 104,
-          "x": 495,
-          "y": 261,
+          "width": 79,
+          "x": 577,
+          "y": 223,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21538,14 +21452,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "ab27ee1c-cece-4267-9548-d35e57ad924c",
-          "width": 104,
-          "x": 496,
-          "y": 181,
+          "width": 79,
+          "x": 577,
+          "y": 163,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21559,14 +21473,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "2168115f-b53d-4aa3-91b1-fa54adb17131",
-          "width": 104,
-          "x": 600,
-          "y": 518,
+          "width": 79,
+          "x": 656,
+          "y": 417,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21580,14 +21494,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "31b80601-9f55-41b2-8f8f-99f26b8b554b",
-          "width": 104,
-          "x": 599,
-          "y": 434,
+          "width": 79,
+          "x": 656,
+          "y": 354,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21601,14 +21515,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "83f6066c-7a04-4650-93f8-9f4eb26ca429",
-          "width": 104,
-          "x": 600,
-          "y": 346,
+          "width": 79,
+          "x": 656,
+          "y": 287,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21622,14 +21536,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "d4c43793-3b3f-44ee-8774-e1dea1cc2da0",
-          "width": 104,
-          "x": 600,
-          "y": 261,
+          "width": 79,
+          "x": 656,
+          "y": 223,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21643,14 +21557,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 77,
+          "height": 58,
           "layer": "",
           "locked": false,
           "name": "MonsterSlot",
           "persistentUuid": "8340e77c-4dcb-4c40-9a41-4cc188920f06",
-          "width": 104,
-          "x": 601,
-          "y": 181,
+          "width": 79,
+          "x": 656,
+          "y": 163,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -21957,110 +21871,13 @@
           "target": "Countdown"
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "CAFETERIA",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "BackToCafeteria",
-                    "375",
-                    "570",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "=",
-                    "30"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Cafeteria\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnCafeteria"
         },
         {
           "disabled": false,
@@ -22458,6 +22275,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -22486,7 +22314,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.464
+        "zoomFactor": 0.572
       },
       "objectsGroups": [],
       "variables": [],
@@ -22510,14 +22338,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 702,
+          "height": 610,
           "layer": "",
           "locked": false,
           "name": "cubicleBack",
           "persistentUuid": "95c727bc-ebf6-4d80-aded-6c30cb308291",
-          "width": 1248,
-          "x": -588,
-          "y": 1,
+          "width": 1085,
+          "x": -396,
+          "y": -24,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -22532,8 +22360,8 @@
           "name": "BackToReception",
           "persistentUuid": "be7599e9-79d2-4c09-b4bc-cb7f6ab8555e",
           "width": 0,
-          "x": 331,
-          "y": 563,
+          "x": 436,
+          "y": 453,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -22548,8 +22376,8 @@
           "name": "cubicleInput",
           "persistentUuid": "5e3cdf26-454f-462d-b6b2-32447e458b6c",
           "width": 0,
-          "x": 515,
-          "y": 82,
+          "x": 574,
+          "y": 54,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -22646,7 +22474,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "RECEPTION",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -23007,7 +22835,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.532
+        "zoomFactor": 0.352
       },
       "objectsGroups": [
         {
@@ -23025,13 +22853,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "UI",
           "locked": false,
           "name": "BackToReception",
           "persistentUuid": "b5047598-caea-42f5-ab3b-fa8fa08a7f1d",
           "width": 0,
-          "x": 337,
-          "y": 570,
+          "x": 752,
+          "y": 436,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -23702,6 +23530,17 @@
               "width": 0
             }
           ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 8682552,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI",
+          "visibility": true,
+          "cameras": [],
           "effects": []
         }
       ],
@@ -29462,7 +29301,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6924
+        "zoomFactor": 0.4044
       },
       "objectsGroups": [
         {
@@ -29499,8 +29338,8 @@
           "name": "Map",
           "persistentUuid": "3d33d408-bc23-4bc5-990c-1cb2b252003a",
           "width": 0,
-          "x": 258,
-          "y": 157,
+          "x": 228,
+          "y": 111,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -29515,8 +29354,8 @@
           "name": "TopFloor",
           "persistentUuid": "49bb4e21-171f-4427-8c52-0eed50a1bf18",
           "width": 301,
-          "x": 256,
-          "y": 192,
+          "x": 226,
+          "y": 146,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -29531,8 +29370,8 @@
           "name": "HUD_ObjectName",
           "persistentUuid": "723c7e7e-eaec-4173-b754-3508a4b53ce1",
           "width": 202,
-          "x": 141,
-          "y": 384,
+          "x": 111,
+          "y": 338,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -29547,8 +29386,8 @@
           "name": "RobotChippy",
           "persistentUuid": "d17c056e-a22f-4802-a98f-8e3169153578",
           "width": 0,
-          "x": 394,
-          "y": 206,
+          "x": 364,
+          "y": 160,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -29563,8 +29402,8 @@
           "name": "RobotSecurity",
           "persistentUuid": "b36befbe-0fb7-4624-803e-c4f9cf59500d",
           "width": 0,
-          "x": 484,
-          "y": 425,
+          "x": 454,
+          "y": 379,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -29579,8 +29418,8 @@
           "name": "RobotSecurity",
           "persistentUuid": "dc27f2ed-4cce-4605-945b-97d1c9f530d6",
           "width": 0,
-          "x": 345,
-          "y": 422,
+          "x": 315,
+          "y": 376,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -29595,8 +29434,8 @@
           "name": "HUD_Description",
           "persistentUuid": "7ca98c60-e30e-46ff-bc8d-05c8da31dbee",
           "width": 313,
-          "x": 255,
-          "y": 53,
+          "x": 225,
+          "y": 7,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -29611,8 +29450,8 @@
           "name": "Board",
           "persistentUuid": "8ddd9742-d586-4050-a4be-bbfad9f41b18",
           "width": 6,
-          "x": 260,
-          "y": 251,
+          "x": 230,
+          "y": 205,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -29627,8 +29466,8 @@
           "name": "HUD_LocationName",
           "persistentUuid": "ca7ec5f5-0ff9-41de-adae-b843413d121e",
           "width": 0,
-          "x": 260,
-          "y": 486,
+          "x": 230,
+          "y": 440,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -29643,8 +29482,8 @@
           "name": "InventoryBackground",
           "persistentUuid": "3595f741-c714-46a5-b945-db468403cea5",
           "width": 0,
-          "x": 201,
-          "y": 157,
+          "x": 171,
+          "y": 111,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -29659,8 +29498,8 @@
           "name": "InventorySlot",
           "persistentUuid": "027421d6-482e-446b-8255-f05d322e61eb",
           "width": 0,
-          "x": 209,
-          "y": 162,
+          "x": 179,
+          "y": 116,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -29680,8 +29519,8 @@
           "name": "InventorySlot",
           "persistentUuid": "736a5aa0-9e88-4868-ae8a-35462303d984",
           "width": 0,
-          "x": 209,
-          "y": 202,
+          "x": 179,
+          "y": 156,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -29701,8 +29540,8 @@
           "name": "InventorySlot",
           "persistentUuid": "b6ecf883-2237-4301-8992-21cac08e5ece",
           "width": 0,
-          "x": 209,
-          "y": 243,
+          "x": 179,
+          "y": 197,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -29717,8 +29556,8 @@
           "name": "BackToReception",
           "persistentUuid": "c3e73e0a-8254-4959-9f9f-f444589dfee8",
           "width": 0,
-          "x": 380,
-          "y": 569,
+          "x": 464,
+          "y": 450,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -29733,8 +29572,8 @@
           "name": "WhiteBoardText",
           "persistentUuid": "61444a02-d679-45b3-9810-3f1cd2b3f4b1",
           "width": 0,
-          "x": 371,
-          "y": 92,
+          "x": 341,
+          "y": 46,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -29749,8 +29588,8 @@
           "name": "chippyInputDisplay",
           "persistentUuid": "4ab2de67-ca9e-45c2-967f-0265d462ef58",
           "width": 0,
-          "x": 368,
-          "y": 297,
+          "x": 338,
+          "y": 251,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -32395,6 +32234,119 @@
                     "\"linear\"",
                     "1000",
                     "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Monster Puzzle",
+      "lastChangeTimeStamp": 0,
+      "name": "ReturnCafeteria",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "CAFETERIA",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "BackToCafeteria",
+                    "BackToCafeteria",
+                    "375",
+                    "440",
+                    "\"HUD\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "BackToCafeteria",
+                    "=",
+                    "30"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BackToCafeteria",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Cafeteria\"",
+                    ""
                   ],
                   "subInstructions": []
                 }

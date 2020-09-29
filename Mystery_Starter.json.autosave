@@ -22,8 +22,8 @@
     "winExecutableIconFile": "",
     "name": "Project",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 848,
+    "windowHeight": 480,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -863,6 +863,120 @@
         "name": "res\\Robot1.jpg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "res/IndieFlower.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\IndieFlower.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "res/La-chata-normal.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\La-chata-normal.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "res/scriptina.regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\scriptina.regular.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "res/blackchancery.regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\blackchancery.regular.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "res/pricedown.black.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\pricedown.black.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "res/libel-suit.regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "res\\libel-suit.regular.ttf",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-1-0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/BBK_Game_Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\BBK_Game_Background.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/BBK_Game_ReceptionDesk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\BBK_Game_ReceptionDesk.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/reception.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\reception.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/BBK_Game_Screen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\BBK_Game_Screen.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/location_receptionDesk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\location_receptionDesk.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -954,13 +1068,13 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "Timer",
-      "font": "",
-      "characterSize": 20,
+      "string": "00:00:00",
+      "font": "res\\libel-suit.regular.ttf",
+      "characterSize": 40,
       "color": {
         "b": 0,
         "g": 0,
-        "r": 0
+        "r": 255
       }
     },
     {
@@ -1151,6 +1265,50 @@
         "g": 0,
         "r": 255
       }
+    },
+    {
+      "name": "Fade",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "fade",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "fade-1-0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsGroups": [
@@ -1221,7 +1379,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.568
+        "zoomFactor": 0.404
       },
       "objectsGroups": [],
       "variables": [],
@@ -1229,14 +1387,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 246,
+          "height": 167,
           "layer": "",
           "locked": false,
           "name": "Desk",
           "persistentUuid": "1178c993-10d4-4c79-a5db-68c0b4a04b03",
-          "width": 780,
-          "x": 3,
-          "y": 144,
+          "width": 300,
+          "x": 275,
+          "y": 225,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1244,16 +1402,64 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
+          "customSize": true,
+          "height": 159,
+          "layer": "UI",
           "locked": false,
           "name": "Title",
           "persistentUuid": "71ba9ad3-1cee-463f-b800-b8ea0474d2b5",
-          "width": 0,
-          "x": 45,
-          "y": 52,
+          "width": 830,
+          "x": 49,
+          "y": -57,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 34,
+          "layer": "UI",
+          "locked": false,
+          "name": "HUD_Tut_1",
+          "persistentUuid": "e596b86e-56db-4c3d-bc05-38f651f6029c",
+          "width": 257,
+          "x": -600,
+          "y": 265,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 19,
+          "layer": "UI",
+          "locked": false,
+          "name": "HUD_Tut_2",
+          "persistentUuid": "dfae6e42-68b6-48fd-99a0-63687c593bc1",
+          "width": 186,
+          "x": 890,
+          "y": 280,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 480,
+          "layer": "",
+          "locked": false,
+          "name": "background",
+          "persistentUuid": "0df0767f-bfed-4f79-9652-75fc44c30657",
+          "width": 848,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1270,9 +1476,9 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Boardroom Doomsday",
-          "font": "",
-          "characterSize": 70,
+          "string": "\nBoardroom Doomsday\n",
+          "font": "res\\blackchancery.regular.ttf",
+          "characterSize": 80,
           "color": {
             "b": 0,
             "g": 0,
@@ -1284,7 +1490,12 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "use",
+              "value": "Intro"
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -1297,7 +1508,113 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "reception-1.png",
+                      "image": "res\\reception.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "HUD_Tut_1",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "Hover over an object and use the right mouse button to display a description of the object.",
+          "font": "res\\blackchancery.regular.ttf",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "HUD_Tut_2",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "Click the left mouse button to use the object.",
+          "font": "res\\blackchancery.regular.ttf",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Great",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "\nGREAT!",
+          "font": "res\\libel-suit.regular.ttf",
+          "characterSize": 120,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 255
+          }
+        },
+        {
+          "name": "background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Background.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1328,6 +1645,271 @@
             {
               "type": {
                 "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "trigger",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionXTween"
+              },
+              "parameters": [
+                "HUD_Tut_1",
+                "Tween",
+                "\"MoveRight\"",
+                "30",
+                "\"linear\"",
+                "700",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Once the RMB is pressed once",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "trigger",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "The desk can only be used once the RMB has been pressed",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Desk",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Intro\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Great",
+                    "313",
+                    "45",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"messageTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Great",
+                    "=",
+                    "100"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "0.5",
+                    "\"messageTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Great",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectPositionXTween"
+                  },
+                  "parameters": [
+                    "HUD_Tut_2",
+                    "Tween",
+                    "\"MoveLeft\"",
+                    "600",
+                    "\"linear\"",
+                    "500",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -1345,7 +1927,7 @@
               },
               "parameters": [
                 "",
-                "Left"
+                "Right"
               ],
               "subInstructions": []
             }
@@ -1354,20 +1936,40 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Scene"
+                "value": "ModVarScene"
               },
               "parameters": [
-                "",
-                "\"Intro\"",
-                ""
+                "trigger",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Fade"
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000080,
+          "ambientLightColorR": 167797870,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -1389,9 +1991,36 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 11754760,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 3,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fade",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -1417,7 +2046,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.658
+        "zoomFactor": 0.61
       },
       "objectsGroups": [],
       "variables": [],
@@ -1447,8 +2076,8 @@
           "name": "text1",
           "persistentUuid": "34d351c8-61a7-45d5-b77c-99dd2f08b133",
           "width": 0,
-          "x": 78,
-          "y": 70,
+          "x": 79,
+          "y": 71,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1456,16 +2085,32 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 368,
           "layer": "",
           "locked": false,
           "name": "Computer",
           "persistentUuid": "8fb273ee-d7b7-4969-a900-0db7dfeaded5",
-          "width": 0,
-          "x": 78,
-          "y": 120,
+          "width": 465,
+          "x": 188,
+          "y": 47,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 169,
+          "layer": "",
+          "locked": false,
+          "name": "TypingText",
+          "persistentUuid": "41fc7f8f-cdd0-4299-bbd3-d513b2338231",
+          "width": 398,
+          "x": 228,
+          "y": 100,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1476,12 +2121,28 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "TypingText",
-          "persistentUuid": "41fc7f8f-cdd0-4299-bbd3-d513b2338231",
+          "name": "play",
+          "persistentUuid": "2d5fcbd9-54eb-4048-8aaa-13d3c70d3f92",
           "width": 0,
-          "x": 100,
-          "y": 161,
-          "zOrder": 4,
+          "x": 365,
+          "y": 415,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Text_IntroSkip",
+          "persistentUuid": "9bcc1296-d737-4e56-bec6-a00b384875e8",
+          "width": 0,
+          "x": 14,
+          "y": -13,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1489,22 +2150,22 @@
       ],
       "objects": [
         {
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "name": "text1",
+          "name": "Text_IntroSkip",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Press Any Key To Skip Intro",
-          "font": "",
-          "characterSize": 15,
+          "string": "\nPRESS ANY KEY TO SKIP INTRO",
+          "font": "res\\libel-suit.regular.ttf",
+          "characterSize": 30,
           "color": {
             "b": 0,
             "g": 0,
-            "r": 0
+            "r": 255
           }
         },
         {
@@ -1517,13 +2178,13 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Play",
-          "font": "",
-          "characterSize": 40,
+          "string": "PLAY",
+          "font": "res\\pricedown.black.ttf",
+          "characterSize": 50,
           "color": {
             "b": 0,
-            "g": 0,
-            "r": 0
+            "g": 255,
+            "r": 51
           }
         },
         {
@@ -1544,7 +2205,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1-9.png",
+                      "image": "res\\BBK_Game_Screen.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1576,17 +2237,17 @@
           "variables": [
             {
               "name": "line1",
-              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! \nCEO, Chippy Blipman, and the other Robots, have been \ncompromised and you need to act fast.\nI am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to \ndefrag Chippy’s motherboard and reboot the system before it’s too \nlate?\nYou have 60 minutes to unlock the rooms, solve the puzzles and \nrestart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
+              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! CEO, Chippy Blipman, and the other Robots, have been compromised and you need to act fast. I am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to defrag Chippy’s motherboard and reboot the system before it’s too late?\nYou have 60 minutes to unlock the rooms, solve the puzzles and restart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
             }
           ],
           "behaviors": [],
-          "string": "",
+          "string": "Welcome, young humans to another day of work at \nTechKorp. \nI am programmed to inform you that TechKorp has been\nHACKED! CEO, Chippy Blipman, and the other robots, \nhave been compromised and you need to act fast. I am \nalso programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out \nhow to defrag Chippy’s motherboard and reboot the \nsystem before it’s too late?\nYou have 60 minutes to unlock the rooms, solve the \npuzzles and restart the system.\nGood luck, you are going to need it to defeat \nmy hacking skills!",
           "font": "",
-          "characterSize": 20,
+          "characterSize": 16,
           "color": {
-            "b": 255,
-            "g": 255,
-            "r": 255
+            "b": 0,
+            "g": 0,
+            "r": 0
           }
         }
       ],
@@ -1605,6 +2266,15 @@
           },
           "comment": "Initialize Global Variables",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Fade"
         },
         {
           "disabled": false,
@@ -1703,7 +2373,7 @@
               "parameters": [
                 "countdown",
                 "=",
-                "60*60*60"
+                "1*60*60"
               ],
               "subInstructions": []
             },
@@ -1763,7 +2433,7 @@
               "parameters": [
                 "timerX",
                 "=",
-                "375"
+                "355"
               ],
               "subInstructions": []
             },
@@ -1775,7 +2445,7 @@
               "parameters": [
                 "timerY",
                 "=",
-                "14"
+                "10"
               ],
               "subInstructions": []
             },
@@ -1790,6 +2460,28 @@
                 "",
                 "100",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "play"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "TypingText",
+                "=",
+                "\"\""
               ],
               "subInstructions": []
             }
@@ -1823,7 +2515,7 @@
               },
               "parameters": [
                 "play",
-                "\"255;255;255\""
+                "\"51;255;0\""
               ],
               "subInstructions": []
             }
@@ -1891,7 +2583,7 @@
               },
               "parameters": [
                 "play",
-                "\"0;0;0\""
+                "\"21;105;0\""
               ],
               "subInstructions": []
             }
@@ -2216,13 +2908,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Create"
+                    "value": "Montre"
                   },
                   "parameters": [
-                    "",
                     "play",
-                    "365",
-                    "540",
                     ""
                   ],
                   "subInstructions": []
@@ -2256,9 +2945,25 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 2,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fade",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -2284,7 +2989,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4906
+        "zoomFactor": 0.874
       },
       "objectsGroups": [
         {
@@ -2310,28 +3015,15 @@
             },
             {
               "name": "Accounting"
+            },
+            {
+              "name": "FrontEntrance"
             }
           ]
         }
       ],
       "variables": [],
       "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 487,
-          "layer": "",
-          "locked": false,
-          "name": "Map",
-          "persistentUuid": "ba76f57c-ea6a-42cd-b9ff-a2b08260ab1b",
-          "width": 866,
-          "x": -32,
-          "y": 46,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
         {
           "angle": 0,
           "customSize": false,
@@ -2341,8 +3033,8 @@
           "name": "InventorySlot",
           "persistentUuid": "abb6508c-2a37-4672-b30e-6f3340858160",
           "width": 0,
-          "x": 8,
-          "y": 54,
+          "x": 19,
+          "y": 347,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -2357,8 +3049,8 @@
           "name": "InventorySlot",
           "persistentUuid": "85a08936-3bef-4f32-9108-552445264a58",
           "width": 0,
-          "x": 8,
-          "y": 134,
+          "x": 19,
+          "y": 427,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -2373,8 +3065,8 @@
           "name": "InventoryBackground",
           "persistentUuid": "6ad4376e-a0c4-400f-b227-0072616292c5",
           "width": 0,
-          "x": 0,
-          "y": 46,
+          "x": 11,
+          "y": 340,
           "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
@@ -2389,8 +3081,8 @@
           "name": "InventorySlot",
           "persistentUuid": "afd7e19d-ede9-434e-af04-4e5ee4620b76",
           "width": 0,
-          "x": 9,
-          "y": 92,
+          "x": 19,
+          "y": 387,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -2405,8 +3097,8 @@
           "name": "HUD_LocationName",
           "persistentUuid": "c3793c9c-e60b-4cbe-9d0c-a26298ea7bae",
           "width": 0,
-          "x": 405,
-          "y": 550,
+          "x": 525,
+          "y": 1086,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -2415,14 +3107,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 22,
+          "height": 134,
           "layer": "",
           "locked": false,
           "name": "WallCLevel",
           "persistentUuid": "fb1bf829-2413-413c-93d5-1cc199f5acd1",
-          "width": 158,
-          "x": 324,
-          "y": 105,
+          "width": 190,
+          "x": 330,
+          "y": 88,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -2430,15 +3122,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 146,
           "layer": "",
           "locked": false,
           "name": "HUD_Description",
           "persistentUuid": "7e92b1f0-18d8-4a34-b620-84f07a7357f6",
-          "width": 0,
-          "x": 17,
-          "y": 10,
+          "width": 251,
+          "x": 12,
+          "y": 9,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -2447,14 +3139,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 158,
+          "height": 132,
           "layer": "",
           "locked": false,
           "name": "ChippyOffice",
           "persistentUuid": "1bcb2229-01bc-4a07-834c-aa590a8fbe58",
-          "width": 275,
-          "x": 7,
-          "y": 105,
+          "width": 107,
+          "x": 221,
+          "y": 88,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -2462,15 +3154,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
+          "customSize": true,
+          "height": 53,
+          "layer": "UI",
           "locked": false,
           "name": "HUD_ObjectName",
           "persistentUuid": "b6aedcc4-abcc-4829-96e3-bd243726c422",
-          "width": 0,
-          "x": 452,
-          "y": 16,
+          "width": 114,
+          "x": -215,
+          "y": 195,
           "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
@@ -2484,9 +3176,9 @@
           "locked": false,
           "name": "Cafeteria",
           "persistentUuid": "969ee040-cb88-48b5-8cae-6d272e59b3ca",
-          "width": 182,
-          "x": 612,
-          "y": 105,
+          "width": 105,
+          "x": 523,
+          "y": 91,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -2495,14 +3187,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 122,
+          "height": 138,
           "layer": "",
           "locked": false,
           "name": "SpareParts",
           "persistentUuid": "714b8ec4-a35b-4f0e-b661-b55fba627338",
-          "width": 183,
-          "x": 612,
-          "y": 286,
+          "width": 119,
+          "x": 635,
+          "y": 86,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -2517,8 +3209,8 @@
           "name": "sparePartsCodePrompt",
           "persistentUuid": "90fd0bfc-38d9-48ae-b6a3-d39ec96e8ca3",
           "width": 0,
-          "x": 331,
-          "y": 262,
+          "x": 353,
+          "y": 289,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -2527,14 +3219,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 105,
+          "height": 160,
           "layer": "",
           "locked": false,
           "name": "Motherboard",
           "persistentUuid": "69b2f985-e079-4f5a-9be4-91180722ad37",
-          "width": 245,
-          "x": 3,
-          "y": 428,
+          "width": 89,
+          "x": 2,
+          "y": 73,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -2543,14 +3235,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 97,
+          "height": 138,
           "layer": "",
           "locked": false,
           "name": "RobotCubicles",
           "persistentUuid": "12a262a9-b3a0-41f9-9f98-6bdb3d6235ac",
-          "width": 146,
-          "x": 4,
-          "y": 301,
+          "width": 123,
+          "x": 94,
+          "y": 84,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -2559,14 +3251,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 106,
+          "height": 156,
           "layer": "",
           "locked": false,
           "name": "Accounting",
           "persistentUuid": "fb9fbb71-6e6c-40d9-8401-fb4ef295b907",
-          "width": 183,
-          "x": 613,
-          "y": 427,
+          "width": 86,
+          "x": 763,
+          "y": 78,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -2581,15 +3273,180 @@
           "name": "tempCode",
           "persistentUuid": "7858336a-efc1-4d23-a008-08a4fbb167d7",
           "width": 0,
-          "x": 230,
-          "y": 559,
+          "x": 350,
+          "y": 1095,
           "zOrder": 32,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 480,
+          "layer": "Background",
+          "locked": false,
+          "name": "background",
+          "persistentUuid": "dd3586da-1abe-4b36-84d7-dff497011e09",
+          "width": 848,
+          "x": 0,
+          "y": 0,
+          "zOrder": 40,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 167,
+          "layer": "Background",
+          "locked": false,
+          "name": "desk",
+          "persistentUuid": "cc12b0e3-d055-4325-8cf0-cde1f20e8f89",
+          "width": 300,
+          "x": 275,
+          "y": 225,
+          "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 67,
+          "layer": "",
+          "locked": false,
+          "name": "reception",
+          "persistentUuid": "22fed272-52e2-4227-b9d9-8a2f566e956e",
+          "width": 223,
+          "x": 315,
+          "y": 399,
+          "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
+        {
+          "name": "background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\BBK_Game_Background.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "desk",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\reception.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reception",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\location_receptionDesk.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Map",
           "tags": "",
@@ -2614,6 +3471,110 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-01.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Empty",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Chippy's Office"
+            },
+            {
+              "name": "description",
+              "value": "This is the office of Chippy Blipman. To deactivate this threat, I have to get in there."
+            },
+            {
+              "name": "use",
+              "value": "The door is locked."
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Normal-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FrontEntrance",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "name",
+              "value": "Chippy's Office"
+            },
+            {
+              "name": "description",
+              "value": "This is the office of Chippy Blipman. To deactivate this threat, I have to get in there."
+            },
+            {
+              "name": "use",
+              "value": "The door is locked."
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Normal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-10.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3230,163 +4191,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -3628,7 +4439,7 @@
                       "parameters": [
                         "HUD_ObjectName",
                         ">=",
-                        "ScreenWidth()-10"
+                        "ScreenWidth()-100"
                       ],
                       "subInstructions": []
                     }
@@ -3783,6 +4594,18 @@
                                 ""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "countdown",
+                                "-",
+                                "1"
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
@@ -3828,6 +4651,18 @@
                                 "",
                                 "\"Chippy's Office\"",
                                 ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "countdown",
+                                "-",
+                                "1"
                               ],
                               "subInstructions": []
                             }
@@ -3878,6 +4713,18 @@
                                 "",
                                 "\"Cafeteria\"",
                                 ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "countdown",
+                                "-",
+                                "1"
                               ],
                               "subInstructions": []
                             }
@@ -3948,6 +4795,18 @@
                                     "",
                                     "\"Robot Cubicles\"",
                                     ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
                                   ],
                                   "subInstructions": []
                                 }
@@ -4082,6 +4941,18 @@
                                     "\"\""
                                   ],
                                   "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
                                 }
                               ],
                               "events": []
@@ -4146,6 +5017,18 @@
                                 ""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "countdown",
+                                "-",
+                                "1"
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
@@ -4206,6 +5089,18 @@
                                 "",
                                 "\"Accounting Office\"",
                                 ""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "countdown",
+                                "-",
+                                "1"
                               ],
                               "subInstructions": []
                             }
@@ -5016,6 +5911,17 @@
       ],
       "layers": [
         {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000080,
+          "ambientLightColorR": 50331648,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
@@ -5049,7 +5955,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -5395,163 +6306,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -6960,163 +7721,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -9049,163 +9660,13 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -9213,7 +9674,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Memory Match",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12201,110 +12662,13 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "CAFETERIA",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "BackToCafeteria",
-                    "375",
-                    "570",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "=",
-                    "30"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "BackToCafeteria",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Cafeteria\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -12312,7 +12676,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Memory Match",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -15431,163 +15795,13 @@
       ],
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -19110,163 +19324,13 @@
       ],
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -21884,163 +21948,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -22787,163 +22701,13 @@
           "parameters": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -23473,163 +23237,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -24967,12 +24581,21 @@
       ],
       "events": [
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Drag & Drop",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25459,165 +25082,6 @@
                   "events": []
                 }
               ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ],
           "parameters": []
@@ -27960,163 +27424,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -29795,163 +29109,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -31412,163 +30576,13 @@
           "events": []
         },
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
           "disabled": false,
-          "folded": true,
-          "name": "COUNTDOWN",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Initializes the position of Timer on HUD",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "HUD_Timer",
-                    "GlobalVariable(timerX)",
-                    "GlobalVariable(timerY)",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Counts down time",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"gameTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "countdown",
-                    "-",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Updates the HUD element",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HUD_Timer",
-                    "=",
-                    "ToString(GlobalVariable(countdown))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ],
-          "parameters": []
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Countdown"
         },
         {
           "colorB": 228,
@@ -32890,7 +31904,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.604
+        "zoomFactor": 0.568
       },
       "objectsGroups": [],
       "variables": [],
@@ -32994,7 +32008,7 @@
               },
               "parameters": [
                 "",
-                "\"Reception\"",
+                "\"MainMenu\"",
                 ""
               ],
               "subInstructions": []
@@ -33030,7 +32044,369 @@
       "behaviorsSharedData": []
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "associatedLayout": "Reception",
+      "lastChangeTimeStamp": 0,
+      "name": "Countdown",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "COUNTDOWN",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Initializes the position of Timer on HUD",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "HUD_Timer",
+                    "GlobalVariable(timerX)",
+                    "GlobalVariable(timerY)",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "HUD_Timer",
+                    "\"255,0,0\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Counts down time",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"gameTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "countdown",
+                    "-",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Updates the HUD element",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HUD_Timer",
+                    "=",
+                    "\"00\" + \":\" + ToString(floor((GlobalVariable(countdown)/60))) + \":\" + VariableString(secText)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "HUD_Timer",
+                    "\"255,0,0\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "sec",
+                    "=",
+                    "mod(GlobalVariable(countdown), 60)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarSceneTxt"
+                  },
+                  "parameters": [
+                    "secText",
+                    "=",
+                    "VariableString(sec)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "sec",
+                        "<",
+                        "10"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "secText",
+                        "=",
+                        "\"0\" + VariableString(sec)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "countdown",
+                "<=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"MainMenu\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "MainMenu",
+      "lastChangeTimeStamp": 0,
+      "name": "Fade",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "FADE IN",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Fade",
+                    "0",
+                    "0",
+                    "\"Fade\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectOpacityTween"
+                  },
+                  "parameters": [
+                    "Fade",
+                    "Tween",
+                    "\"fade_out\"",
+                    "0",
+                    "\"linear\"",
+                    "1000",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        }
+      ]
+    }
+  ],
   "eventsFunctionsExtensions": [],
   "externalLayouts": [],
   "externalSourceFiles": []

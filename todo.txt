@@ -1,0 +1,4 @@
+1. Motherboard Puzzle 
+- reset bug
+- deletion of signs
+- draggable signs

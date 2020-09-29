@@ -986,6 +986,15 @@
         "name": "res\\BBK_Game_Receptionist.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/photo.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\photo.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -6319,14 +6328,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 1212,
+          "height": 380,
           "layer": "",
           "locked": false,
           "name": "RobotPicture",
           "persistentUuid": "664ed442-b751-43cb-b28f-ff3c1794bd95",
-          "width": 2156,
-          "x": -1218,
-          "y": -325,
+          "width": 676,
+          "x": 84,
+          "y": 57,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6335,14 +6344,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 214,
+          "height": 179,
           "layer": "",
           "locked": false,
           "name": "RobotPictureKey",
           "persistentUuid": "9308bc0e-5ba8-47ac-9d53-ad220cd3c64b",
-          "width": 153,
-          "x": 331,
-          "y": 267,
+          "width": 117,
+          "x": 364,
+          "y": 236,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -6464,7 +6473,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-05.jpg",
+                      "image": "res\\photo.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6493,7 +6502,7 @@
           "variables": [
             {
               "name": "name",
-              "value": "Out of Place Robot"
+              "value": ""
             },
             {
               "name": "description",
@@ -6757,12 +6766,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
+                    "value": "SetAnimationName"
                   },
                   "parameters": [
-                    "HUD_ObjectName",
-                    "=",
-                    "Interactives.VariableString(name)"
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 },
@@ -6779,20 +6787,44 @@
                     "Interactives.PointY(\"Center\")"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "name",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "Interactives.VariableString(name)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -7532,7 +7564,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -22818,6 +22855,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -23782,12 +23830,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "BackToSpareParts",
-          "persistentUuid": "9b2690a8-9248-449e-8476-32c0a5bb59fa",
+          "name": "Match",
+          "persistentUuid": "a09b3a46-5855-415a-b9fb-513324869387",
           "width": 0,
-          "x": 724,
-          "y": 6,
-          "zOrder": 11,
+          "x": 678,
+          "y": 38,
+          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23798,12 +23846,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "Match",
-          "persistentUuid": "a09b3a46-5855-415a-b9fb-513324869387",
+          "name": "BackToReception",
+          "persistentUuid": "ec6cdb90-c6ff-495b-869c-7142ac67f91b",
           "width": 0,
-          "x": 678,
-          "y": 38,
-          "zOrder": 12,
+          "x": 735,
+          "y": 11,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -24440,6 +24488,15 @@
           "target": "Countdown"
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnReception"
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -24935,52 +24992,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BackToSpareParts",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Spare Parts Room\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         },
         {
           "disabled": false,
@@ -32345,6 +32356,81 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Puzzle Robot Picture",
+      "lastChangeTimeStamp": 0,
+      "name": "ReturnReception",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "RECEPTION",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BackToReception",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Reception\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ]
     }

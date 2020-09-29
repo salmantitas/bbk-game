@@ -986,6 +986,51 @@
         "name": "res\\BBK_Game_Receptionist.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/photo.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\photo.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/monster.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\monster.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/cubicle.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\cubicle.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/motherboard.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\motherboard.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/accounting.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\accounting.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -6286,7 +6331,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.316
+        "zoomFactor": 0.676
       },
       "objectsGroups": [
         {
@@ -6319,14 +6364,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 1212,
+          "height": 380,
           "layer": "",
           "locked": false,
           "name": "RobotPicture",
           "persistentUuid": "664ed442-b751-43cb-b28f-ff3c1794bd95",
-          "width": 2156,
-          "x": -1218,
-          "y": -325,
+          "width": 676,
+          "x": 84,
+          "y": 57,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -6335,14 +6380,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 214,
+          "height": 179,
           "layer": "",
           "locked": false,
           "name": "RobotPictureKey",
           "persistentUuid": "9308bc0e-5ba8-47ac-9d53-ad220cd3c64b",
-          "width": 153,
-          "x": 331,
-          "y": 267,
+          "width": 117,
+          "x": 364,
+          "y": 236,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -6464,7 +6509,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-05.jpg",
+                      "image": "res\\photo.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6493,7 +6538,7 @@
           "variables": [
             {
               "name": "name",
-              "value": "Out of Place Robot"
+              "value": ""
             },
             {
               "name": "description",
@@ -6757,12 +6802,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
+                    "value": "SetAnimationName"
                   },
                   "parameters": [
-                    "HUD_ObjectName",
-                    "=",
-                    "Interactives.VariableString(name)"
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 },
@@ -6779,20 +6823,44 @@
                     "Interactives.PointY(\"Center\")"
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
-                  ],
-                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "name",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "Interactives.VariableString(name)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -7532,7 +7600,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -21000,7 +21073,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.568
+        "zoomFactor": 0.604
       },
       "objectsGroups": [],
       "variables": [],
@@ -21072,14 +21145,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 883,
+          "height": 470,
           "layer": "",
           "locked": false,
           "name": "MonsterBackground",
           "persistentUuid": "2263d6b2-cee1-4b1d-a045-a80d618d8d18",
-          "width": 1609,
-          "x": -839,
-          "y": -227,
+          "width": 475,
+          "x": 280,
+          "y": 30,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -21723,7 +21796,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-04.jpg",
+                      "image": "res\\monster.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -22299,7 +22372,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -22325,7 +22403,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.572
+        "zoomFactor": 0.68
       },
       "objectsGroups": [],
       "variables": [],
@@ -22349,14 +22427,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 610,
+          "height": 390,
           "layer": "",
           "locked": false,
           "name": "cubicleBack",
           "persistentUuid": "95c727bc-ebf6-4d80-aded-6c30cb308291",
-          "width": 1085,
-          "x": -396,
-          "y": -24,
+          "width": 346,
+          "x": 299,
+          "y": 67,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -22380,15 +22458,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 48,
           "layer": "UI",
           "locked": false,
           "name": "cubicleInput",
           "persistentUuid": "5e3cdf26-454f-462d-b6b2-32447e458b6c",
-          "width": 0,
-          "x": 574,
-          "y": 54,
+          "width": 83,
+          "x": 565,
+          "y": 99,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -22430,7 +22508,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-06.jpg",
+                      "image": "res\\cubicle.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -22470,7 +22548,7 @@
           "behaviors": [],
           "string": "Text",
           "font": "",
-          "characterSize": 40,
+          "characterSize": 30,
           "color": {
             "b": 0,
             "g": 0,
@@ -22831,7 +22909,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -24465,7 +24548,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Drag & Drop",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24943,7 +25026,7 @@
                       },
                       "parameters": [
                         "",
-                        "\"Spare Parts Room\"",
+                        "\"Reception\"",
                         ""
                       ],
                       "subInstructions": []
@@ -26778,7 +26861,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "maze.jpg",
+                      "image": "res\\motherboard.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -28701,7 +28784,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -28727,7 +28815,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.3074
+        "zoomFactor": 0.4514
       },
       "objectsGroups": [],
       "variables": [],
@@ -28751,14 +28839,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 693,
+          "height": 390,
           "layer": "",
           "locked": false,
           "name": "background",
           "persistentUuid": "feed4400-e1f6-4abf-a81b-baee3de18d7e",
-          "width": 1232,
-          "x": -238,
-          "y": -123,
+          "width": 469,
+          "x": 148,
+          "y": 68,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -28816,7 +28904,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Escape Room prototype with Puzzles and Maps\\Escape Room prototype with Puzzles and Maps-08.jpg",
+                      "image": "res\\accounting.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -29239,7 +29327,12 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
     },
     {
       "b": 209,
@@ -29265,7 +29358,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4044
+        "zoomFactor": 0.8004
       },
       "objectsGroups": [
         {
@@ -29413,7 +29506,7 @@
           "locked": false,
           "name": "Board",
           "persistentUuid": "8ddd9742-d586-4050-a4be-bbfad9f41b18",
-          "width": 6,
+          "width": 18,
           "x": 230,
           "y": 205,
           "zOrder": 9,

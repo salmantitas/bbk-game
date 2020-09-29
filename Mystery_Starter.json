@@ -1388,7 +1388,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.548
+        "zoomFactor": 0.332
       },
       "objectsGroups": [],
       "variables": [],
@@ -5205,7 +5205,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "\"Spare Parts Room\"",
+                                    "\"Drag & Drop\"",
                                     ""
                                   ],
                                   "subInstructions": []
@@ -7516,6 +7516,17 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "UI",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000080,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -22807,6 +22818,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -23187,7 +23209,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -23570,7 +23592,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.532
+        "zoomFactor": 0.46
       },
       "objectsGroups": [
         {
@@ -23771,12 +23793,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "BackToSpareParts",
-          "persistentUuid": "9b2690a8-9248-449e-8476-32c0a5bb59fa",
+          "name": "Match",
+          "persistentUuid": "a09b3a46-5855-415a-b9fb-513324869387",
           "width": 0,
-          "x": 359,
-          "y": 560,
-          "zOrder": 11,
+          "x": 678,
+          "y": 38,
+          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -23787,12 +23809,12 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "Match",
-          "persistentUuid": "a09b3a46-5855-415a-b9fb-513324869387",
+          "name": "BackToReception",
+          "persistentUuid": "ec6cdb90-c6ff-495b-869c-7142ac67f91b",
           "width": 0,
-          "x": 678,
-          "y": 38,
-          "zOrder": 12,
+          "x": 735,
+          "y": 11,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -24429,6 +24451,15 @@
           "target": "Countdown"
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "ReturnReception"
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -24929,52 +24960,6 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "BackToSpareParts",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"Spare Parts Room\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": []
@@ -25079,13 +25064,13 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "UI",
+          "layer": "HUD",
           "locked": false,
           "name": "BackToReception",
           "persistentUuid": "762a13b9-b455-405b-87e5-e1188bc3252b",
           "width": 0,
-          "x": 349,
-          "y": 568,
+          "x": 127,
+          "y": 371,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -25100,8 +25085,8 @@
           "name": "Robot",
           "persistentUuid": "ef08dc2f-2aec-4daa-890f-291155b9f0f4",
           "width": 0,
-          "x": 590,
-          "y": 430,
+          "x": 609,
+          "y": 357,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -25270,38 +25255,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "idx",
-          "persistentUuid": "8fc60f7f-21a0-4695-9d4e-3e5aafec4b3a",
-          "width": 0,
-          "x": 541,
-          "y": 11,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "playidx",
-          "persistentUuid": "0e64f1fe-3082-465a-bfd6-7978520c8f83",
-          "width": 0,
-          "x": 541,
-          "y": 42,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "layer": "UI",
           "locked": false,
           "name": "arrow_empty",
@@ -25328,8 +25281,8 @@
           "name": "maze",
           "persistentUuid": "56560ee9-3b22-49e9-9fb5-fab77e36eabb",
           "width": 384,
-          "x": 353,
-          "y": 109,
+          "x": 372,
+          "y": 36,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -25365,8 +25318,8 @@
           "name": "WallH",
           "persistentUuid": "7945e880-a06a-40bc-8dab-be56dae500dd",
           "width": 127,
-          "x": 543,
-          "y": 401,
+          "x": 562,
+          "y": 328,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25381,8 +25334,8 @@
           "name": "WallH",
           "persistentUuid": "d795afd5-0797-49d8-b7d2-eab06cae3ea3",
           "width": 240,
-          "x": 360,
-          "y": 472,
+          "x": 379,
+          "y": 399,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25397,8 +25350,8 @@
           "name": "WallV",
           "persistentUuid": "671dfadf-1d5b-4f30-93fb-8632ec1094a5",
           "width": 13,
-          "x": 657,
-          "y": 416,
+          "x": 676,
+          "y": 343,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25413,8 +25366,8 @@
           "name": "WallV",
           "persistentUuid": "d8e178f5-a966-4335-8371-042c73d270ac",
           "width": 13,
-          "x": 359,
-          "y": 116,
+          "x": 378,
+          "y": 43,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25534,8 +25487,8 @@
           "name": "WallH",
           "persistentUuid": "6f06017d-e4b7-4607-ae08-e19ac209a220",
           "width": 294,
-          "x": 430,
-          "y": 215,
+          "x": 449,
+          "y": 142,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25550,8 +25503,8 @@
           "name": "WallH",
           "persistentUuid": "e77b333f-f525-4440-a4e8-681f40d602ed",
           "width": 327,
-          "x": 358,
-          "y": 115,
+          "x": 377,
+          "y": 42,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25566,8 +25519,8 @@
           "name": "WallH",
           "persistentUuid": "1fc578dd-6c92-4bdd-8192-b9e51931b8a9",
           "width": 258,
-          "x": 355,
-          "y": 287,
+          "x": 374,
+          "y": 214,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25582,8 +25535,8 @@
           "name": "WallH",
           "persistentUuid": "b63b8f6c-4a2a-45ff-9e5d-00c28bde4464",
           "width": 122,
-          "x": 364,
-          "y": 400,
+          "x": 383,
+          "y": 327,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25598,8 +25551,8 @@
           "name": "WallH",
           "persistentUuid": "063d9a76-7fa4-40ee-bf2f-afc3408b6189",
           "width": 127,
-          "x": 601,
-          "y": 343,
+          "x": 620,
+          "y": 270,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25614,8 +25567,8 @@
           "name": "WallV",
           "persistentUuid": "00cffad4-5f7d-4f56-acd7-489acce10f5c",
           "width": 13,
-          "x": 543,
-          "y": 358,
+          "x": 562,
+          "y": 285,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25630,8 +25583,8 @@
           "name": "WallV",
           "persistentUuid": "bcb25681-79d4-41b5-91c9-26353fd65f18",
           "width": 13,
-          "x": 473,
-          "y": 357,
+          "x": 492,
+          "y": 284,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25646,8 +25599,8 @@
           "name": "WallV",
           "persistentUuid": "7d96cb40-9109-4bb7-ba82-b6b995e8b50a",
           "width": 13,
-          "x": 416,
-          "y": 299,
+          "x": 435,
+          "y": 226,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25662,8 +25615,8 @@
           "name": "WallV",
           "persistentUuid": "41c4bd33-0c32-4e88-8dc8-b779a5ad25bc",
           "width": 14,
-          "x": 430,
-          "y": 175,
+          "x": 449,
+          "y": 102,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25678,8 +25631,8 @@
           "name": "WallV",
           "persistentUuid": "98fcbc91-749e-4c7e-a91d-dcd10199442f",
           "width": 13,
-          "x": 572,
-          "y": 173,
+          "x": 591,
+          "y": 100,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25694,8 +25647,8 @@
           "name": "WallV",
           "persistentUuid": "a00ea80c-206c-447d-aa94-08d85b6618fb",
           "width": 13,
-          "x": 501,
-          "y": 129,
+          "x": 520,
+          "y": 56,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25710,8 +25663,8 @@
           "name": "WallV",
           "persistentUuid": "c173623d-4986-45a8-9575-4389afd0d277",
           "width": 13,
-          "x": 644,
-          "y": 129,
+          "x": 663,
+          "y": 56,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25726,8 +25679,8 @@
           "name": "WallV",
           "persistentUuid": "3a03f551-4649-4099-a5f0-9f781859c5a7",
           "width": 13,
-          "x": 714,
-          "y": 116,
+          "x": 733,
+          "y": 43,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -25742,8 +25695,8 @@
           "name": "WallH",
           "persistentUuid": "460d4ead-2922-44cf-a5a7-59b3e3b4fcde",
           "width": 58,
-          "x": 662,
-          "y": 471,
+          "x": 681,
+          "y": 398,
           "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
@@ -25926,8 +25879,8 @@
           "name": "Finish",
           "persistentUuid": "6886f54a-41cf-419e-b7a6-a73df992c42e",
           "width": 70,
-          "x": 655,
-          "y": 117,
+          "x": 674,
+          "y": 44,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -26194,8 +26147,8 @@
           "name": "WallH",
           "persistentUuid": "86401c4a-894b-43d7-aad7-573eaac5c8ee",
           "width": 14,
-          "x": 430,
-          "y": 173,
+          "x": 449,
+          "y": 100,
           "zOrder": 21,
           "numberProperties": [],
           "stringProperties": [],
@@ -28735,6 +28688,17 @@
           "visibility": true,
           "cameras": [],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 10345928,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "HUD",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": []
@@ -28763,7 +28727,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.4154
+        "zoomFactor": 0.3074
       },
       "objectsGroups": [],
       "variables": [],
@@ -28777,8 +28741,8 @@
           "name": "BackToReception",
           "persistentUuid": "da6bd015-ff3d-439c-bcb5-4fc7a177b09a",
           "width": 0,
-          "x": 337,
-          "y": 565,
+          "x": 710,
+          "y": 441,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -28787,14 +28751,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 819,
+          "height": 693,
           "layer": "",
           "locked": false,
           "name": "background",
           "persistentUuid": "feed4400-e1f6-4abf-a81b-baee3de18d7e",
-          "width": 1455,
-          "x": -323,
-          "y": -124,
+          "width": 1232,
+          "x": -238,
+          "y": -123,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -28825,8 +28789,8 @@
           "name": "accountingInput",
           "persistentUuid": "55a694a8-b965-4540-b196-9f418bbf3cfa",
           "width": 0,
-          "x": 676,
-          "y": 488,
+          "x": 611,
+          "y": 403,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -31942,7 +31906,7 @@
                     "HUD_Timer",
                     "GlobalVariable(timerX)",
                     "GlobalVariable(timerY)",
-                    "\"UI\""
+                    "\"HUD\""
                   ],
                   "subInstructions": []
                 },
@@ -32355,6 +32319,81 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Puzzle Robot Picture",
+      "lastChangeTimeStamp": 0,
+      "name": "ReturnReception",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "RECEPTION",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BackToReception",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Reception\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ]
     }

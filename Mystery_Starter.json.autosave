@@ -256,42 +256,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "InventoryBackground-1-0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "InventoryBackground-1-0.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewObject-1-6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewObject-1-6.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Hover-1-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Hover-1-2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "InventoryKey-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "InventoryKey-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "InventorySlot-1.png",
         "kind": "image",
         "metadata": "",
@@ -1058,6 +1022,78 @@
         "name": "res\\BBK_Game_Cafeteria.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryBackground-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryBackground-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Hover-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Hover-1-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryKey-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryKey-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryKey-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryKey-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryBackground-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryBackground-1-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-1-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Hover-1-5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Hover-1-5.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1255,7 +1291,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "InventoryBackground-1-0.png",
+                  "image": "InventoryBackground-1-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1299,7 +1335,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "NewObject-1-6.png",
+                  "image": "Normal-1-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1328,7 +1364,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "Hover-1-2.png",
+                  "image": "Hover-1-5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1367,7 +1403,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "InventoryKey-1.png",
+                  "image": "InventoryKey-1-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2841,6 +2877,18 @@
                 "value": "ModVarGlobal"
               },
               "parameters": [
+                "hintChippy",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
                 "hintPicture",
                 "=",
                 "1"
@@ -3436,7 +3484,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.242
+        "zoomFactor": 0.37
       },
       "objectsGroups": [
         {
@@ -3475,70 +3523,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "Inventory",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "abb6508c-2a37-4672-b30e-6f3340858160",
-          "width": 0,
-          "x": 16,
-          "y": 849,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Inventory",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "85a08936-3bef-4f32-9108-552445264a58",
-          "width": 0,
-          "x": 16,
-          "y": 929,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Inventory",
-          "locked": false,
-          "name": "InventoryBackground",
-          "persistentUuid": "6ad4376e-a0c4-400f-b227-0072616292c5",
-          "width": 0,
-          "x": 8,
-          "y": 842,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Inventory",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "afd7e19d-ede9-434e-af04-4e5ee4620b76",
-          "width": 0,
-          "x": 16,
-          "y": 889,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "layer": "",
           "locked": false,
           "name": "HUD_LocationName",
@@ -3554,7 +3538,7 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 299,
+          "height": 158,
           "layer": "",
           "locked": false,
           "name": "WallCLevel",
@@ -3656,8 +3640,8 @@
           "name": "sparePartsCodePrompt",
           "persistentUuid": "90fd0bfc-38d9-48ae-b6a3-d39ec96e8ca3",
           "width": 0,
-          "x": 1401,
-          "y": 517,
+          "x": 1310,
+          "y": 582,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -4606,6 +4590,15 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Init_Basic"
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4620,54 +4613,6 @@
             }
           ],
           "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "HUD_Description",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "HUD_ObjectName",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Drawer",
-                "0",
-                "0",
-                "\"UI\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "InvisibleMarkers"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -4796,6 +4741,41 @@
                 "use",
                 "=",
                 "\"\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "sparePartsSolved",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjetTxt"
+              },
+              "parameters": [
+                "SpareParts",
+                "use",
+                "=",
+                "\"There is nothing of interest here.\""
               ],
               "subInstructions": []
             }
@@ -5026,6 +5006,35 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "HUD_ObjectName",
+                    "=",
+                    "Interactives.PointX(\"Left\") + 10",
+                    "=",
+                    "Interactives.PointY(\"Right\") + 100"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::RoundedRectangle"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "HUD_ObjectName.X() - 10",
+                    "HUD_ObjectName.Y() - 10",
+                    "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
+                    "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
+                    "10"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "SetAnimationName"
                   },
                   "parameters": [
@@ -5036,92 +5045,6 @@
                 }
               ],
               "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "HUD_ObjectName",
-                        "=",
-                        "Interactives.PointX(\"Left\") + 10",
-                        "=",
-                        "Interactives.PointY(\"Right\") + 100"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PrimitiveDrawing::RoundedRectangle"
-                      },
-                      "parameters": [
-                        "Drawer",
-                        "HUD_ObjectName.X() - 10",
-                        "HUD_ObjectName.Y() - 10",
-                        "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
-                        "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
-                        "10"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": true,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "HUD_ObjectName",
-                        ">=",
-                        "ScreenWidth()-100"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "PosX"
-                      },
-                      "parameters": [
-                        "HUD_ObjectName",
-                        ">=",
-                        "ScreenWidth()-100"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "HUD_ObjectName",
-                        "=",
-                        "Interactives.PointX(\"Left\") - Interactives.Width()",
-                        "=",
-                        "Interactives.PointY(\"Bottom\")"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -5520,100 +5443,122 @@
                                     "value": "VarGlobal"
                                   },
                                   "parameters": [
-                                    "sparePartsDoorLocked",
-                                    "=",
-                                    "1"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "sparePartsCodeEntry",
-                                    "0",
-                                    "0",
-                                    "\"\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "sparePartsCodePrompt",
-                                    ""
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            },
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarGlobal"
-                                  },
-                                  "parameters": [
-                                    "sparePartsDoorLocked",
+                                    "sparePartsSolved",
                                     "=",
                                     "0"
                                   ],
                                   "subInstructions": []
                                 }
                               ],
-                              "actions": [
+                              "actions": [],
+                              "events": [
                                 {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Scene"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Drag & Drop\"",
-                                    ""
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarGlobal"
+                                      },
+                                      "parameters": [
+                                        "sparePartsDoorLocked",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
                                   ],
-                                  "subInstructions": []
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "sparePartsCodeEntry",
+                                        "0",
+                                        "0",
+                                        "\"\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Montre"
+                                      },
+                                      "parameters": [
+                                        "sparePartsCodePrompt",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
                                 },
                                 {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarObjetTxt"
-                                  },
-                                  "parameters": [
-                                    "SpareParts",
-                                    "use",
-                                    "=",
-                                    "\"\""
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarGlobal"
+                                      },
+                                      "parameters": [
+                                        "sparePartsDoorLocked",
+                                        "=",
+                                        "0"
+                                      ],
+                                      "subInstructions": []
+                                    }
                                   ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarGlobal"
-                                  },
-                                  "parameters": [
-                                    "countdown",
-                                    "-",
-                                    "1"
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Scene"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Drag & Drop\"",
+                                        ""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjetTxt"
+                                      },
+                                      "parameters": [
+                                        "SpareParts",
+                                        "use",
+                                        "=",
+                                        "\"\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarGlobal"
+                                      },
+                                      "parameters": [
+                                        "countdown",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
                                   ],
-                                  "subInstructions": []
+                                  "events": []
                                 }
-                              ],
-                              "events": []
+                              ]
                             }
                           ]
                         },
@@ -5848,6 +5793,18 @@
                     "\"\""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "HUD_HintText",
+                    "=",
+                    "200"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -5879,7 +5836,22 @@
                   "parameters": [
                     "HUD_HintText",
                     "=",
-                    "\"Right click to check description.\nLeft click to use.\""
+                    "\"This is a free hint!\nRight click to check description.\nLeft click to use.\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::RoundedRectangle"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "HUD_HintText.X() - 10",
+                    "HUD_HintText.Y() - 10",
+                    "HUD_HintText.X() + HUD_HintText.Width() + 10",
+                    "HUD_HintText.Y() + HUD_HintText.Height() + 10",
+                    "10"
                   ],
                   "subInstructions": []
                 }
@@ -6085,18 +6057,6 @@
                             "value": "ModVarGlobal"
                           },
                           "parameters": [
-                            "hints",
-                            "-",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
                             "hintReception",
                             "-",
                             "1"
@@ -6140,36 +6100,175 @@
               "comment2": ""
             },
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "folded": true,
+              "name": "INIT",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "picked_item",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "InventoryBackground",
+                        "17",
+                        "804",
+                        "\"Inventory\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "InventoryBackground",
+                        "=",
+                        "17"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_i",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_y",
+                        "=",
+                        "InventoryBackground.Y()+16"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "InventorySlot",
+                            "InventoryBackground.X()+16",
+                            "Variable(inv_y)",
+                            "\"Inventory\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "InventorySlot",
+                            "=",
+                            "20"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_y",
+                            "+",
+                            "80"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "picked_item",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -6993,7 +7092,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.232
+        "zoomFactor": 0.196
       },
       "objectsGroups": [
         {
@@ -7010,14 +7109,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 982,
+          "height": 812,
           "layer": "",
           "locked": false,
           "name": "RobotPicture",
           "persistentUuid": "664ed442-b751-43cb-b28f-ff3c1794bd95",
-          "width": 1747,
-          "x": 84,
-          "y": 57,
+          "width": 1445,
+          "x": 114,
+          "y": 250,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -7026,79 +7125,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 386,
+          "height": 333,
           "layer": "",
           "locked": false,
           "name": "RobotPictureKey",
           "persistentUuid": "9308bc0e-5ba8-47ac-9d53-ad220cd3c64b",
-          "width": 275,
-          "x": 821,
-          "y": 559,
+          "width": 237,
+          "x": 725,
+          "y": 664,
           "zOrder": 21,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventoryBackground",
-          "persistentUuid": "b5b9d7de-29f5-4631-bbbd-1e98df44e338",
-          "width": 0,
-          "x": 7,
-          "y": 86,
-          "zOrder": 22,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "f131fe1c-c770-4be5-9ce9-39f116d6df2f",
-          "width": 0,
-          "x": 16,
-          "y": 92,
-          "zOrder": 23,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "e7d409eb-3203-4e08-9d6e-b0a9dfe73e1e",
-          "width": 0,
-          "x": 16,
-          "y": 174,
-          "zOrder": 23,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "f1231594-0c9b-4a11-9b29-3206abdcbe5a",
-          "width": 0,
-          "x": 15.846,
-          "y": 131.961,
-          "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7286,6 +7321,20 @@
             {
               "type": {
                 "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Drawer",
+                "0",
+                "0",
+                "\"UI\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "Cache"
               },
               "parameters": [
@@ -7311,7 +7360,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "HINTS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7355,7 +7404,7 @@
                   "parameters": [
                     "",
                     "HUD_HintText",
-                    "1415",
+                    "1515",
                     "650",
                     "\"UI\""
                   ],
@@ -7370,6 +7419,18 @@
                     "HUD_HintText",
                     "=",
                     "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "HUD_HintText",
+                    "=",
+                    "200"
                   ],
                   "subInstructions": []
                 }
@@ -7404,6 +7465,21 @@
                     "HUD_HintText",
                     "=",
                     "\"There is an imposter among\nthese employees.\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::RoundedRectangle"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "HUD_HintText.X() - 10",
+                    "HUD_HintText.Y() - 10",
+                    "HUD_HintText.X() + HUD_HintText.Width() + 10",
+                    "HUD_HintText.Y() + HUD_HintText.Height() + 10",
+                    "10"
                   ],
                   "subInstructions": []
                 }
@@ -7963,36 +8039,175 @@
               "comment2": ""
             },
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "folded": true,
+              "name": "INIT",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "picked_item",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "InventoryBackground",
+                        "17",
+                        "804",
+                        "\"Inventory\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "InventoryBackground",
+                        "=",
+                        "17"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_i",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_y",
+                        "=",
+                        "InventoryBackground.Y()+16"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "InventorySlot",
+                            "InventoryBackground.X()+16",
+                            "Variable(inv_y)",
+                            "\"Inventory\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "InventorySlot",
+                            "=",
+                            "20"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_y",
+                            "+",
+                            "80"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarSceneTxt"
-                  },
-                  "parameters": [
-                    "picked_item",
-                    "=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -9325,20 +9540,9 @@
                   "parameters": [
                     "HUD_ObjectName",
                     "=",
-                    "Interactives.PointX(\"Right\")+Interactives.Width()",
+                    "Interactives.PointX(\"Right\")+Interactives.Width()+32",
                     "=",
                     "Interactives.PointY(\"Center\")"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "Interactives",
-                    "\"Hover\""
                   ],
                   "subInstructions": []
                 },
@@ -9354,6 +9558,17 @@
                     "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
                     "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
                     "10"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "Interactives",
+                    "\"Hover\""
                   ],
                   "subInstructions": []
                 }
@@ -10032,7 +10247,7 @@
         "gridWidth": 16,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.16
+        "zoomFactor": 0.484
       },
       "objectsGroups": [
         {
@@ -10245,8 +10460,8 @@
           "name": "position_placeholder",
           "persistentUuid": "b3ac845a-5ee4-4ce4-b188-1d5cf7cbfa13",
           "width": 0,
-          "x": 496,
-          "y": 224,
+          "x": 525,
+          "y": 250,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10261,8 +10476,8 @@
           "name": "position_placeholder",
           "persistentUuid": "18e5c6e7-efec-4596-9a32-fb77acea7b93",
           "width": 0,
-          "x": 304,
-          "y": 224,
+          "x": 300,
+          "y": 250,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10277,8 +10492,8 @@
           "name": "position_placeholder",
           "persistentUuid": "6b960c23-9db9-4634-b273-134b9eb20a13",
           "width": 0,
-          "x": 368,
-          "y": 224,
+          "x": 375,
+          "y": 250,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10293,8 +10508,8 @@
           "name": "position_placeholder",
           "persistentUuid": "6d84e543-906e-43d7-9044-0f5fd61c2fa2",
           "width": 0,
-          "x": 432,
-          "y": 224,
+          "x": 450,
+          "y": 250,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10309,8 +10524,8 @@
           "name": "position_placeholder",
           "persistentUuid": "a851ab2e-89f1-4773-877e-15fe0f529e2e",
           "width": 0,
-          "x": 496,
-          "y": 288,
+          "x": 525,
+          "y": 325,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10325,8 +10540,8 @@
           "name": "position_placeholder",
           "persistentUuid": "142a04cb-2812-4f32-8205-8f009aa62d7f",
           "width": 0,
-          "x": 304,
-          "y": 288,
+          "x": 300,
+          "y": 325,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10341,8 +10556,8 @@
           "name": "position_placeholder",
           "persistentUuid": "7053dab0-2712-4ebe-94e8-37645747cbde",
           "width": 0,
-          "x": 368,
-          "y": 288,
+          "x": 375,
+          "y": 325,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10357,8 +10572,8 @@
           "name": "position_placeholder",
           "persistentUuid": "a5ef55ea-eb4c-4108-9685-2b688fafcf2a",
           "width": 0,
-          "x": 432,
-          "y": 288,
+          "x": 450,
+          "y": 325,
           "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
@@ -10384,7 +10599,7 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
+          "layer": "Fade",
           "locked": false,
           "name": "Fade",
           "persistentUuid": "d82fdc6d-b3ca-4932-ae52-366c0fffd442",
@@ -12558,7 +12773,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": []
         },
@@ -23464,7 +23679,7 @@
           "locked": false,
           "name": "cubicleInput",
           "persistentUuid": "5e3cdf26-454f-462d-b6b2-32447e458b6c",
-          "width": 183,
+          "width": 363,
           "x": 990,
           "y": 167,
           "zOrder": 5,
@@ -29634,7 +29849,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.3324
+        "zoomFactor": 0.262
       },
       "objectsGroups": [
         {
@@ -29664,31 +29879,15 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Map",
-          "persistentUuid": "3d33d408-bc23-4bc5-990c-1cb2b252003a",
-          "width": 0,
-          "x": 228,
-          "y": 111,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
-          "height": 272,
+          "height": 847,
           "layer": "",
           "locked": false,
           "name": "TopFloor",
           "persistentUuid": "49bb4e21-171f-4427-8c52-0eed50a1bf18",
-          "width": 301,
-          "x": 226,
-          "y": 146,
+          "width": 936,
+          "x": 237,
+          "y": 122,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -29712,14 +29911,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 243,
           "layer": "",
           "locked": false,
           "name": "RobotChippy",
           "persistentUuid": "d17c056e-a22f-4802-a98f-8e3169153578",
-          "width": 0,
-          "x": 364,
+          "width": 243,
+          "x": 572,
           "y": 160,
           "zOrder": 5,
           "numberProperties": [],
@@ -29728,15 +29927,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 83,
           "layer": "",
           "locked": false,
           "name": "RobotSecurity",
           "persistentUuid": "b36befbe-0fb7-4624-803e-c4f9cf59500d",
-          "width": 0,
-          "x": 454,
-          "y": 379,
+          "width": 83,
+          "x": 851,
+          "y": 805,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -29744,15 +29943,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 83,
           "layer": "",
           "locked": false,
           "name": "RobotSecurity",
           "persistentUuid": "dc27f2ed-4cce-4605-945b-97d1c9f530d6",
-          "width": 0,
-          "x": 315,
-          "y": 376,
+          "width": 83,
+          "x": 502,
+          "y": 825,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -29761,12 +29960,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 45,
+          "height": 99,
           "layer": "UI",
           "locked": false,
           "name": "HUD_Description",
           "persistentUuid": "7ca98c60-e30e-46ff-bc8d-05c8da31dbee",
-          "width": 313,
+          "width": 687,
           "x": 225,
           "y": 7,
           "zOrder": 8,
@@ -29777,14 +29976,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 155,
+          "height": 574,
           "layer": "",
           "locked": false,
           "name": "Board",
           "persistentUuid": "8ddd9742-d586-4050-a4be-bbfad9f41b18",
-          "width": 18,
-          "x": 230,
-          "y": 205,
+          "width": 24,
+          "x": 263,
+          "y": 244,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -29792,15 +29991,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 74,
           "layer": "UI",
           "locked": false,
           "name": "HUD_LocationName",
           "persistentUuid": "ca7ec5f5-0ff9-41de-adae-b843413d121e",
-          "width": 0,
-          "x": 230,
-          "y": 440,
+          "width": 243,
+          "x": 1325,
+          "y": 528,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -29808,122 +30007,32 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventoryBackground",
-          "persistentUuid": "3595f741-c714-46a5-b945-db468403cea5",
-          "width": 0,
-          "x": 171,
-          "y": 111,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "027421d6-482e-446b-8255-f05d322e61eb",
-          "width": 0,
-          "x": 179,
-          "y": 116,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Variable",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "736a5aa0-9e88-4868-ae8a-35462303d984",
-          "width": 0,
-          "x": 179,
-          "y": 156,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Variable",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "UI",
-          "locked": false,
-          "name": "InventorySlot",
-          "persistentUuid": "b6ecf883-2237-4301-8992-21cac08e5ece",
-          "width": 0,
-          "x": 179,
-          "y": 197,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "BackToReception",
-          "persistentUuid": "c3e73e0a-8254-4959-9f9f-f444589dfee8",
-          "width": 0,
-          "x": 464,
-          "y": 450,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "WhiteBoardText",
-          "persistentUuid": "61444a02-d679-45b3-9810-3f1cd2b3f4b1",
-          "width": 0,
-          "x": 341,
-          "y": 46,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 133,
           "layer": "",
           "locked": false,
           "name": "chippyInputDisplay",
           "persistentUuid": "4ab2de67-ca9e-45c2-967f-0265d462ef58",
-          "width": 0,
-          "x": 338,
-          "y": 251,
+          "width": 215,
+          "x": 640,
+          "y": 513,
           "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 94,
+          "layer": "UI",
+          "locked": false,
+          "name": "WhiteBoardText2",
+          "persistentUuid": "463d6808-4980-4f30-a999-60251d1a1a7c",
+          "width": 546,
+          "x": 1329,
+          "y": 180,
+          "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -30524,22 +30633,29 @@
           }
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "WhiteBoardText",
-          "smoothed": true,
+          "name": "WhiteBoardText2",
           "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
+          "type": "BBText::BBText",
+          "variables": [
+            {
+              "name": "text2",
+              "value": "ThiS evening I came home and the cat\nwas gOne. Can you stufF ours in the car?"
+            },
+            {
+              "name": "text3",
+              "value": "Thi[outline=yellow]S even[/outline]ing I came home and the cat\nwas g[outline=yellow]One[/outline]. Can you stuf[outline=yellow]F our[/outline]s in the car?"
+            }
+          ],
           "behaviors": [],
-          "string": "This evening I came home and the cat\nwas gone. Can you stuff ours in the car?",
-          "font": "",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+          "content": {
+            "text": "This evening I came home and the cat\nwas gone. Can you stuff ours in the car?",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "res\\libel-suit.regular.ttf",
+            "align": "left",
+            "wordWrap": true
           }
         },
         {
@@ -30557,11 +30673,20 @@
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "text2",
+              "value": ""
+            },
+            {
+              "name": "text3",
+              "value": ""
+            }
+          ],
           "behaviors": [],
           "string": "_ _ _",
           "font": "",
-          "characterSize": 40,
+          "characterSize": 80,
           "color": {
             "b": 0,
             "g": 0,
@@ -30570,6 +30695,15 @@
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Init_Basic"
+        },
         {
           "disabled": false,
           "folded": false,
@@ -30590,46 +30724,10 @@
             {
               "type": {
                 "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "HUD_Description",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "HUD_ObjectName",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "HUD_LocationName",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Cache"
               },
               "parameters": [
-                "WhiteBoardText"
+                "WhiteBoardText2"
               ],
               "subInstructions": []
             },
@@ -30740,7 +30838,42 @@
                 "value": "Cache"
               },
               "parameters": [
-                "WhiteBoardText"
+                "WhiteBoardText2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Visible"
+              },
+              "parameters": [
+                "WhiteBoardText2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PrimitiveDrawing::RoundedRectangle"
+              },
+              "parameters": [
+                "Drawer",
+                "WhiteBoardText2.X() - 10",
+                "WhiteBoardText2.Y() - 10",
+                "WhiteBoardText2.X() + WhiteBoardText2.Width() + 10",
+                "WhiteBoardText2.Y() + WhiteBoardText2.Height() + 10",
+                "10"
               ],
               "subInstructions": []
             }
@@ -30755,15 +30888,6 @@
             "includeConfig": 0
           },
           "target": "ReturnReception"
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Hints"
         },
         {
           "disabled": false,
@@ -30888,7 +31012,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -30982,9 +31106,24 @@
                   "parameters": [
                     "HUD_ObjectName",
                     "=",
-                    "Interactives.PointX(\"Right\")+Interactives.Width()",
+                    "Interactives.PointX(\"Right\")+Interactives.Width()+32",
                     "=",
                     "Interactives.PointY(\"Center\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::RoundedRectangle"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "HUD_ObjectName.X() - 10",
+                    "HUD_ObjectName.Y() - 10",
+                    "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
+                    "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
+                    "10"
                   ],
                   "subInstructions": []
                 },
@@ -31118,7 +31257,7 @@
                                 "value": "Montre"
                               },
                               "parameters": [
-                                "WhiteBoardText",
+                                "WhiteBoardText2",
                                 ""
                               ],
                               "subInstructions": []
@@ -31229,25 +31368,10 @@
           "creationTime": 0,
           "disabled": false,
           "folded": true,
-          "name": "INVENTORY",
+          "name": "HINTS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "GENERIC BEHAVIOR",
-              "comment2": ""
-            },
             {
               "disabled": false,
               "folded": false,
@@ -31268,17 +31392,549 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarSceneTxt"
+                    "value": "Create"
                   },
                   "parameters": [
-                    "picked_item",
+                    "",
+                    "HUD_Hints",
+                    "1600",
+                    "10",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "HUD_HintText",
+                    "1415",
+                    "650",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HUD_HintText",
                     "=",
                     "\"\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "HUD_HintText",
+                    "=",
+                    "200"
                   ],
                   "subInstructions": []
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "hintChippy",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "WhiteBoardText2",
+                    "=",
+                    "WhiteBoardText2.VariableString(text2)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "hintChippy",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "WhiteBoardText2",
+                    "=",
+                    "WhiteBoardText2.VariableString(text3)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::String"
+                  },
+                  "parameters": [
+                    "HUD_Hints",
+                    "=",
+                    "\"HINTS: \" + GlobalVariableString(hints) + \"/3\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "hintChippy",
+                            "<=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarGlobal"
+                          },
+                          "parameters": [
+                            "hints",
+                            "<=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "\"148;148;148\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "hintChippy",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "hints",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "\"0;0;0\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::ChangeColor"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "\"255;0;0\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "hintChippy",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "hints",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": true,
+          "name": "INVENTORY",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "GENERIC BEHAVIOR",
+              "comment2": ""
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": true,
+              "name": "INIT",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "picked_item",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "InventoryBackground",
+                        "17",
+                        "804",
+                        "\"Inventory\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "InventoryBackground",
+                        "=",
+                        "17"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_i",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "inv_y",
+                        "=",
+                        "InventoryBackground.Y()+16"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "InventorySlot",
+                            "InventoryBackground.X()+16",
+                            "Variable(inv_y)",
+                            "\"Inventory\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "InventorySlot",
+                            "=",
+                            "20"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_i",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "inv_y",
+                            "+",
+                            "80"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             },
             {
               "colorB": 228,
@@ -31725,7 +32381,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "CHIPPY INPUT",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -33062,6 +33718,89 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Reception",
+      "lastChangeTimeStamp": 0,
+      "name": "Init_Basic",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "HUD_Description",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "HUD_ObjectName",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Drawer",
+                "0",
+                "0",
+                "\"UI\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "InvisibleMarkers"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,

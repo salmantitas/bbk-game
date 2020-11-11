@@ -1094,6 +1094,24 @@
         "name": "Hover-1-5.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_SpareParts.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_SpareParts.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_Motherboard.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_Motherboard.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -5732,7 +5750,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "HINTS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5778,7 +5796,7 @@
                     "HUD_HintText",
                     "1415",
                     "650",
-                    "\"UI\""
+                    "\"HUD\""
                   ],
                   "subInstructions": []
                 },
@@ -7061,9 +7079,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 12327144,
-          "ambientLightColorR": -2147483616,
+          "ambientLightColorR": -2147483648,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "HUD",
@@ -24124,7 +24142,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.26
+        "zoomFactor": 0.23
       },
       "objectsGroups": [
         {
@@ -24190,7 +24208,7 @@
           "angle": 0,
           "customSize": true,
           "height": 201,
-          "layer": "Heads",
+          "layer": "Parts",
           "locked": false,
           "name": "RH1",
           "persistentUuid": "cbeb57e9-c818-4e68-893b-551927e4685e",
@@ -24206,13 +24224,13 @@
           "angle": 0,
           "customSize": true,
           "height": 157,
-          "layer": "Heads",
+          "layer": "Parts",
           "locked": false,
           "name": "RH2",
           "persistentUuid": "1b781422-e6f5-4da2-99b8-5205f7802c76",
           "width": 329,
-          "x": 536,
-          "y": 130,
+          "x": 529,
+          "y": 112,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -24222,7 +24240,7 @@
           "angle": 0,
           "customSize": true,
           "height": 274,
-          "layer": "Heads",
+          "layer": "Parts",
           "locked": false,
           "name": "RH4",
           "persistentUuid": "3cc68623-7594-45e2-9a8b-2319215d4a63",
@@ -24238,13 +24256,13 @@
           "angle": 0,
           "customSize": true,
           "height": 174,
-          "layer": "",
+          "layer": "Parts",
           "locked": false,
           "name": "RB1",
           "persistentUuid": "e12979e3-5017-4eae-82e9-a92fb2aa0737",
           "width": 354,
-          "x": 983,
-          "y": 739,
+          "x": 943,
+          "y": 788,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -24259,13 +24277,13 @@
           "angle": 0,
           "customSize": true,
           "height": 174,
-          "layer": "",
+          "layer": "Parts",
           "locked": false,
           "name": "RB2",
           "persistentUuid": "ba64b623-347c-4ba8-9ad1-72c0425a01e7",
           "width": 343,
-          "x": 1497,
-          "y": 739,
+          "x": 1417,
+          "y": 754,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -24275,13 +24293,13 @@
           "angle": 0,
           "customSize": true,
           "height": 183,
-          "layer": "",
+          "layer": "Parts",
           "locked": false,
           "name": "RB3",
           "persistentUuid": "5204f1da-3ef4-4f69-995b-d42bb4d34b27",
           "width": 343,
-          "x": 19,
-          "y": 739,
+          "x": 50,
+          "y": 788,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -24291,13 +24309,13 @@
           "angle": 0,
           "customSize": true,
           "height": 172,
-          "layer": "",
+          "layer": "Parts",
           "locked": false,
           "name": "RB4",
           "persistentUuid": "89212218-0595-4e77-9401-c7155ea780cc",
           "width": 360,
-          "x": 506,
-          "y": 739,
+          "x": 429,
+          "y": 782,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -24323,7 +24341,7 @@
           "angle": 0,
           "customSize": true,
           "height": 283,
-          "layer": "Heads",
+          "layer": "Parts",
           "locked": false,
           "name": "RH3",
           "persistentUuid": "0b6287c7-9bb3-4268-8180-a7cdcf569ecc",
@@ -24347,6 +24365,22 @@
           "x": 1375,
           "y": 28,
           "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Background",
+          "locked": false,
+          "name": "Background",
+          "persistentUuid": "2d4b8780-b023-4897-b95c-bffc3db28625",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -24970,6 +25004,45 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "Background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\Background_SpareParts.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -25508,12 +25581,12 @@
       ],
       "layers": [
         {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "name": "Full",
+          "name": "Background",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -25546,7 +25619,18 @@
           "ambientLightColorR": 200,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
-          "name": "Heads",
+          "name": "Full",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Parts",
           "visibility": true,
           "cameras": [],
           "effects": []
@@ -25583,7 +25667,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.094
+        "zoomFactor": 0.194
       },
       "objectsGroups": [
         {
@@ -26778,6 +26862,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Background",
+          "locked": false,
+          "name": "Background",
+          "persistentUuid": "55d1d084-0336-4d73-91d7-867cd0c87600",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -27426,6 +27526,45 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "Background",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\Background_Motherboard.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -29261,6 +29400,17 @@
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6000560,
+          "ambientLightColorR": 167797870,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -32696,7 +32846,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.568
+        "zoomFactor": 0.352
       },
       "objectsGroups": [],
       "variables": [],
@@ -33484,7 +33634,7 @@
                     "HUD_Hints",
                     "1600",
                     "10",
-                    "\"UI\""
+                    "\"HUD\""
                   ],
                   "subInstructions": []
                 }

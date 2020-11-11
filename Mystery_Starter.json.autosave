@@ -5732,7 +5732,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "HINTS",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5778,7 +5778,7 @@
                     "HUD_HintText",
                     "1415",
                     "650",
-                    "\"UI\""
+                    "\"HUD\""
                   ],
                   "subInstructions": []
                 },
@@ -7061,9 +7061,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 12327144,
-          "ambientLightColorR": -2147483616,
+          "ambientLightColorR": -2147483648,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "HUD",
@@ -25583,7 +25583,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.194
+        "zoomFactor": 1.094
       },
       "objectsGroups": [
         {
@@ -32696,7 +32696,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.568
+        "zoomFactor": 0.352
       },
       "objectsGroups": [],
       "variables": [],
@@ -33484,7 +33484,7 @@
                     "HUD_Hints",
                     "1600",
                     "10",
-                    "\"UI\""
+                    "\"HUD\""
                   ],
                   "subInstructions": []
                 }

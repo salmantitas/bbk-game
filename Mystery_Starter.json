@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 98,
+    "build": 99,
     "major": 4,
     "minor": 0,
     "revision": 0
@@ -9,17 +9,14 @@
   "properties": {
     "adaptGameResolutionAtRuntime": true,
     "folderProject": false,
-    "linuxExecutableFilename": "",
-    "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "E:\\BBK\\bbk-game\\Mystery_Starter.json",
+    "projectUuid": "45c5a82d-fd92-4749-b518-f7362214d144",
     "scaleMode": "linear",
     "sizeOnStartupMode": "",
+    "useDeprecatedZeroAsDefaultZOrder": true,
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "winExecutableFilename": "",
-    "winExecutableIconFile": "",
     "name": "Project",
     "author": "",
     "windowWidth": 1920,
@@ -1157,6 +1154,222 @@
         "name": "position_placeholder-1-2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryKey-1-0-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryKey-1-0-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryKey-1-0-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryKey-1-0-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Normal-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Normal-1-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Hover-1-6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Hover-1-6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryKey-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryKey-1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "InventoryBackground-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "InventoryBackground-1-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_Cafeteria1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_Cafeteria1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_Map.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_Map.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie7.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie8.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/IntroMovie9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\IntroMovie9.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "arrow_right-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arrow_right-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "arrow_left-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "arrow_left-1-0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_Cafeteria2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_Cafeteria2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_Reception.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_Reception.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Invisible.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Invisible.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Screenla.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Screenla.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Screen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Screen.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1592,12 +1805,930 @@
         },
         {
           "name": "Screenla"
+        },
+        {
+          "name": "MemoryMatch"
+        },
+        {
+          "name": "Desk"
         }
       ]
     }
   ],
   "variables": [],
   "layouts": [
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Slideshow_95Start",
+      "name": "Slideshow_Start",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 0.31
+      },
+      "objectsGroups": [
+        {
+          "name": "Arrows",
+          "objects": [
+            {
+              "name": "ArrowRight"
+            },
+            {
+              "name": "ArrowLeft"
+            }
+          ]
+        }
+      ],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 916,
+          "layer": "",
+          "locked": false,
+          "name": "Slideshow",
+          "persistentUuid": "b3aaebab-36c2-4f55-9444-19df3ef5d10c",
+          "width": 1626,
+          "x": 102,
+          "y": 14,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ArrowLeft",
+          "persistentUuid": "c4768fb5-83f5-4abf-a2de-e924eb7b3bd7",
+          "width": 0,
+          "x": 30,
+          "y": 940,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ArrowRight",
+          "persistentUuid": "055ecefd-0048-4470-9bf6-0fc364ed01e9",
+          "width": 0,
+          "x": 1740,
+          "y": 940,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "Slideshow",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\IntroMovie9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ArrowRight",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "direction",
+              "value": "right"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "arrow_right",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "arrow_right-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ArrowLeft",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "direction",
+              "value": "left"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "arrow_left",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "arrow_left-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Fade"
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Slideshow",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Slideshow ",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "slideshowTimeCheck",
+                    "=",
+                    "3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "fade",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Fade",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "fade",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "fade",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"slideshowTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "Variable(slideshowTimeCheck)",
+                    "\"slideshowTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Slideshow",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"slideshowTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Arrows",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "Arrows",
+                            "direction",
+                            "=",
+                            "\"right\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeAnimation"
+                          },
+                          "parameters": [
+                            "Slideshow",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"slideshowTimer\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjetTxt"
+                          },
+                          "parameters": [
+                            "Arrows",
+                            "direction",
+                            "=",
+                            "\"left\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeAnimation"
+                          },
+                          "parameters": [
+                            "Slideshow",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"slideshowTimer\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Animation"
+                      },
+                      "parameters": [
+                        "Slideshow",
+                        "=",
+                        "8"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "Arrows",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "Arrows",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"MainMenu\"",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 12207560,
+          "ambientLightColorG": 6011408,
+          "ambientLightColorR": 9657344,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6003360,
+          "ambientLightColorR": 67108864,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Fade",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    },
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
@@ -1622,7 +2753,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.2236
+        "zoomFactor": 0.3436
       },
       "objectsGroups": [],
       "variables": [],
@@ -1630,14 +2761,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 339,
+          "height": 276,
           "layer": "Background",
           "locked": false,
           "name": "Desk",
           "persistentUuid": "1178c993-10d4-4c79-a5db-68c0b4a04b03",
-          "width": 609,
-          "x": 660,
-          "y": 539,
+          "width": 1359,
+          "x": 306,
+          "y": 546,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1687,22 +2818,6 @@
           "x": 0,
           "y": 0,
           "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 224,
-          "layer": "Background",
-          "locked": false,
-          "name": "Screen",
-          "persistentUuid": "05860d91-1d5a-43a0-a386-d2fb9b831ea8",
-          "width": 284,
-          "x": 830,
-          "y": 666,
-          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1815,95 +2930,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\reception_noTransparency.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Screen",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "use",
-              "value": "Intro"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "screen",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Screen.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Receptionist",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "use",
-              "value": "Intro"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "reception",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Receptionist.png",
+                      "image": "res\\Invisible.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2033,7 +3060,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Background.png",
+                      "image": "res\\Background_Reception.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2115,6 +3142,28 @@
                 "\"linear\"",
                 "2000",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "displaySplash",
+                "=",
+                "0.5"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "InvisibleMarkers"
               ],
               "subInstructions": []
             }
@@ -2319,7 +3368,7 @@
                   },
                   "parameters": [
                     "",
-                    "0.5",
+                    "GlobalVariable(displaySplash)",
                     "\"messageTimer\""
                   ],
                   "subInstructions": []
@@ -2566,7 +3615,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.508
+        "zoomFactor": 0.31
       },
       "objectsGroups": [],
       "variables": [],
@@ -2605,16 +3654,16 @@
         },
         {
           "angle": 0,
-          "customSize": true,
+          "customSize": false,
           "height": 825,
-          "layer": "",
+          "layer": "Background",
           "locked": false,
           "name": "Computer",
           "persistentUuid": "8fb273ee-d7b7-4969-a900-0db7dfeaded5",
           "width": 1040,
-          "x": 425,
-          "y": 100,
-          "zOrder": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2622,14 +3671,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 613,
+          "height": 666,
           "layer": "",
           "locked": false,
           "name": "TypingText",
           "persistentUuid": "41fc7f8f-cdd0-4299-bbd3-d513b2338231",
-          "width": 815,
-          "x": 534,
-          "y": 214,
+          "width": 886,
+          "x": 528,
+          "y": 142,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2663,6 +3712,22 @@
           "x": 14,
           "y": -28,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1034,
+          "layer": "Background",
+          "locked": false,
+          "name": "Screenla",
+          "persistentUuid": "1bd52304-f65b-4251-a6d5-04d6533364f3",
+          "width": 483,
+          "x": 1430,
+          "y": 28,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2725,7 +3790,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Screen2.png",
+                      "image": "res\\Screen.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2763,12 +3828,51 @@
           "behaviors": [],
           "string": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has\nbeen HACKED! CEO, Chippy Blipman, and the\nother robots, have been compromised and you\nneed to act fast. I am also programmed to inform\nyou that it was I, Screenla, the best receptionist of\nTechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure\nout how to defrag Chippy’s motherboard and\nreboot the system before it’s too late?\nYou have 60 minutes to unlock the rooms, solve\nthe puzzles and restart the system.\nGood luck, you are going to need it to defeat my\nhacking skills!",
           "font": "",
-          "characterSize": 36,
+          "characterSize": 41,
           "color": {
             "b": 0,
             "g": 255,
             "r": 51
           }
+        },
+        {
+          "name": "Screenla",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\Screenla.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -2813,18 +3917,6 @@
             }
           ],
           "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "typeRate",
-                "=",
-                "30.075"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -3028,55 +4120,6 @@
                 "10"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "screenla.wav",
-                "",
-                "100",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Cache"
-              },
-              "parameters": [
-                "play"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjetTxt"
-              },
-              "parameters": [
-                "TypingText",
-                "line1",
-                "=",
-                "TypingText.String()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "TypingText",
-                "=",
-                "\"\""
-              ],
-              "subInstructions": []
             }
           ],
           "events": [
@@ -3091,147 +4134,31 @@
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": [],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Opacity"
-              },
-              "parameters": [
-                "Fade",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "play",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::ChangeColor"
-              },
-              "parameters": [
-                "play",
-                "\"51;255;0\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Reception\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "play",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "TextObject::ChangeColor"
-              },
-              "parameters": [
-                "play",
-                "\"21;105;0\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "TYPING",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Typing Text",
+              "comment2": ""
+            },
             {
               "disabled": false,
               "folded": false,
@@ -3298,7 +4225,78 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "typeRate",
+                        "=",
+                        "30.075"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "screenla.wav",
+                        "",
+                        "100",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "play"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjetTxt"
+                      },
+                      "parameters": [
+                        "TypingText",
+                        "line1",
+                        "=",
+                        "TypingText.String()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "TypingText",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -3317,7 +4315,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -3552,9 +4550,151 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Opacity"
+              },
+              "parameters": [
+                "Fade",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "play",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "play",
+                "\"51;255;0\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Map\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "play",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "play",
+                "\"21;105;0\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6003360,
+          "ambientLightColorR": 134217728,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Background",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -3599,8 +4739,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Reception",
-      "name": "Reception",
+      "mangledName": "Map",
+      "name": "Map",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -3620,7 +4760,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.226
+        "zoomFactor": 0.346
       },
       "objectsGroups": [
         {
@@ -3674,14 +4814,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 158,
+          "height": 49,
           "layer": "",
           "locked": false,
           "name": "WallCLevel",
           "persistentUuid": "fb1bf829-2413-413c-93d5-1cc199f5acd1",
-          "width": 424,
-          "x": 748,
-          "y": 199,
+          "width": 355,
+          "x": 785,
+          "y": 130,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -3690,14 +4830,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 299,
+          "height": 348,
           "layer": "",
           "locked": false,
           "name": "ChippyOffice",
           "persistentUuid": "1bcb2229-01bc-4a07-834c-aa590a8fbe58",
-          "width": 242,
-          "x": 502,
-          "y": 194,
+          "width": 614,
+          "x": 77,
+          "y": 132,
           "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
@@ -3727,9 +4867,9 @@
           "locked": false,
           "name": "Cafeteria",
           "persistentUuid": "969ee040-cb88-48b5-8cae-6d272e59b3ca",
-          "width": 237,
-          "x": 1182,
-          "y": 200,
+          "width": 468,
+          "x": 1376,
+          "y": 133,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -3738,14 +4878,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 312,
+          "height": 252,
           "layer": "",
           "locked": false,
           "name": "SpareParts",
           "persistentUuid": "714b8ec4-a35b-4f0e-b661-b55fba627338",
-          "width": 274,
-          "x": 1432,
-          "y": 190,
+          "width": 408,
+          "x": 1423,
+          "y": 544,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -3770,14 +4910,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 350,
+          "height": 244,
           "layer": "",
           "locked": false,
           "name": "Motherboard",
           "persistentUuid": "69b2f985-e079-4f5a-9be4-91180722ad37",
-          "width": 201,
-          "x": 2,
-          "y": 171,
+          "width": 533,
+          "x": 86,
+          "y": 842,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -3786,14 +4926,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 313,
+          "height": 221,
           "layer": "",
           "locked": false,
           "name": "RobotCubicles",
           "persistentUuid": "12a262a9-b3a0-41f9-9f98-6bdb3d6235ac",
-          "width": 279,
-          "x": 214,
-          "y": 188,
+          "width": 318,
+          "x": 80,
+          "y": 564,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -3802,14 +4942,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 351,
+          "height": 235,
           "layer": "",
           "locked": false,
           "name": "Accounting",
           "persistentUuid": "fb9fbb71-6e6c-40d9-8401-fb4ef295b907",
-          "width": 193,
-          "x": 1722,
-          "y": 171,
+          "width": 408,
+          "x": 1424,
+          "y": 844,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -3834,12 +4974,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 1080,
+          "height": 1079,
           "layer": "Background",
           "locked": false,
           "name": "background",
           "persistentUuid": "dd3586da-1abe-4b36-84d7-dff497011e09",
-          "width": 1920,
+          "width": 1917,
           "x": 0,
           "y": 0,
           "zOrder": 40,
@@ -3850,78 +4990,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 339,
-          "layer": "Background",
-          "locked": false,
-          "name": "desk",
-          "persistentUuid": "cc12b0e3-d055-4325-8cf0-cde1f20e8f89",
-          "width": 609,
-          "x": 660,
-          "y": 539,
-          "zOrder": 41,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 167,
-          "layer": "",
-          "locked": false,
-          "name": "reception",
-          "persistentUuid": "22fed272-52e2-4227-b9d9-8a2f566e956e",
-          "width": 556,
-          "x": 688,
-          "y": 895,
-          "zOrder": 42,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 288,
-          "layer": "Background",
-          "locked": false,
-          "name": "receptionist",
-          "persistentUuid": "c504f7d3-cccf-454d-aa8d-d0bd27557a2b",
-          "width": 301,
-          "x": 813,
-          "y": 310,
-          "zOrder": 43,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 224,
-          "layer": "Background",
-          "locked": false,
-          "name": "Screen",
-          "persistentUuid": "95062f5f-e57f-49e4-a779-137c1029940c",
-          "width": 284,
-          "x": 830,
-          "y": 666,
-          "zOrder": 44,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 164,
+          "height": 174,
           "layer": "",
           "locked": false,
           "name": "Screenla",
           "persistentUuid": "b847e691-8b81-4f7f-91b9-6cdeceedfe1c",
-          "width": 547,
-          "x": 704,
-          "y": 627,
+          "width": 393,
+          "x": 785,
+          "y": 594,
           "zOrder": 45,
           "numberProperties": [],
           "stringProperties": [],
@@ -3963,7 +5039,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Background.png",
+                      "image": "res\\Background_Map.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7239,7 +8315,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.196
+        "zoomFactor": 0.316
       },
       "objectsGroups": [
         {
@@ -7409,6 +8485,45 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Splash_Key",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "InventoryKey-1-0",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "InventoryKey-1-0-1-0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -7491,6 +8606,142 @@
             }
           ],
           "events": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "SPLASH",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "chippyOfficeKeyFound",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"splashTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Splash_Key",
+                        "ScreenWidth()/2",
+                        "ScreenHeight()/2",
+                        "\"HUD\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "GlobalVariable(displaySplash)",
+                        "\"splashTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Splash_Key",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_Description",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Reception\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ],
+          "parameters": []
         },
         {
           "disabled": false,
@@ -7875,7 +9126,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8145,6 +9396,43 @@
                                 "\"I found a key!\""
                               ],
                               "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarObjetTxt"
+                              },
+                              "parameters": [
+                                "ChippyOffice",
+                                "description",
+                                "=",
+                                "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "chippyOfficeKeyFound",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarGlobal"
+                              },
+                              "parameters": [
+                                "chippyOfficeDoorLocked",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
                             }
                           ],
                           "events": []
@@ -8165,7 +9453,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "INVENTORY",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8788,43 +10076,6 @@
                         "30"
                       ],
                       "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjetTxt"
-                      },
-                      "parameters": [
-                        "ChippyOffice",
-                        "description",
-                        "=",
-                        "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "chippyOfficeKeyFound",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "chippyOfficeDoorLocked",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -8956,14 +10207,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 261,
+          "height": 273,
           "layer": "",
           "locked": false,
           "name": "MemoryMatch",
           "persistentUuid": "cff1219a-74c8-403b-a24d-bf93059c77be",
-          "width": 425,
-          "x": 752,
-          "y": 448,
+          "width": 477,
+          "x": 709,
+          "y": 505,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -8972,14 +10223,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 237,
+          "height": 412,
           "layer": "",
           "locked": false,
           "name": "MonsterPuzzle",
           "persistentUuid": "104e80fd-1262-4483-9355-3fcac3bc8363",
           "width": 446,
-          "x": 736,
-          "y": 190,
+          "x": 606,
+          "y": 22,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -9328,7 +10579,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -9337,7 +10588,36 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\BBK_Game_Cafeteria.png",
+                      "image": "res\\Background_Cafeteria1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "res\\Background_Cafeteria2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -10308,6 +11588,18 @@
                     "Hints",
                     "=",
                     "Hints.VariableString(one) + \"\n\" + Hints.VariableString(two) + \"\n\" + Hints.VariableString(three) + \"\n\" + Hints.VariableString(four)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "background",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -25699,7 +26991,7 @@
       ],
       "layers": [
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 0,
           "ambientLightColorR": 0,
           "followBaseLayerCamera": false,
@@ -29519,9 +30811,9 @@
       ],
       "layers": [
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 6000560,
-          "ambientLightColorR": 167797870,
+          "ambientLightColorR": 167797872,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Background",
@@ -30716,7 +32008,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "InventoryBackground-1-0.png",
+                      "image": "InventoryBackground-1-2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -30760,7 +32052,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1-6.png",
+                      "image": "Normal-1-2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -30789,7 +32081,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Hover-1-2.png",
+                      "image": "Hover-1-6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -30828,7 +32120,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "InventoryKey-1.png",
+                      "image": "InventoryKey-1-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -33111,7 +34403,7 @@
   ],
   "externalEvents": [
     {
-      "associatedLayout": "Reception",
+      "associatedLayout": "Map",
       "lastChangeTimeStamp": 0,
       "name": "Countdown",
       "events": [
@@ -33402,7 +34694,7 @@
               },
               "parameters": [
                 "",
-                "\"MainMenu\"",
+                "\"Slideshow_Start\"",
                 ""
               ],
               "subInstructions": []
@@ -33696,7 +34988,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"Reception\"",
+                    "\"Map\"",
                     ""
                   ],
                   "subInstructions": []
@@ -33710,7 +35002,7 @@
       ]
     },
     {
-      "associatedLayout": "Reception",
+      "associatedLayout": "Map",
       "lastChangeTimeStamp": 0,
       "name": "Hints",
       "events": [
@@ -33997,7 +35289,7 @@
       ]
     },
     {
-      "associatedLayout": "Reception",
+      "associatedLayout": "Map",
       "lastChangeTimeStamp": 0,
       "name": "Init_Basic",
       "events": [

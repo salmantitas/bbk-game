@@ -1762,6 +1762,25 @@
           ]
         }
       ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "play",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "PLAY",
+      "font": "res\\pricedown.black.ttf",
+      "characterSize": 150,
+      "color": {
+        "b": 0,
+        "g": 255,
+        "r": 51
+      }
     }
   ],
   "objectsGroups": [
@@ -1860,22 +1879,6 @@
       "instances": [
         {
           "angle": 0,
-          "customSize": true,
-          "height": 916,
-          "layer": "",
-          "locked": false,
-          "name": "Slideshow",
-          "persistentUuid": "b3aaebab-36c2-4f55-9444-19df3ef5d10c",
-          "width": 1626,
-          "x": 102,
-          "y": 14,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "layer": "",
@@ -1899,9 +1902,41 @@
           "name": "ArrowRight",
           "persistentUuid": "055ecefd-0048-4470-9bf6-0fc364ed01e9",
           "width": 0,
-          "x": 1740,
+          "x": 1765,
           "y": 940,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 916,
+          "layer": "",
+          "locked": false,
+          "name": "Slideshow",
+          "persistentUuid": "3da2e043-f74a-4171-97a8-a25efc6f3c63",
+          "width": 1626,
+          "x": 141,
+          "y": 9,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "play",
+          "persistentUuid": "6fc245fb-340f-4878-aa95-cdc4d6f50c0b",
+          "width": 0,
+          "x": 826,
+          "y": 911,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2344,6 +2379,16 @@
                     "1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "play"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -2601,7 +2646,89 @@
                       "events": []
                     }
                   ]
-                },
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "Play Button",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Animation"
+                  },
+                  "parameters": [
+                    "Slideshow",
+                    "=",
+                    "8"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "play",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "play",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "play",
+                    "\"51;255;0\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
                 {
                   "disabled": false,
                   "folded": false,
@@ -2610,78 +2737,66 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Animation"
+                        "value": "MouseButtonReleased"
                       },
                       "parameters": [
-                        "Slideshow",
-                        "=",
-                        "8"
+                        "",
+                        "Left"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "actions": [],
-                  "events": [
+                  "actions": [
                     {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "Arrows",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"MainMenu\"",
+                        ""
                       ],
-                      "actions": [],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "Arrows",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Scene"
-                          },
-                          "parameters": [
-                            "",
-                            "\"MainMenu\"",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
+                      "subInstructions": []
                     }
-                  ]
+                  ],
+                  "events": []
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "play",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "play",
+                    "\"21;105;0\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -2711,7 +2826,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 6003360,
           "ambientLightColorR": 67108864,
           "followBaseLayerCamera": false,
@@ -2753,7 +2868,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.3436
+        "zoomFactor": 0.1936
       },
       "objectsGroups": [],
       "variables": [],
@@ -2966,7 +3081,7 @@
               "type": "Tween::TweenBehavior"
             }
           ],
-          "string": "The right mouse button gives a description of an object.\nGo ahead! Right click on the reception.",
+          "string": "The right mouse button gives a description of an object.\nGo ahead! Right click on the reception desk.",
           "font": "res\\libel-suit.regular.ttf",
           "characterSize": 40,
           "color": {
@@ -3097,9 +3212,37 @@
             "align": "left",
             "wordWrap": true
           }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "test_trigger",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Trigger",
+          "font": "",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Fade"
+        },
         {
           "disabled": false,
           "folded": false,
@@ -3125,23 +3268,7 @@
               "parameters": [
                 "trigger",
                 "=",
-                "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Tween::AddObjectPositionXTween"
-              },
-              "parameters": [
-                "HUD_Tut_1",
-                "Tween",
-                "\"MoveRight\"",
-                "60",
-                "\"linear\"",
-                "2000",
-                ""
+                "-1"
               ],
               "subInstructions": []
             },
@@ -3166,44 +3293,237 @@
                 "InvisibleMarkers"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"titleTimer\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "TITLE",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Title Background",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::FillColor"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "\"173;160;249\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PrimitiveDrawing::RoundedRectangle"
+                  },
+                  "parameters": [
+                    "Drawer",
+                    "Title.X() - 10",
+                    "15",
+                    "Title.X() + Title.Width() + 10",
+                    "250",
+                    "20"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Hide Title and Show Tutorial_1",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    "\"titleTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Title",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "trigger",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+          "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "PrimitiveDrawing::FillColor"
+                "value": "VarScene"
               },
               "parameters": [
-                "Drawer",
-                "\"173;160;249\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "PrimitiveDrawing::RoundedRectangle"
-              },
-              "parameters": [
-                "Drawer",
-                "Title.X() - 10",
-                "15",
-                "Title.X() + Title.Width() + 10",
-                "250",
-                "20"
+                "trigger",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionXTween"
+              },
+              "parameters": [
+                "HUD_Tut_1",
+                "Tween",
+                "\"MoveRight\"",
+                "60",
+                "\"linear\"",
+                "2000",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Desk",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "trigger",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -3240,6 +3560,151 @@
           ],
           "actions": [],
           "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Feedback for right clicking",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Great",
+                    "SceneWindowWidth()/2 - 200",
+                    "SceneWindowHeight()/2 - 200",
+                    "\"UI\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"messageTimer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Great",
+                    "=",
+                    "100"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Delete Great",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "GlobalVariable(displaySplash)",
+                    "\"messageTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Great",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectPositionYTween"
+                  },
+                  "parameters": [
+                    "HUD_Tut_2",
+                    "Tween",
+                    "\"MoveUp\"",
+                    "900",
+                    "\"linear\"",
+                    "500",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"messageTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
             {
               "disabled": false,
               "folded": false,
@@ -3309,121 +3774,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Great",
-                    "SceneWindowWidth()/2 - 200",
-                    "SceneWindowHeight()/2 - 200",
-                    "\"UI\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"messageTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangePlan"
-                  },
-                  "parameters": [
-                    "Great",
-                    "=",
-                    "100"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "GlobalVariable(displaySplash)",
-                    "\"messageTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Great",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Tween::AddObjectPositionYTween"
-                  },
-                  "parameters": [
-                    "HUD_Tut_2",
-                    "Tween",
-                    "\"MoveUp\"",
-                    "900",
-                    "\"linear\"",
-                    "500",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"messageTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Tween::HasFinished"
                   },
                   "parameters": [
@@ -3470,61 +3820,6 @@
           },
           "comment": "",
           "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Desk",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MouseButtonReleased"
-              },
-              "parameters": [
-                "",
-                "Right"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "trigger",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "Fade"
         }
       ],
       "layers": [
@@ -3754,25 +4049,6 @@
           }
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "play",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "PLAY",
-          "font": "res\\pricedown.black.ttf",
-          "characterSize": 150,
-          "color": {
-            "b": 0,
-            "g": 255,
-            "r": 51
-          }
-        },
-        {
           "name": "Computer",
           "tags": "",
           "type": "Sprite",
@@ -3821,12 +4097,36 @@
           "underlined": false,
           "variables": [
             {
-              "name": "line1",
-              "value": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! CEO, Chippy Blipman, and the other Robots, have been compromised and you need to act fast. I am also programmed to inform you that it was I, Screenla, \nthe best receptionist of TechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure out how to defrag Chippy’s motherboard and reboot the system before it’s too late?\nYou have 60 minutes to unlock the rooms, solve the puzzles and restart the system.\nGood luck, you are going to need it to defeat my hacking skills!"
+              "name": "l1",
+              "value": "Welcome, young humans to another day of work at TechKorp."
+            },
+            {
+              "name": "l2",
+              "value": "I am programmed to inform you that TechKorp has been HACKED! "
+            },
+            {
+              "name": "l3",
+              "value": "CEO, Chippy Blipman, and the other Robots, have been compromised and you need to act fast. "
+            },
+            {
+              "name": "l4",
+              "value": "I am also programmed to inform you that it was I, Screenla, the best receptionist of TechKorp ever, who is the hacker."
+            },
+            {
+              "name": "l5",
+              "value": "You are well trained, humans, but can you figure out how to defrag Chippy’s motherboard and reboot the system before it’s too late?"
+            },
+            {
+              "name": "l6",
+              "value": "You have 60 minutes to unlock the rooms, solve the puzzles and restart the system."
+            },
+            {
+              "name": "l7",
+              "value": "Good luck, you are going to need it to defeat my hacking skills!"
             }
           ],
           "behaviors": [],
-          "string": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has\nbeen HACKED! CEO, Chippy Blipman, and the\nother robots, have been compromised and you\nneed to act fast. I am also programmed to inform\nyou that it was I, Screenla, the best receptionist of\nTechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure\nout how to defrag Chippy’s motherboard and\nreboot the system before it’s too late?\nYou have 60 minutes to unlock the rooms, solve\nthe puzzles and restart the system.\nGood luck, you are going to need it to defeat my\nhacking skills!",
+          "string": "Welcome, young humans to another day of work at TechKorp. \nI am programmed to inform you that TechKorp has been HACKED! \nCEO, Chippy Blipman, and the other robots, \nhave been compromised and you need to act \nfast. I am also programmed to inform\nyou that it was I, Screenla, the best receptionist of\nTechKorp ever, who is the hacker.\nYou are well trained, humans, but can you figure\nout how to defrag Chippy’s motherboard and\nreboot the system before it’s too late?\nYou have 60 minutes to unlock the rooms, solve\nthe puzzles and restart the system.\nGood luck, you are going to need it to defeat my\nhacking skills!",
           "font": "",
           "characterSize": 41,
           "color": {
@@ -4139,7 +4439,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "TYPING",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4203,12 +4503,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarSceneTxt"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
                     "lineState",
                     "=",
-                    "0"
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -4221,6 +4521,18 @@
                     "typing",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "lineCheck",
+                    "=",
+                    "mod(Variable(lineState), 2)"
                   ],
                   "subInstructions": []
                 }
@@ -4315,7 +4627,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4369,7 +4681,20 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
@@ -4379,7 +4704,7 @@
                           "parameters": [
                             "TypingText",
                             "+",
-                            "SubStr(TypingText.VariableString(line1), Variable(charPos), 1)"
+                            "SubStr(TypingText.VariableString(l1), Variable(charPos), 1)"
                           ],
                           "subInstructions": []
                         },
@@ -4392,6 +4717,567 @@
                             "charPos",
                             "+",
                             "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l1)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l2), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "4"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l2)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "5"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l3), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "6"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l3)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "7"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l4), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "8"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l4)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "9"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l5), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "10"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l5)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "11"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l6), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "12"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l6)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "13"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "+",
+                            "SubStr(TypingText.VariableString(l7), Variable(charPos), 1)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "charPos",
+                                "=",
+                                "StrLength(TypingText.VariableString(l7))"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "typing",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "=",
+                            "14"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "TypingText",
+                            "=",
+                            "TypingText.VariableString(l7)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "typing",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -4436,69 +5322,126 @@
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "TypingText",
-                        "=",
-                        "TypingText.VariableString(line1)"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "<",
+                            "14"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "typing",
-                        "=",
-                        "0"
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "lineState",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "charPos",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "lineCheck",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "TypingText",
+                                "=",
+                                "\"\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "lineCheck",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "TypingText",
+                                "=",
+                                "\"\""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "charPos",
-                    "=",
-                    "StrLength(TypingText.VariableString(line1))"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "typing",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             },
             {
               "disabled": false,
@@ -4685,7 +5628,7 @@
       ],
       "layers": [
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 6003360,
           "ambientLightColorR": 134217728,
           "followBaseLayerCamera": false,
@@ -6737,7 +7680,7 @@
                                       },
                                       "parameters": [
                                         "",
-                                        "\"Drag & Drop\"",
+                                        "\"Spare Parts\"",
                                         ""
                                       ],
                                       "subInstructions": []
@@ -25531,8 +26474,8 @@
     {
       "b": 255,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Drag_32_38_32Drop",
-      "name": "Drag & Drop",
+      "mangledName": "Spare_32Parts",
+      "name": "Spare Parts",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,

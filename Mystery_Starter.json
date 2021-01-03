@@ -4013,7 +4013,7 @@
           "name": "Text_IntroSkip",
           "persistentUuid": "9bcc1296-d737-4e56-bec6-a00b384875e8",
           "width": 0,
-          "x": 14,
+          "x": 718,
           "y": -28,
           "zOrder": 6,
           "numberProperties": [],
@@ -5712,7 +5712,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.346
+        "zoomFactor": 0.446
       },
       "objectsGroups": [
         {
@@ -7562,6 +7562,74 @@
             "g": 255,
             "r": 0
           }
+        },
+        {
+          "name": "Hint_Arrow",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "down",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "arrow_down-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "up",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "arrow_up-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -7779,24 +7847,15 @@
           "events": []
         },
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "paused",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
+          "name": "GAME LOOP",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
               "colorB": 228,
@@ -7804,21 +7863,253 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
-              "name": "GAME LOOP",
+              "folded": true,
+              "name": "LOCATIONS",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
-                  "name": "LOCATIONS",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Locations",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_LocationName",
+                        "=",
+                        "Locations.VariableString(name)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Map",
+                        "",
+                        "yes",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_LocationName",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": true,
+              "name": "INTERACTIVES",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "GENERIC BEHAVIOR",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "\"Normal\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "Interactives.VariableString(name)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "HUD_ObjectName",
+                        "=",
+                        "Interactives.PointX(\"Left\") + 10",
+                        "=",
+                        "Interactives.PointY(\"Right\") + 100"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PrimitiveDrawing::RoundedRectangle"
+                      },
+                      "parameters": [
+                        "Drawer",
+                        "HUD_ObjectName.X() - 10",
+                        "HUD_ObjectName.Y() - 10",
+                        "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
+                        "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
+                        "10"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Interactives",
+                        "\"Hover\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
@@ -7828,13 +8119,11 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "SourisSurObjet"
+                            "value": "MouseButtonReleased"
                           },
                           "parameters": [
-                            "Locations",
                             "",
-                            "",
-                            ""
+                            "Right"
                           ],
                           "subInstructions": []
                         }
@@ -7846,21 +8135,9 @@
                             "value": "TextObject::String"
                           },
                           "parameters": [
-                            "HUD_LocationName",
+                            "HUD_Description",
                             "=",
-                            "Locations.VariableString(name)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_ObjectName",
-                            "=",
-                            "\"\""
+                            "Interactives.VariableString(description)"
                           ],
                           "subInstructions": []
                         }
@@ -7874,14 +8151,12 @@
                       "conditions": [
                         {
                           "type": {
-                            "inverted": true,
-                            "value": "SourisSurObjet"
+                            "inverted": false,
+                            "value": "MouseButtonReleased"
                           },
                           "parameters": [
-                            "Map",
                             "",
-                            "yes",
-                            ""
+                            "Left"
                           ],
                           "subInstructions": []
                         }
@@ -7893,40 +8168,981 @@
                             "value": "TextObject::String"
                           },
                           "parameters": [
-                            "HUD_ObjectName",
+                            "HUD_Description",
                             "=",
-                            "\"\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_LocationName",
-                            "=",
-                            "\"\""
+                            "Interactives.VariableString(use)"
                           ],
                           "subInstructions": []
                         }
                       ],
-                      "events": []
+                      "events": [
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "disabled": false,
+                          "folded": false,
+                          "name": "SPECIFIC BEHAVIOR",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "RECEPTION",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "Screenla",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Screenla\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "KEY",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "WallCLevel",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "chippyOfficeKeyFound",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Puzzle Robot Picture\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "ChippyOffice",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "chippyOfficeDoorLocked",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Chippy's Office\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "CAFETERIA",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "Cafeteria",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Cafeteria\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "ROBOT CUBICLES",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "RobotCubicles",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarGlobal"
+                                      },
+                                      "parameters": [
+                                        "accountingDoorLocked",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarGlobal"
+                                      },
+                                      "parameters": [
+                                        "countdown",
+                                        "-",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "PushScene"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "\"Robot Cubicles\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "SPARE PARTS ROOM",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "SpareParts",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "VarGlobal"
+                                      },
+                                      "parameters": [
+                                        "sparePartsSolved",
+                                        "=",
+                                        "0"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "disabled": false,
+                                      "folded": false,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "VarGlobal"
+                                          },
+                                          "parameters": [
+                                            "sparePartsDoorLocked",
+                                            "=",
+                                            "1"
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Create"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "sparePartsCodeEntry",
+                                            "0",
+                                            "0",
+                                            "\"\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Montre"
+                                          },
+                                          "parameters": [
+                                            "sparePartsCodePrompt",
+                                            ""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ShowLayer"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"Lockpad\""
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "events": []
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "folded": false,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "VarGlobal"
+                                          },
+                                          "parameters": [
+                                            "sparePartsDoorLocked",
+                                            "=",
+                                            "0"
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "Scene"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "\"Spare Parts\"",
+                                            ""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarObjetTxt"
+                                          },
+                                          "parameters": [
+                                            "SpareParts",
+                                            "use",
+                                            "=",
+                                            "\"\""
+                                          ],
+                                          "subInstructions": []
+                                        },
+                                        {
+                                          "type": {
+                                            "inverted": false,
+                                            "value": "ModVarGlobal"
+                                          },
+                                          "parameters": [
+                                            "countdown",
+                                            "-",
+                                            "1"
+                                          ],
+                                          "subInstructions": []
+                                        }
+                                      ],
+                                      "events": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "MOTHERBOARD",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "Motherboard",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "motherboardDoorLocked",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Motherboard Room\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "ACCOUNTING",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SourisSurObjet"
+                                  },
+                                  "parameters": [
+                                    "Accounting",
+                                    "",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarGlobal"
+                                  },
+                                  "parameters": [
+                                    "accountingDoorLocked",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarGlobal"
+                                  },
+                                  "parameters": [
+                                    "countdown",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PushScene"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "\"Accounting Office\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ]
                     }
-                  ],
-                  "parameters": []
+                  ]
                 },
                 {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
                   "disabled": false,
-                  "folded": true,
-                  "name": "INTERACTIVES",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "HINTS",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "hint_y",
+                        "=",
+                        "135"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "HUD_Hints",
+                        "1600",
+                        "10",
+                        "\"UI\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Hint_Arrow",
+                        "1880",
+                        "90",
+                        "\"UI\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "HUD_HintText",
+                        "1495",
+                        "Variable(hint_y)",
+                        "\"HUD\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_HintText",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "HUD_HintText",
+                        "=",
+                        "200"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Hint_Arrow",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "hintReception",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_HintText",
+                        "=",
+                        "\"This is a free hint!\nPress J to access the Journal.\nRight click to check description.\nLeft click to use.\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PrimitiveDrawing::RoundedRectangle"
+                      },
+                      "parameters": [
+                        "Drawer",
+                        "HUD_HintText.X() - 10",
+                        "HUD_HintText.Y() - 10",
+                        "HUD_HintText.X() + HUD_HintText.Width() + 10",
+                        "HUD_HintText.Y() + HUD_HintText.Height() + 10",
+                        "10"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "show_hint",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "HUD_HintText",
+                        "=",
+                        "-500"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Hint_Arrow",
+                        "\"down\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "show_hint",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "HUD_HintText",
+                        "=",
+                        "Variable(hint_y)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "Hint_Arrow",
+                        "\"up\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_Hints",
+                        "=",
+                        "\"HINTS: \" + GlobalVariableString(hints) + \"/3\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
@@ -7940,9 +9156,112 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "GENERIC BEHAVIOR",
+                      "comment": "Hints Unavailable",
                       "comment2": ""
                     },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "hintReception",
+                                "<=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "hints",
+                                "<=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "TextObject::ChangeColor"
+                          },
+                          "parameters": [
+                            "HUD_Hints",
+                            "\"148;148;148\""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Hints Available",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "hintReception",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "hints",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
                     {
                       "disabled": false,
                       "folded": false,
@@ -7954,7 +9273,7 @@
                             "value": "SourisSurObjet"
                           },
                           "parameters": [
-                            "Interactives",
+                            "HUD_Hints",
                             "",
                             "",
                             ""
@@ -7966,23 +9285,11 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "SetAnimationName"
+                            "value": "TextObject::ChangeColor"
                           },
                           "parameters": [
-                            "Interactives",
-                            "\"Normal\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_ObjectName",
-                            "=",
-                            "\"\""
+                            "HUD_Hints",
+                            "\"255;255;255\""
                           ],
                           "subInstructions": []
                         }
@@ -8000,7 +9307,7 @@
                             "value": "SourisSurObjet"
                           },
                           "parameters": [
-                            "Interactives",
+                            "HUD_Hints",
                             "",
                             "",
                             ""
@@ -8012,90 +9319,16 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "TextObject::String"
+                            "value": "TextObject::ChangeColor"
                           },
                           "parameters": [
-                            "HUD_ObjectName",
-                            "=",
-                            "Interactives.VariableString(name)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreXY"
-                          },
-                          "parameters": [
-                            "HUD_ObjectName",
-                            "=",
-                            "Interactives.PointX(\"Left\") + 10",
-                            "=",
-                            "Interactives.PointY(\"Right\") + 100"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "PrimitiveDrawing::RoundedRectangle"
-                          },
-                          "parameters": [
-                            "Drawer",
-                            "HUD_ObjectName.X() - 10",
-                            "HUD_ObjectName.Y() - 10",
-                            "HUD_ObjectName.X() + HUD_ObjectName.Width() + 10",
-                            "HUD_ObjectName.Y() + HUD_ObjectName.Height() + 10",
-                            "10"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "Interactives",
-                            "\"Hover\""
+                            "HUD_Hints",
+                            "\"255;0;0\""
                           ],
                           "subInstructions": []
                         }
                       ],
                       "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "MouseButtonReleased"
-                              },
-                              "parameters": [
-                                "",
-                                "Right"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TextObject::String"
-                              },
-                              "parameters": [
-                                "HUD_Description",
-                                "=",
-                                "Interactives.VariableString(description)"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
                         {
                           "disabled": false,
                           "folded": false,
@@ -8117,682 +9350,94 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "TextObject::String"
+                                "value": "ModVarGlobal"
                               },
                               "parameters": [
-                                "HUD_Description",
+                                "hintReception",
+                                "-",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "show_hint",
                                 "=",
-                                "Interactives.VariableString(use)"
+                                "1"
                               ],
                               "subInstructions": []
                             }
                           ],
-                          "events": [
-                            {
-                              "colorB": 228,
-                              "colorG": 176,
-                              "colorR": 74,
-                              "creationTime": 0,
-                              "disabled": false,
-                              "folded": false,
-                              "name": "SPECIFIC BEHAVIOR",
-                              "source": "",
-                              "type": "BuiltinCommonInstructions::Group",
-                              "events": [
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "RECEPTION",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "Screenla",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Screenla\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "KEY",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "WallCLevel",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "VarGlobal"
-                                      },
-                                      "parameters": [
-                                        "chippyOfficeKeyFound",
-                                        "=",
-                                        "0"
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "ModVarGlobal"
-                                      },
-                                      "parameters": [
-                                        "countdown",
-                                        "-",
-                                        "1"
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Puzzle Robot Picture\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "ChippyOffice",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "VarGlobal"
-                                      },
-                                      "parameters": [
-                                        "chippyOfficeDoorLocked",
-                                        "=",
-                                        "0"
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "ModVarGlobal"
-                                      },
-                                      "parameters": [
-                                        "countdown",
-                                        "-",
-                                        "1"
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Chippy's Office\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "CAFETERIA",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "Cafeteria",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "ModVarGlobal"
-                                      },
-                                      "parameters": [
-                                        "countdown",
-                                        "-",
-                                        "1"
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Cafeteria\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "ROBOT CUBICLES",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "RobotCubicles",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [],
-                                  "events": [
-                                    {
-                                      "disabled": false,
-                                      "folded": false,
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "inverted": false,
-                                            "value": "VarGlobal"
-                                          },
-                                          "parameters": [
-                                            "accountingDoorLocked",
-                                            "=",
-                                            "1"
-                                          ],
-                                          "subInstructions": []
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "inverted": false,
-                                            "value": "ModVarGlobal"
-                                          },
-                                          "parameters": [
-                                            "countdown",
-                                            "-",
-                                            "1"
-                                          ],
-                                          "subInstructions": []
-                                        },
-                                        {
-                                          "type": {
-                                            "inverted": false,
-                                            "value": "PushScene"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "\"Robot Cubicles\""
-                                          ],
-                                          "subInstructions": []
-                                        }
-                                      ],
-                                      "events": []
-                                    }
-                                  ]
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "SPARE PARTS ROOM",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "SpareParts",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [],
-                                  "events": [
-                                    {
-                                      "disabled": false,
-                                      "folded": false,
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "inverted": false,
-                                            "value": "VarGlobal"
-                                          },
-                                          "parameters": [
-                                            "sparePartsSolved",
-                                            "=",
-                                            "0"
-                                          ],
-                                          "subInstructions": []
-                                        }
-                                      ],
-                                      "actions": [],
-                                      "events": [
-                                        {
-                                          "disabled": false,
-                                          "folded": false,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "VarGlobal"
-                                              },
-                                              "parameters": [
-                                                "sparePartsDoorLocked",
-                                                "=",
-                                                "1"
-                                              ],
-                                              "subInstructions": []
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "Create"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "sparePartsCodeEntry",
-                                                "0",
-                                                "0",
-                                                "\"\""
-                                              ],
-                                              "subInstructions": []
-                                            },
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "Montre"
-                                              },
-                                              "parameters": [
-                                                "sparePartsCodePrompt",
-                                                ""
-                                              ],
-                                              "subInstructions": []
-                                            },
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "ShowLayer"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "\"Lockpad\""
-                                              ],
-                                              "subInstructions": []
-                                            }
-                                          ],
-                                          "events": []
-                                        },
-                                        {
-                                          "disabled": false,
-                                          "folded": false,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "VarGlobal"
-                                              },
-                                              "parameters": [
-                                                "sparePartsDoorLocked",
-                                                "=",
-                                                "0"
-                                              ],
-                                              "subInstructions": []
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "Scene"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "\"Spare Parts\"",
-                                                ""
-                                              ],
-                                              "subInstructions": []
-                                            },
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "ModVarObjetTxt"
-                                              },
-                                              "parameters": [
-                                                "SpareParts",
-                                                "use",
-                                                "=",
-                                                "\"\""
-                                              ],
-                                              "subInstructions": []
-                                            },
-                                            {
-                                              "type": {
-                                                "inverted": false,
-                                                "value": "ModVarGlobal"
-                                              },
-                                              "parameters": [
-                                                "countdown",
-                                                "-",
-                                                "1"
-                                              ],
-                                              "subInstructions": []
-                                            }
-                                          ],
-                                          "events": []
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "MOTHERBOARD",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "Motherboard",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "VarGlobal"
-                                      },
-                                      "parameters": [
-                                        "motherboardDoorLocked",
-                                        "=",
-                                        "0"
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "ModVarGlobal"
-                                      },
-                                      "parameters": [
-                                        "countdown",
-                                        "-",
-                                        "1"
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Motherboard Room\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "ACCOUNTING",
-                                  "comment2": ""
-                                },
-                                {
-                                  "disabled": false,
-                                  "folded": false,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "Accounting",
-                                        "",
-                                        "",
-                                        ""
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "VarGlobal"
-                                      },
-                                      "parameters": [
-                                        "accountingDoorLocked",
-                                        "=",
-                                        "0"
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "ModVarGlobal"
-                                      },
-                                      "parameters": [
-                                        "countdown",
-                                        "-",
-                                        "1"
-                                      ],
-                                      "subInstructions": []
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": false,
-                                        "value": "PushScene"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "\"Accounting Office\""
-                                      ],
-                                      "subInstructions": []
-                                    }
-                                  ],
-                                  "events": []
-                                }
-                              ],
-                              "parameters": []
-                            }
-                          ]
+                          "events": []
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Show/Hide Input",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Hint_Arrow",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
                     },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "show_hint",
+                        "=",
+                        "mod(Variable(show_hint)+1, 2)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
                     {
                       "disabled": false,
                       "folded": false,
@@ -8801,8 +9446,36 @@
                       "actions": [],
                       "events": []
                     }
-                  ],
-                  "parameters": []
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": true,
+              "name": "INVENTORY",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "GENERIC BEHAVIOR",
+                  "comment2": ""
                 },
                 {
                   "colorB": 228,
@@ -8811,7 +9484,7 @@
                   "creationTime": 0,
                   "disabled": false,
                   "folded": false,
-                  "name": "HINTS",
+                  "name": "INIT",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -8835,38 +9508,10 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "Create"
+                            "value": "ModVarSceneTxt"
                           },
                           "parameters": [
-                            "",
-                            "HUD_Hints",
-                            "1600",
-                            "10",
-                            "\"UI\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "HUD_HintText",
-                            "1415",
-                            "650",
-                            "\"HUD\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_HintText",
+                            "picked_item",
                             "=",
                             "\"\""
                           ],
@@ -8875,12 +9520,14 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ChangePlan"
+                            "value": "Create"
                           },
                           "parameters": [
-                            "HUD_HintText",
-                            "=",
-                            "200"
+                            "",
+                            "InventoryBackground",
+                            "17",
+                            "604",
+                            "\"Inventory\""
                           ],
                           "subInstructions": []
                         },
@@ -8890,79 +9537,33 @@
                             "value": "ChangePlan"
                           },
                           "parameters": [
-                            "HUD_Hints",
+                            "InventoryBackground",
                             "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "hintReception",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_HintText",
-                            "=",
-                            "\"This is a free hint!\nPress J to access the Journal.\nRight click to check description.\nLeft click to use.\""
+                            "17"
                           ],
                           "subInstructions": []
                         },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "PrimitiveDrawing::RoundedRectangle"
+                            "value": "ModVarScene"
                           },
                           "parameters": [
-                            "Drawer",
-                            "HUD_HintText.X() - 10",
-                            "HUD_HintText.Y() - 10",
-                            "HUD_HintText.X() + HUD_HintText.Width() + 10",
-                            "HUD_HintText.Y() + HUD_HintText.Height() + 10",
-                            "10"
+                            "inv_i",
+                            "=",
+                            "3"
                           ],
                           "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
+                        },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "TextObject::String"
+                            "value": "ModVarScene"
                           },
                           "parameters": [
-                            "HUD_Hints",
+                            "inv_y",
                             "=",
-                            "\"HINTS: \" + GlobalVariableString(hints) + \"/3\""
+                            "InventoryBackground.Y()+16"
                           ],
                           "subInstructions": []
                         }
@@ -8971,192 +9572,76 @@
                         {
                           "disabled": false,
                           "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                          "infiniteLoopWarning": true,
+                          "type": "BuiltinCommonInstructions::While",
+                          "whileConditions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "BuiltinCommonInstructions::Or"
+                                "value": "VarScene"
                               },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarGlobal"
-                                  },
-                                  "parameters": [
-                                    "hintReception",
-                                    "<=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarGlobal"
-                                  },
-                                  "parameters": [
-                                    "hints",
-                                    "<=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ]
+                              "parameters": [
+                                "inv_i",
+                                ">",
+                                "0"
+                              ],
+                              "subInstructions": []
                             }
                           ],
+                          "conditions": [],
                           "actions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "TextObject::ChangeColor"
+                                "value": "Create"
                               },
                               "parameters": [
-                                "HUD_Hints",
-                                "\"148;148;148\""
+                                "",
+                                "InventorySlot",
+                                "InventoryBackground.X()+16",
+                                "Variable(inv_y)",
+                                "\"Inventory\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "InventorySlot",
+                                "=",
+                                "20"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "inv_i",
+                                "-",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "inv_y",
+                                "+",
+                                "80"
                               ],
                               "subInstructions": []
                             }
                           ],
                           "events": []
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "hintReception",
-                            ">",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "hints",
-                            ">",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": true,
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "HUD_Hints",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TextObject::ChangeColor"
-                              },
-                              "parameters": [
-                                "HUD_Hints",
-                                "\"255;255;255\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "HUD_Hints",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TextObject::ChangeColor"
-                              },
-                              "parameters": [
-                                "HUD_Hints",
-                                "\"255;0;0\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": [
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "MouseButtonReleased"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "Left"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarGlobal"
-                                  },
-                                  "parameters": [
-                                    "hintReception",
-                                    "-",
-                                    "1"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            }
-                          ]
                         }
                       ]
                     }
@@ -9170,35 +9655,41 @@
                   "creationTime": 0,
                   "disabled": false,
                   "folded": false,
-                  "name": "INVENTORY",
+                  "name": "Show/Hide",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
                       "disabled": false,
                       "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "GENERIC BEHAVIOR",
-                      "comment2": ""
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "disabled": false,
-                      "folded": false,
-                      "name": "INIT",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "i"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "i_released",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
                       "events": [
                         {
                           "disabled": false,
@@ -9208,37 +9699,10 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "DepartScene"
-                              },
-                              "parameters": [
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarSceneTxt"
-                              },
-                              "parameters": [
-                                "picked_item",
-                                "=",
-                                "\"\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Create"
+                                "value": "LayerVisible"
                               },
                               "parameters": [
                                 "",
-                                "InventoryBackground",
-                                "17",
-                                "604",
                                 "\"Inventory\""
                               ],
                               "subInstructions": []
@@ -9246,153 +9710,7 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "InventoryBackground",
-                                "=",
-                                "17"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "inv_i",
-                                "=",
-                                "3"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
-                              },
-                              "parameters": [
-                                "inv_y",
-                                "=",
-                                "InventoryBackground.Y()+16"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": [
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "infiniteLoopWarning": true,
-                              "type": "BuiltinCommonInstructions::While",
-                              "whileConditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarScene"
-                                  },
-                                  "parameters": [
-                                    "inv_i",
-                                    ">",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "InventorySlot",
-                                    "InventoryBackground.X()+16",
-                                    "Variable(inv_y)",
-                                    "\"Inventory\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "InventorySlot",
-                                    "=",
-                                    "20"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "inv_i",
-                                    "-",
-                                    "1"
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "inv_y",
-                                    "+",
-                                    "80"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            }
-                          ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "disabled": false,
-                      "folded": true,
-                      "name": "Show/Hide",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "KeyReleased"
-                              },
-                              "parameters": [
-                                "",
-                                "i"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarScene"
+                                "value": "VarScene"
                               },
                               "parameters": [
                                 "i_released",
@@ -9402,239 +9720,33 @@
                               "subInstructions": []
                             }
                           ],
-                          "events": [
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "LayerVisible"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Inventory\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarScene"
-                                  },
-                                  "parameters": [
-                                    "i_released",
-                                    "=",
-                                    "1"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "HideLayer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Inventory\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "i_released",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            },
-                            {
-                              "disabled": false,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "LayerVisible"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Inventory\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "VarScene"
-                                  },
-                                  "parameters": [
-                                    "i_released",
-                                    "=",
-                                    "1"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ShowLayer"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "\"Inventory\""
-                                  ],
-                                  "subInstructions": []
-                                },
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "i_released",
-                                    "=",
-                                    "0"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            }
-                          ]
-                        }
-                      ],
-                      "parameters": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "InventorySlot",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "InventorySlot",
-                            "\"Hover\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "HUD_Inventory",
-                            "=",
-                            "\"Inventory slot contains a \" + InventorySlot.VariableString(slot)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                          "actions": [
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "VarObjet"
+                                "value": "HideLayer"
                               },
                               "parameters": [
-                                "InventorySlot",
-                                "slot",
+                                "",
+                                "\"Inventory\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "i_released",
                                 "=",
                                 "0"
                               ],
                               "subInstructions": []
                             }
                           ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "TextObject::String"
-                              },
-                              "parameters": [
-                                "HUD_Inventory",
-                                "=",
-                                "\"Inventory slot is empty\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
                           "events": []
-                        }
-                      ]
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": true,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "InventorySlot",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "InventorySlot",
-                            "\"Normal\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": [
+                        },
                         {
                           "disabled": false,
                           "folded": false,
@@ -9643,13 +9755,23 @@
                             {
                               "type": {
                                 "inverted": true,
-                                "value": "SourisSurObjet"
+                                "value": "LayerVisible"
                               },
                               "parameters": [
-                                "InventoryBackground",
                                 "",
-                                "",
-                                ""
+                                "\"Inventory\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "i_released",
+                                "=",
+                                "1"
                               ],
                               "subInstructions": []
                             }
@@ -9658,12 +9780,23 @@
                             {
                               "type": {
                                 "inverted": false,
-                                "value": "TextObject::String"
+                                "value": "ShowLayer"
                               },
                               "parameters": [
-                                "HUD_Inventory",
+                                "",
+                                "\"Inventory\""
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "i_released",
                                 "=",
-                                "\"Inventory:\""
+                                "0"
                               ],
                               "subInstructions": []
                             }
@@ -9671,12 +9804,59 @@
                           "events": []
                         }
                       ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "InventorySlot",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "InventorySlot",
+                        "\"Hover\""
+                      ],
+                      "subInstructions": []
                     },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_Inventory",
+                        "=",
+                        "\"Inventory slot contains a \" + InventorySlot.VariableString(slot)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
                     {
                       "disabled": false,
                       "folded": false,
-                      "type": "BuiltinCommonInstructions::ForEach",
-                      "object": "InventorySlot",
+                      "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
@@ -9690,524 +9870,26 @@
                             "0"
                           ],
                           "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarSceneTxt"
-                          },
-                          "parameters": [
-                            "picked_item",
-                            "!=",
-                            "\"\""
-                          ],
-                          "subInstructions": []
                         }
                       ],
                       "actions": [
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarObjetTxt"
+                            "value": "TextObject::String"
                           },
                           "parameters": [
-                            "InventorySlot",
-                            "slot",
+                            "HUD_Inventory",
                             "=",
-                            "VariableString(picked_item)"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "picked_item",
-                            "=",
-                            "\"\""
+                            "\"Inventory slot is empty\""
                           ],
                           "subInstructions": []
                         }
                       ],
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "KEY",
-                          "comment2": ""
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "VarObjetTxt"
-                              },
-                              "parameters": [
-                                "InventorySlot",
-                                "slot",
-                                "=",
-                                "\"key\""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "InventoryKey",
-                                "InventorySlot.PointX(\"Left\")",
-                                "InventorySlot.PointY(\"Top\")",
-                                "\"UI\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ChangePlan"
-                              },
-                              "parameters": [
-                                "InventoryKey",
-                                "=",
-                                "20"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarObjetTxt"
-                              },
-                              "parameters": [
-                                "ChippyOffice",
-                                "description",
-                                "=",
-                                "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "chippyOfficeKeyFound",
-                                "=",
-                                "1"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "chippyOfficeDoorLocked",
-                                "=",
-                                "0"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        }
-                      ]
+                      "events": []
                     }
-                  ],
-                  "parameters": []
+                  ]
                 },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "disabled": false,
-                  "folded": true,
-                  "name": "SPARE PARTS INPUT",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "sparePartsCodePrompt",
-                            "=",
-                            "\"Input: \" + sparePartsCodeEntry.String()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "tempCode",
-                            "=",
-                            "GlobalVariableString(sparePartsDoorLocked) + VariableString(tempCodeEntry)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "tempCodeEntry",
-                            "=",
-                            "sparePartsCodeEntry.String()"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarSceneTxt"
-                          },
-                          "parameters": [
-                            "tempCodeEntry",
-                            "=",
-                            "\"698105\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "sparePartsDoorLocked",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "sparePartsCodeEntry",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Cache"
-                          },
-                          "parameters": [
-                            "sparePartsCodePrompt"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "Correct",
-                            "SceneWindowWidth()/2 - 528",
-                            "SceneWindowHeight()/2 - 115",
-                            "\"UI\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ResetTimer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"correctTimer\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "HideLayer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Lockpad\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "KeyReleased"
-                              },
-                              "parameters": [
-                                "",
-                                "Return"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "KeyReleased"
-                              },
-                              "parameters": [
-                                "",
-                                "Escape"
-                              ],
-                              "subInstructions": []
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "sparePartsCodeEntry",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Cache"
-                          },
-                          "parameters": [
-                            "sparePartsCodePrompt"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "HideLayer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Lockpad\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SourisSurObjet"
-                          },
-                          "parameters": [
-                            "ButtonN",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "HideLayer"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Lockpad\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "sparePartsCodeEntry",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Cache"
-                          },
-                          "parameters": [
-                            "sparePartsCodePrompt"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarGlobal"
-                          },
-                          "parameters": [
-                            "sparePartsDoorLocked",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Timer"
-                          },
-                          "parameters": [
-                            "",
-                            "1",
-                            "\"correctTimer\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Delete"
-                          },
-                          "parameters": [
-                            "Correct",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ],
-                  "parameters": []
-                }
-              ],
-              "parameters": []
-            }
-          ]
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": true,
-          "name": "JOURNAL",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "disabled": false,
-              "folded": false,
-              "name": "Show/Hide",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
                 {
                   "disabled": false,
                   "folded": false,
@@ -10215,12 +9897,14 @@
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
-                        "value": "KeyReleased"
+                        "inverted": true,
+                        "value": "SourisSurObjet"
                       },
                       "parameters": [
+                        "InventorySlot",
                         "",
-                        "j"
+                        "",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -10229,12 +9913,11 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "SetAnimationName"
                       },
                       "parameters": [
-                        "j_released",
-                        "=",
-                        "1"
+                        "InventorySlot",
+                        "\"Normal\""
                       ],
                       "subInstructions": []
                     }
@@ -10247,24 +9930,14 @@
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
-                            "value": "LayerVisible"
+                            "inverted": true,
+                            "value": "SourisSurObjet"
                           },
                           "parameters": [
+                            "InventoryBackground",
                             "",
-                            "\"Journal\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "j_released",
-                            "=",
-                            "1"
+                            "",
+                            ""
                           ],
                           "subInstructions": []
                         }
@@ -10273,40 +9946,94 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "HideLayer"
+                            "value": "TextObject::String"
                           },
                           "parameters": [
-                            "",
-                            "\"Journal\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "j_released",
+                            "HUD_Inventory",
                             "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "paused",
-                            "=",
-                            "0"
+                            "\"Inventory:\""
                           ],
                           "subInstructions": []
                         }
                       ],
                       "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "InventorySlot",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "InventorySlot",
+                        "slot",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "picked_item",
+                        "!=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjetTxt"
+                      },
+                      "parameters": [
+                        "InventorySlot",
+                        "slot",
+                        "=",
+                        "VariableString(picked_item)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "picked_item",
+                        "=",
+                        "\"\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "KEY",
+                      "comment2": ""
                     },
                     {
                       "disabled": false,
@@ -10315,24 +10042,14 @@
                       "conditions": [
                         {
                           "type": {
-                            "inverted": true,
-                            "value": "LayerVisible"
-                          },
-                          "parameters": [
-                            "",
-                            "\"Journal\""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
                             "inverted": false,
-                            "value": "VarScene"
+                            "value": "VarObjetTxt"
                           },
                           "parameters": [
-                            "j_released",
+                            "InventorySlot",
+                            "slot",
                             "=",
-                            "1"
+                            "\"key\""
                           ],
                           "subInstructions": []
                         }
@@ -10341,35 +10058,63 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ShowLayer"
+                            "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "\"Journal\""
+                            "InventoryKey",
+                            "InventorySlot.PointX(\"Left\")",
+                            "InventorySlot.PointY(\"Top\")",
+                            "\"UI\""
                           ],
                           "subInstructions": []
                         },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "ChangePlan"
                           },
                           "parameters": [
-                            "j_released",
+                            "InventoryKey",
                             "=",
-                            "0"
+                            "20"
                           ],
                           "subInstructions": []
                         },
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "ModVarObjetTxt"
                           },
                           "parameters": [
-                            "paused",
+                            "ChippyOffice",
+                            "description",
+                            "=",
+                            "ChippyOffice.VariableString(description) + \"You have a key which might open this door.\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "chippyOfficeKeyFound",
                             "=",
                             "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "chippyOfficeDoorLocked",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -10377,6 +10122,349 @@
                       "events": []
                     }
                   ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": true,
+              "name": "SPARE PARTS INPUT",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "sparePartsCodePrompt",
+                        "=",
+                        "\"Input: \" + sparePartsCodeEntry.String()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "tempCode",
+                        "=",
+                        "GlobalVariableString(sparePartsDoorLocked) + VariableString(tempCodeEntry)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "tempCodeEntry",
+                        "=",
+                        "sparePartsCodeEntry.String()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "tempCodeEntry",
+                        "=",
+                        "\"698105\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "sparePartsDoorLocked",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "sparePartsCodeEntry",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "sparePartsCodePrompt"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Correct",
+                        "SceneWindowWidth()/2 - 528",
+                        "SceneWindowHeight()/2 - 115",
+                        "\"UI\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ResetTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"correctTimer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Lockpad\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Return"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Escape"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "sparePartsCodeEntry",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "sparePartsCodePrompt"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Lockpad\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "ButtonN",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Lockpad\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "sparePartsCodeEntry",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "sparePartsCodePrompt"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "sparePartsDoorLocked",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Timer"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"correctTimer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Correct",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ],
               "parameters": []
@@ -31012,7 +31100,7 @@
               },
               "parameters": [
                 "",
-                "\"Slideshow_Start\"",
+                "\"MainMenu\"",
                 ""
               ],
               "subInstructions": []

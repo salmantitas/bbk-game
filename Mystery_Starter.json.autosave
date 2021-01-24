@@ -1379,6 +1379,33 @@
         "name": "1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "res/Background_SpareParts.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "res\\Background_SpareParts.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-5-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-5-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1-5-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1-5-1-0.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -9196,7 +9223,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "SPARE PARTS INPUT",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -22045,23 +22072,14 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.23
+        "zoomFactor": 0.29
       },
       "objectsGroups": [
         {
           "name": "Head",
           "objects": [
             {
-              "name": "RH1"
-            },
-            {
-              "name": "RH2"
-            },
-            {
-              "name": "RH3"
-            },
-            {
-              "name": "RH4"
+              "name": "R1head"
             }
           ]
         },
@@ -22069,33 +22087,34 @@
           "name": "Body",
           "objects": [
             {
-              "name": "RB1"
-            },
-            {
-              "name": "RB2"
-            },
-            {
-              "name": "RB3"
-            },
-            {
-              "name": "RB4"
+              "name": "R1body"
             }
           ]
         },
         {
           "name": "Robot",
+          "objects": []
+        },
+        {
+          "name": "Parts",
           "objects": [
             {
-              "name": "R1"
+              "name": "R1larm"
             },
             {
-              "name": "R2"
+              "name": "R1head"
             },
             {
-              "name": "R3"
+              "name": "R1rarm"
             },
             {
-              "name": "R4"
+              "name": "R1lleg"
+            },
+            {
+              "name": "R1rleg"
+            },
+            {
+              "name": "R1body"
             }
           ]
         }
@@ -22113,10 +22132,10 @@
           "height": 201,
           "layer": "Parts",
           "locked": false,
-          "name": "RH1",
+          "name": "R1head",
           "persistentUuid": "cbeb57e9-c818-4e68-893b-551927e4685e",
           "width": 329,
-          "x": 15,
+          "x": 100,
           "y": 130,
           "zOrder": 1,
           "numberProperties": [],
@@ -22126,46 +22145,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 157,
+          "height": 98,
           "layer": "Parts",
           "locked": false,
-          "name": "RH2",
-          "persistentUuid": "1b781422-e6f5-4da2-99b8-5205f7802c76",
-          "width": 329,
-          "x": 529,
-          "y": 112,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 274,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RH4",
-          "persistentUuid": "3cc68623-7594-45e2-9a8b-2319215d4a63",
-          "width": 305,
-          "x": 1023,
-          "y": 130,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 174,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RB1",
+          "name": "R1body",
           "persistentUuid": "e12979e3-5017-4eae-82e9-a92fb2aa0737",
-          "width": 354,
-          "x": 943,
-          "y": 788,
+          "width": 200,
+          "x": 1265,
+          "y": 885,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -22175,54 +22162,6 @@
               "value": ""
             }
           ]
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 174,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RB2",
-          "persistentUuid": "ba64b623-347c-4ba8-9ad1-72c0425a01e7",
-          "width": 343,
-          "x": 1417,
-          "y": 754,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 183,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RB3",
-          "persistentUuid": "5204f1da-3ef4-4f69-995b-d42bb4d34b27",
-          "width": 343,
-          "x": 50,
-          "y": 788,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 172,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RB4",
-          "persistentUuid": "89212218-0595-4e77-9401-c7155ea780cc",
-          "width": 360,
-          "x": 429,
-          "y": 782,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         },
         {
           "angle": 0,
@@ -22236,22 +22175,6 @@
           "x": 1375,
           "y": 28,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 283,
-          "layer": "Parts",
-          "locked": false,
-          "name": "RH3",
-          "persistentUuid": "0b6287c7-9bb3-4268-8180-a7cdcf569ecc",
-          "width": 305,
-          "x": 1521,
-          "y": 130,
-          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -22287,11 +22210,201 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "5f394a58-d3ce-442d-bd70-9ba63ecfd213",
+          "width": 0,
+          "x": 500,
+          "y": 400,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "larm"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "08b26dc6-59eb-46f2-94d8-950966b76a34",
+          "width": 0,
+          "x": 800,
+          "y": 100,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "head"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "1823002e-e02e-4850-b60f-1fc4a00d063c",
+          "width": 0,
+          "x": 1100,
+          "y": 400,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "rarm"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "5fbfe6dd-f50c-4875-a805-dcc75b21c561",
+          "width": 0,
+          "x": 950,
+          "y": 700,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "rleg"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "99d39a52-cc9a-4a6d-a8eb-af4d5cf1c8cb",
+          "width": 0,
+          "x": 800,
+          "y": 400,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "body"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Full",
+          "locked": false,
+          "name": "RobotSlot",
+          "persistentUuid": "048682e5-9c2e-448e-8f93-fe794a62a008",
+          "width": 0,
+          "x": 650,
+          "y": 700,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "part",
+              "value": "lleg"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Parts",
+          "locked": false,
+          "name": "R1larm",
+          "persistentUuid": "290bf241-44a4-464d-8653-257a2abedb83",
+          "width": 0,
+          "x": 1524,
+          "y": 145,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Parts",
+          "locked": false,
+          "name": "R1rarm",
+          "persistentUuid": "a94af510-0755-4525-9684-d9a97e5d95ca",
+          "width": 0,
+          "x": 1714,
+          "y": 345,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Parts",
+          "locked": false,
+          "name": "R1lleg",
+          "persistentUuid": "2d180072-5e7e-4372-b9bc-9b80c437e0f5",
+          "width": 0,
+          "x": 1655,
+          "y": 511,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "R1rleg",
+          "persistentUuid": "1c4b53e4-100b-4693-a451-faba2a5b0a40",
+          "width": 0,
+          "x": 1459,
+          "y": 611,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
-          "name": "RH1",
+          "name": "R1head",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -22307,6 +22420,10 @@
             {
               "name": "ogY",
               "value": ""
+            },
+            {
+              "name": "part",
+              "value": "head"
             }
           ],
           "behaviors": [
@@ -22348,178 +22465,7 @@
           ]
         },
         {
-          "name": "RH2",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "2"
-            },
-            {
-              "name": "ogX",
-              "value": ""
-            },
-            {
-              "name": "ogY",
-              "value": ""
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Draggable",
-              "type": "DraggableBehavior::Draggable"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Robothead2.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "RH3",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "3"
-            },
-            {
-              "name": "ogX",
-              "value": ""
-            },
-            {
-              "name": "ogY",
-              "value": ""
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Draggable",
-              "type": "DraggableBehavior::Draggable"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Robothead3.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "RH4",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "4"
-            },
-            {
-              "name": "ogX",
-              "value": ""
-            },
-            {
-              "name": "ogY",
-              "value": ""
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Draggable",
-              "type": "DraggableBehavior::Draggable"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Robothead4.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "RB1",
+          "name": "R1body",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -22527,9 +22473,26 @@
             {
               "name": "robot",
               "value": "1"
+            },
+            {
+              "name": "ogX",
+              "value": ""
+            },
+            {
+              "name": "ogY",
+              "value": ""
+            },
+            {
+              "name": "part",
+              "value": "body"
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -22563,20 +22526,37 @@
           ]
         },
         {
-          "name": "RB2",
+          "name": "R1larm",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
             {
               "name": "robot",
-              "value": "2"
+              "value": "1"
+            },
+            {
+              "name": "ogX",
+              "value": ""
+            },
+            {
+              "name": "ogY",
+              "value": ""
+            },
+            {
+              "name": "part",
+              "value": "larm"
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ],
           "animations": [
             {
-              "name": "",
+              "name": "Robothead1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -22607,20 +22587,37 @@
           ]
         },
         {
-          "name": "RB3",
+          "name": "R1rarm",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
             {
               "name": "robot",
-              "value": "3"
+              "value": "1"
+            },
+            {
+              "name": "ogX",
+              "value": ""
+            },
+            {
+              "name": "ogY",
+              "value": ""
+            },
+            {
+              "name": "part",
+              "value": "rarm"
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ],
           "animations": [
             {
-              "name": "",
+              "name": "Robothead1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -22651,51 +22648,7 @@
           ]
         },
         {
-          "name": "RB4",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "4"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Robotbody4.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "R1",
+          "name": "R1lleg",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -22703,12 +22656,29 @@
             {
               "name": "robot",
               "value": "1"
+            },
+            {
+              "name": "ogX",
+              "value": ""
+            },
+            {
+              "name": "ogY",
+              "value": ""
+            },
+            {
+              "name": "part",
+              "value": "lleg"
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ],
           "animations": [
             {
-              "name": "",
+              "name": "Robothead1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -22717,7 +22687,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\Robot1.jpg",
+                      "image": "Robothead2.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -22739,20 +22709,37 @@
           ]
         },
         {
-          "name": "R2",
+          "name": "R1rleg",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
             {
               "name": "robot",
-              "value": "2"
+              "value": "1"
+            },
+            {
+              "name": "ogX",
+              "value": ""
+            },
+            {
+              "name": "ogY",
+              "value": ""
+            },
+            {
+              "name": "part",
+              "value": "rleg"
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Draggable",
+              "type": "DraggableBehavior::Draggable"
+            }
+          ],
           "animations": [
             {
-              "name": "",
+              "name": "Robothead1",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -22761,95 +22748,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\Robot2.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "R3",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "3"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "res\\Robot3.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "R4",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "robot",
-              "value": "4"
-            }
-          ],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "res\\Robot4.jpg",
+                      "image": "Robothead3.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -22926,7 +22825,51 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "res\\Background_SpareParts.jpg",
+                      "image": "res\\Background_SpareParts.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RobotSlot",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "part",
+              "value": ""
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewObject-1-5",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1-5-1-0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -22950,7 +22893,7 @@
       ],
       "events": [
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
@@ -23010,10 +22953,10 @@
                     "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "Head",
+                    "Parts",
                     "ogX",
                     "=",
-                    "Head.X()"
+                    "Parts.X()"
                   ],
                   "subInstructions": []
                 },
@@ -23023,22 +22966,38 @@
                     "value": "ModVarObjet"
                   },
                   "parameters": [
-                    "Head",
+                    "Parts",
                     "ogY",
                     "=",
-                    "Head.Y()"
+                    "Parts.Y()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "RobotSlot",
+                    "robot",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeLayer"
+                  },
+                  "parameters": [
+                    "Parts",
+                    "\"Parts\""
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
               "events": []
             },
             {
@@ -23063,7 +23022,23 @@
                 {
                   "disabled": false,
                   "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "When a part is dropped on top of the slot, it will position itself inside the slot\nThe part will become un-draggable",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "RobotSlot",
                   "conditions": [
                     {
                       "type": {
@@ -23071,76 +23046,16 @@
                         "value": "CollisionNP"
                       },
                       "parameters": [
-                        "Head",
-                        "Body",
+                        "Parts",
+                        "RobotSlot",
                         "",
                         "",
                         ""
                       ],
                       "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Head",
-                        "robot",
-                        "=",
-                        "Body.Variable(robot)"
-                      ],
-                      "subInstructions": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "rbNm",
-                        "=",
-                        "Head.Variable(robot)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Head",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Body",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "match",
-                        "+",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "disabled": false,
@@ -23150,12 +23065,13 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "VarScene"
+                            "value": "VarObjet"
                           },
                           "parameters": [
-                            "rbNm",
+                            "RobotSlot",
+                            "robot",
                             "=",
-                            "1"
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -23164,19 +23080,103 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "Create"
+                            "value": "MettreXY"
                           },
                           "parameters": [
-                            "",
-                            "R1",
-                            "Body.X()",
-                            "Body.Y()-Head.Height()",
-                            ""
+                            "Parts",
+                            "=",
+                            "RobotSlot.X()",
+                            "=",
+                            "RobotSlot.Y()"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "RobotSlot",
+                            "robot",
+                            "=",
+                            "Parts.Variable(robot)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ActivateBehavior"
+                          },
+                          "parameters": [
+                            "Parts",
+                            "Draggable",
+                            "no"
                           ],
                           "subInstructions": []
                         }
                       ],
-                      "events": []
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": [],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjetTxt"
+                              },
+                              "parameters": [
+                                "RobotSlot",
+                                "part",
+                                "=",
+                                "Parts.VariableString(part)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "Score",
+                                "+",
+                                "RobotSlot.Variable(robot)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "If the slot is full",
+                      "comment2": ""
                     },
                     {
                       "disabled": false,
@@ -23185,13 +23185,27 @@
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
-                            "value": "VarScene"
+                            "inverted": true,
+                            "value": "VarObjet"
                           },
                           "parameters": [
-                            "rbNm",
+                            "RobotSlot",
+                            "robot",
                             "=",
-                            "2"
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "RobotSlot",
+                            "robot",
+                            "=",
+                            "Parts.Variable(robot)"
                           ],
                           "subInstructions": []
                         }
@@ -23200,86 +23214,14 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "Create"
+                            "value": "MettreXY"
                           },
                           "parameters": [
-                            "",
-                            "R2",
-                            "Body.X()",
-                            "Body.Y()-Head.Height()",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "rbNm",
+                            "Parts",
                             "=",
-                            "3"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "R3",
-                            "Body.X()",
-                            "Body.Y()-Head.Height()",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "rbNm",
+                            "Parts.Variable(ogX)",
                             "=",
-                            "4"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "R4",
-                            "Body.X()",
-                            "Body.Y()-Head.Height()",
-                            ""
+                            "Parts.Variable(ogY)"
                           ],
                           "subInstructions": []
                         }
@@ -23292,7 +23234,22 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Parts",
+                        "RobotSlot",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -23300,11 +23257,166 @@
                         "value": "MettreXY"
                       },
                       "parameters": [
-                        "Head",
+                        "Parts",
                         "=",
-                        "Head.Variable(ogX)",
+                        "Parts.Variable(ogX)",
                         "=",
-                        "Head.Variable(ogY)"
+                        "Parts.Variable(ogY)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Right click on any full slots to release the part inside",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "RobotSlot",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "RobotSlot",
+                    "robot",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Parts",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Parts",
+                    "Draggable",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Parts",
+                    "=",
+                    "Parts.Variable(ogX)",
+                    "=",
+                    "Parts.Variable(ogY)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjetTxt"
+                      },
+                      "parameters": [
+                        "RobotSlot",
+                        "part",
+                        "=",
+                        "Parts.VariableString(part)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Score",
+                        "-",
+                        "RobotSlot.Variable(robot)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "RobotSlot",
+                        "robot",
+                        "=",
+                        "0"
                       ],
                       "subInstructions": []
                     }
@@ -23327,7 +23439,7 @@
                   "parameters": [
                     "Match",
                     "=",
-                    "VariableString(match)"
+                    "VariableString(Score)"
                   ],
                   "subInstructions": []
                 }
@@ -23360,9 +23472,21 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "match",
-                    ">=",
-                    "4"
+                    "Score",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "mod(Variable(Score), 6)",
+                    "=",
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -25810,35 +25934,14 @@
             {
               "type": {
                 "inverted": false,
-                "value": "BuiltinCommonInstructions::Or"
+                "value": "VarGlobal"
               },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "robotControl",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "motherboardSolved",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ]
+              "parameters": [
+                "robotControl",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -25881,6 +25984,111 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "motherboardSolved",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"UI\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Montre"
+              },
+              "parameters": [
+                "RobotEnableText",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PrimitiveDrawing::RoundedRectangle"
+              },
+              "parameters": [
+                "Drawer",
+                "RobotEnableText.X() - 10",
+                "RobotEnableText.Y() - 10",
+                "RobotEnableText.X() + RobotEnableText.Width() + 10",
+                "RobotEnableText.Y() + RobotEnableText.Height() + 10",
+                "10"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"correctTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Timer"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "\"correctTimer\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Map\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,

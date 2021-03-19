@@ -1622,6 +1622,15 @@
         "name": "res\\Robot 3\\R3 Leg Right.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1798,7 +1807,7 @@
       "variables": [],
       "behaviors": [],
       "string": "Cafeteria",
-      "font": "res\\pricedown.black.ttf",
+      "font": "res\\libel-suit.regular.ttf",
       "characterSize": 40,
       "color": {
         "b": 0,
@@ -1968,7 +1977,7 @@
       "variables": [],
       "behaviors": [],
       "string": "CORRECT!",
-      "font": "",
+      "font": "res\\libel-suit.regular.ttf",
       "characterSize": 200,
       "color": {
         "b": 0,
@@ -2031,7 +2040,7 @@
       "variables": [],
       "behaviors": [],
       "string": "PLAY",
-      "font": "res\\pricedown.black.ttf",
+      "font": "res\\libel-suit.regular.ttf",
       "characterSize": 150,
       "color": {
         "b": 0,
@@ -2117,7 +2126,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.1936
+        "zoomFactor": 0.1336
       },
       "objectsGroups": [],
       "variables": [],
@@ -2249,6 +2258,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI",
+          "locked": false,
+          "name": "HUD_Description",
+          "persistentUuid": "011384b8-46aa-4880-b7d5-67fc5d993279",
+          "width": 0,
+          "x": 695,
+          "y": -245,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -2354,7 +2379,7 @@
               "type": "Tween::TweenBehavior"
             }
           ],
-          "string": "The reception desk has a flashing message on the screen. \nThe message is for you!",
+          "string": "Information in the game will be shown through text descriptions.\nLook to the upper left corner!",
           "font": "res\\libel-suit.regular.ttf",
           "characterSize": 40,
           "color": {
@@ -2551,6 +2576,56 @@
               "parameters": [
                 "",
                 "\"titleTimer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "HUD_Description",
+                "=",
+                "12",
+                "=",
+                "32"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "HUD_Description",
+                "=",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "HUD_Description",
+                "=",
+                "Drawer.ZOrder()+1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "skipToStart",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -3051,7 +3126,59 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Add description",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PrimitiveDrawing::RoundedRectangle"
+                      },
+                      "parameters": [
+                        "Drawer",
+                        "HUD_Description.X() - 10",
+                        "HUD_Description.Y() - 10",
+                        "HUD_Description.X() + HUD_Description.Width() + 10",
+                        "HUD_Description.Y() + HUD_Description.Height() + 10",
+                        "10"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "HUD_Description",
+                        "=",
+                        "\"The reception desk has flashing message for you!\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         },
@@ -3067,8 +3194,53 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "",
+          "comment": "SKIP TO START",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyReleased"
+              },
+              "parameters": [
+                "",
+                "Num0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "skipToStart",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Intro\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -3159,7 +3331,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.28
+        "zoomFactor": 0.25
       },
       "objectsGroups": [],
       "variables": [],
@@ -3876,7 +4048,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -4826,12 +4998,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Scene"
+                    "value": "ModVarGlobal"
                   },
                   "parameters": [
-                    "",
-                    "\"Map\"",
-                    ""
+                    "skipToStart",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -4868,6 +5040,40 @@
               "parameters": [
                 "play",
                 "\"21;105;0\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "skipToStart",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Map\"",
+                ""
               ],
               "subInstructions": []
             }
@@ -7231,7 +7437,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "name": "INTERACTIVES",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8130,7 +8336,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "name": "HINTS",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11107,6 +11313,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 650,
+          "layer": "Memory Match",
+          "locked": false,
+          "name": "memMatchBackground",
+          "persistentUuid": "312607b6-d010-4410-8134-ace0e6b8f323",
+          "width": 945,
+          "x": 348,
+          "y": 202,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -11429,6 +11651,45 @@
               ]
             }
           ]
+        },
+        {
+          "name": "memMatchBackground",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "background",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "background-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -11506,6 +11767,18 @@
                 "0",
                 "0",
                 "\"UI\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "memMatch",
+                "=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -11921,6 +12194,55 @@
                                 {
                                   "type": {
                                     "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "memMatch",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "memMatch",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "LEGACY PROG",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
                                     "value": "VarGlobal"
                                   },
                                   "parameters": [
@@ -12126,6 +12448,86 @@
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
+              "events": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "disabled": false,
+          "folded": false,
+          "name": "MEMORY MATCH",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "memMatch",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Memory Match\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "memMatch",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Memory Match\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": []
             }
           ],
@@ -12436,6 +12838,17 @@
           "effects": []
         },
         {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 9575048,
+          "ambientLightColorR": 1,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Memory Match",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
           "ambientLightColorB": 1702453632,
           "ambientLightColorG": 9373896,
           "ambientLightColorR": -2147483648,
@@ -12447,9 +12860,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 0,
-          "ambientLightColorR": 167797870,
+          "ambientLightColorR": 167797872,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "HUD",
@@ -12458,9 +12871,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 0,
-          "ambientLightColorR": 167797870,
+          "ambientLightColorR": 167797872,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Countdown",
@@ -12469,9 +12882,9 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
-          "ambientLightColorG": 1853189955,
-          "ambientLightColorR": 167797870,
+          "ambientLightColorB": 1702453632,
+          "ambientLightColorG": 1853190016,
+          "ambientLightColorR": 167797872,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "Fade",
@@ -31886,8 +32299,8 @@
               "parameters": [
                 "",
                 "Drawer",
-                "0",
-                "0",
+                "-0",
+                "-0",
                 "\"UI\""
               ],
               "subInstructions": []

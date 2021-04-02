@@ -670,6 +670,8 @@
         "kind": "audio",
         "metadata": "",
         "name": "screenla.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
         "userAdded": false
       },
       {
@@ -1862,6 +1864,7 @@
       "variables": [
         {
           "name": "slot",
+          "type": "string",
           "value": "0"
         }
       ],
@@ -2123,6 +2126,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -2304,6 +2308,7 @@
           "variables": [
             {
               "name": "use",
+              "type": "string",
               "value": "Intro"
             }
           ],
@@ -3328,6 +3333,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -3519,30 +3525,37 @@
           "variables": [
             {
               "name": "l1",
+              "type": "string",
               "value": "Welcome, young humans to another day of work at TechKorp."
             },
             {
               "name": "l2",
+              "type": "string",
               "value": "I am programmed to inform you that TechKorp has been HACKED! "
             },
             {
               "name": "l3",
+              "type": "string",
               "value": "CEO, Chippy Blipman, and the other Robots, have been compromised and you need to act fast. "
             },
             {
               "name": "l4",
+              "type": "string",
               "value": "I am also programmed to inform you that it was I, Screenla, the best receptionist of TechKorp ever, who is the hacker."
             },
             {
               "name": "l5",
+              "type": "string",
               "value": "You are well trained, humans, but can you figure out how to defrag Chippy’s motherboard and reboot the system before it’s too late?"
             },
             {
               "name": "l6",
+              "type": "string",
               "value": "You have 60 minutes to unlock the rooms, solve the puzzles and restart the system."
             },
             {
               "name": "l7",
+              "type": "string",
               "value": "Good luck, you are going to need it to defeat my hacking skills!"
             }
           ],
@@ -3962,6 +3975,59 @@
                 {
                   "disabled": false,
                   "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Play Sound",
+                  "comment2": ""
+                },
+                {
+                  "disabled": true,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "screenla.wav",
+                        "",
+                        "100",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Initialize type rate and prepare line 1 text",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -3974,20 +4040,6 @@
                         "typeRate",
                         "=",
                         "30.075"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "screenla.wav",
-                        "",
-                        "100",
-                        ""
                       ],
                       "subInstructions": []
                     },
@@ -5155,6 +5207,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -5754,6 +5807,7 @@
           "variables": [
             {
               "name": "use",
+              "type": "string",
               "value": "Intro"
             }
           ],
@@ -5915,6 +5969,7 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Map"
             }
           ],
@@ -5959,14 +6014,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Chippy's Office"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This is the office of Chippy Blipman. To deactivate this threat, I have to get in there."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "The door is locked."
             }
           ],
@@ -6011,14 +6069,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Screenla"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "Screenla is behind the meltdown of TechCorp"
             },
             {
               "name": "use",
+              "type": "string",
               "value": "Screenla remains unresponsive"
             }
           ],
@@ -6063,14 +6124,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Chippy's Office"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This is the office of Chippy Blipman. To deactivate this threat, I have to get in there."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "The door is locked."
             }
           ],
@@ -6115,14 +6179,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Cafeteria"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "The cafeteria is where the robots go to eat microchips."
             },
             {
               "name": "use",
+              "type": "string",
               "value": ""
             }
           ],
@@ -6167,14 +6234,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Spare Parts Robot Room"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This room contains spare parts from construction and destruction of robots."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "This door is locked and requires a keycode to open."
             }
           ],
@@ -6219,14 +6289,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Motherboard Room"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "The Motherboard Room has access to all the motherboards of every robot in the company."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "This door is locked."
             }
           ],
@@ -6290,14 +6363,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Robot Cubicles"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "Here are the offices of the many robot employees who work here."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "\"\""
             }
           ],
@@ -6342,14 +6418,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Accounting Office"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This is where all the calculations take place. Clearance for certain actions can also be received from here."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "This door is locked and has to be opened from elsewhere."
             }
           ],
@@ -6394,14 +6473,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Wall of C Level"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This is a picture of the robots in the staff team. I can take a closer look."
             },
             {
               "name": "use",
+              "type": "string",
               "value": ""
             }
           ],
@@ -6530,6 +6612,7 @@
           "variables": [
             {
               "name": "num",
+              "type": "string",
               "value": "0"
             }
           ],
@@ -6574,6 +6657,7 @@
           "variables": [
             {
               "name": "num",
+              "type": "string",
               "value": "1"
             }
           ],
@@ -6618,6 +6702,7 @@
           "variables": [
             {
               "name": "num",
+              "type": "string",
               "value": "2"
             }
           ],
@@ -6662,6 +6747,7 @@
           "variables": [
             {
               "name": "num",
+              "type": "string",
               "value": "3"
             }
           ],
@@ -10126,6 +10212,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -10491,6 +10578,7 @@
           "variables": [
             {
               "name": "direction",
+              "type": "string",
               "value": "right"
             }
           ],
@@ -10535,6 +10623,7 @@
           "variables": [
             {
               "name": "direction",
+              "type": "string",
               "value": "left"
             }
           ],
@@ -11134,6 +11223,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -11323,9 +11413,41 @@
           "name": "memMatchBackground",
           "persistentUuid": "312607b6-d010-4410-8134-ace0e6b8f323",
           "width": 945,
-          "x": 348,
+          "x": -1000,
           "y": 202,
           "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "Memory Match",
+          "locked": false,
+          "name": "memMatchInfo",
+          "persistentUuid": "8e3caf38-4d64-45d0-ab91-c9d16b4f2386",
+          "width": 0,
+          "x": 526,
+          "y": 148,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "testText",
+          "persistentUuid": "03fc848b-c010-49d5-9914-2d8c6664ce4b",
+          "width": 0,
+          "x": 1773,
+          "y": 214,
+          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11343,22 +11465,27 @@
           "variables": [
             {
               "name": "one",
+              "type": "string",
               "value": "1. Slimey is the youngest of the weird monsters"
             },
             {
               "name": "two",
+              "type": "string",
               "value": "2. Chomp has been alive for an odd number of years"
             },
             {
               "name": "three",
+              "type": "string",
               "value": "3. Buzz has been alive for the same number of years as he has eyes"
             },
             {
               "name": "four",
+              "type": "string",
               "value": "4. Ruff is four years older than Buzz "
             },
             {
               "name": "text",
+              "type": "string",
               "value": ""
             }
           ],
@@ -11399,10 +11526,12 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Monster Puzzle"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "Monster Puzzle"
             }
           ],
@@ -11476,10 +11605,12 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Memory Match"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "Memory Match"
             }
           ],
@@ -11658,7 +11789,12 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "background",
@@ -11690,6 +11826,44 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "testText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "memMatchInfo",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Click outside the memory match window to cancel game",
+          "font": "",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -11926,7 +12100,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "INTERACTIVES",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12004,6 +12178,19 @@
                   },
                   "parameters": [
                     "Interactives",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "memMatchBackground",
                     "",
                     "",
                     ""
@@ -12454,6 +12641,21 @@
           "parameters": []
         },
         {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Memory Match States:\n0 - Game Cancelled\n1 - Moving Right\n2 - Game Ongoing\n3 - Moving Left",
+          "comment2": ""
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -12468,29 +12670,17 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "memMatch",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "conditions": [],
               "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "HideLayer"
+                    "value": "TextObject::String"
                   },
                   "parameters": [
-                    "",
-                    "\"Memory Match\""
+                    "testText",
+                    "=",
+                    "VariableString(memMatch)"
                   ],
                   "subInstructions": []
                 }
@@ -12498,37 +12688,332 @@
               "events": []
             },
             {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
               "disabled": false,
               "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "name": "Pre-Game",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "memMatch",
-                    "=",
-                    "1"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "memMatch",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Memory Match\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "memMatchInfo"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "memMatch",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Memory Match\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Tween::AddObjectPositionXTween"
+                      },
+                      "parameters": [
+                        "memMatchBackground",
+                        "Tween",
+                        "\"MoveRight\"",
+                        "350",
+                        "\"linear\"",
+                        "500",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PosX"
+                      },
+                      "parameters": [
+                        "memMatchBackground",
+                        ">",
+                        "300"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "memMatch",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "memMatchInfo",
+                        "memMatchInfo"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ],
-              "actions": [
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "disabled": false,
+              "folded": false,
+              "name": "During-Game",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Memory Match\""
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "memMatch",
+                        "=",
+                        "2"
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Memory Match\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "memMatchBackground",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "memMatch",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "memMatch",
+                        "=",
+                        "3"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Tween::AddObjectPositionXTween"
+                      },
+                      "parameters": [
+                        "memMatchBackground",
+                        "Tween",
+                        "\"MoveLeft\"",
+                        "-1000",
+                        "\"linear\"",
+                        "300",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "memMatchInfo"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "0",
+                            ">",
+                            "memMatchBackground.X() + memMatchBackground.Width()"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "memMatch",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ],
-              "events": []
+              "parameters": []
             }
           ],
           "parameters": []
@@ -12838,7 +13323,7 @@
           "effects": []
         },
         {
-          "ambientLightColorB": 1702453580,
+          "ambientLightColorB": 1702453632,
           "ambientLightColorG": 9575048,
           "ambientLightColorR": 1,
           "followBaseLayerCamera": false,
@@ -12921,6 +13406,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 16,
         "snap": true,
         "windowMask": false,
@@ -12948,22 +13434,27 @@
       "variables": [
         {
           "name": "first_card_id",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "num_selected",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "second_card_id",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "pairs_earned",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "game_state",
+          "type": "string",
           "value": "player_turn"
         }
       ],
@@ -13298,6 +13789,7 @@
           "variables": [
             {
               "name": "id",
+              "type": "string",
               "value": "crab"
             }
           ],
@@ -13376,6 +13868,7 @@
           "variables": [
             {
               "name": "id",
+              "type": "string",
               "value": "seahorse"
             }
           ],
@@ -13454,6 +13947,7 @@
           "variables": [
             {
               "name": "id",
+              "type": "string",
               "value": "snail"
             }
           ],
@@ -13532,6 +14026,7 @@
           "variables": [
             {
               "name": "id",
+              "type": "string",
               "value": "seagrass"
             }
           ],
@@ -15494,6 +15989,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -15599,6 +16095,7 @@
           "initialVariables": [
             {
               "name": "correct",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15668,6 +16165,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15689,10 +16187,12 @@
           "initialVariables": [
             {
               "name": "correct",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "column",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15714,6 +16214,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15735,6 +16236,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15756,6 +16258,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -15777,6 +16280,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -15798,6 +16302,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -15819,10 +16324,12 @@
           "initialVariables": [
             {
               "name": "correct",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "column",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -15844,6 +16351,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -15865,6 +16373,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -15886,10 +16395,12 @@
           "initialVariables": [
             {
               "name": "correct",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "column",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -15911,6 +16422,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -15932,6 +16444,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -15953,6 +16466,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -15974,6 +16488,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -15995,6 +16510,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -16016,6 +16532,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -16037,6 +16554,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -16058,6 +16576,7 @@
           "initialVariables": [
             {
               "name": "column",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -16079,10 +16598,12 @@
           "initialVariables": [
             {
               "name": "correct",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "column",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -16161,14 +16682,17 @@
           "variables": [
             {
               "name": "state",
+              "type": "string",
               "value": "0"
             },
             {
               "name": "correct",
+              "type": "string",
               "value": "0"
             },
             {
               "name": "column",
+              "type": "string",
               "value": "0"
             }
           ],
@@ -16865,6 +17389,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -16995,14 +17520,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": ""
             },
             {
               "name": "description",
+              "type": "string",
               "value": "This robot has no antennas"
             },
             {
               "name": "use",
+              "type": "string",
               "value": "key"
             }
           ],
@@ -18721,6 +19249,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -19199,6 +19728,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
@@ -19300,6 +19830,7 @@
       "variables": [
         {
           "name": "Score",
+          "type": "string",
           "value": ""
         }
       ],
@@ -19337,6 +19868,7 @@
           "initialVariables": [
             {
               "name": "Variable",
+              "type": "string",
               "value": ""
             }
           ]
@@ -19719,18 +20251,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -19780,18 +20316,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "body"
             }
           ],
@@ -19841,18 +20381,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "body"
             }
           ],
@@ -19902,18 +20446,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "body"
             }
           ],
@@ -19963,18 +20511,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "larm"
             }
           ],
@@ -20024,18 +20576,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "rarm"
             }
           ],
@@ -20085,18 +20641,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "lleg"
             }
           ],
@@ -20146,18 +20706,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "rleg"
             }
           ],
@@ -20207,18 +20771,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20268,18 +20836,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20329,18 +20901,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20390,18 +20966,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20451,18 +21031,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20512,18 +21096,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20573,18 +21161,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20634,18 +21226,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "2"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "head"
             }
           ],
@@ -20695,18 +21291,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "body"
             }
           ],
@@ -20756,18 +21356,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "body"
             }
           ],
@@ -20817,18 +21421,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "larm"
             }
           ],
@@ -20878,18 +21486,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "larm"
             }
           ],
@@ -20939,18 +21551,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "lleg"
             }
           ],
@@ -21000,18 +21616,22 @@
           "variables": [
             {
               "name": "robot",
+              "type": "string",
               "value": "1"
             },
             {
               "name": "ogX",
+              "type": "string",
               "value": ""
             },
             {
               "name": "ogY",
+              "type": "string",
               "value": ""
             },
             {
               "name": "part",
+              "type": "string",
               "value": "lleg"
             }
           ],
@@ -21138,6 +21758,7 @@
           "variables": [
             {
               "name": "part",
+              "type": "string",
               "value": ""
             }
           ],
@@ -23907,6 +24528,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -24030,6 +24652,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "0"
             }
           ]
@@ -24067,6 +24690,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "1"
             }
           ]
@@ -24088,6 +24712,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "2"
             }
           ]
@@ -24109,6 +24734,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "3"
             }
           ]
@@ -24146,6 +24772,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "4"
             }
           ]
@@ -24231,6 +24858,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "5"
             }
           ]
@@ -24252,6 +24880,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "7"
             }
           ]
@@ -24273,6 +24902,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "8"
             }
           ]
@@ -24294,6 +24924,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "9"
             }
           ]
@@ -24315,6 +24946,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "10"
             }
           ]
@@ -24560,6 +25192,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "6"
             }
           ]
@@ -24581,6 +25214,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "11"
             }
           ]
@@ -24602,6 +25236,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "12"
             }
           ]
@@ -24623,6 +25258,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "13"
             }
           ]
@@ -24644,6 +25280,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "14"
             }
           ]
@@ -24665,6 +25302,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "15"
             }
           ]
@@ -24686,6 +25324,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "16"
             }
           ]
@@ -24707,6 +25346,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "17"
             }
           ]
@@ -24744,6 +25384,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "18"
             }
           ]
@@ -24765,6 +25406,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "19"
             }
           ]
@@ -24786,6 +25428,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "20"
             }
           ]
@@ -24807,6 +25450,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "21"
             }
           ]
@@ -24828,6 +25472,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "22"
             }
           ]
@@ -24849,6 +25494,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "23"
             }
           ]
@@ -24870,6 +25516,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "24"
             }
           ]
@@ -24891,6 +25538,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "25"
             }
           ]
@@ -24912,6 +25560,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "26"
             }
           ]
@@ -24933,6 +25582,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "27"
             }
           ]
@@ -24954,6 +25604,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "28"
             }
           ]
@@ -24975,6 +25626,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "29"
             }
           ]
@@ -25044,6 +25696,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "18"
             }
           ]
@@ -25065,6 +25718,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "24"
             }
           ]
@@ -25086,6 +25740,7 @@
           "initialVariables": [
             {
               "name": "index",
+              "type": "string",
               "value": "25"
             }
           ]
@@ -25132,6 +25787,7 @@
           "variables": [
             {
               "name": "index",
+              "type": "string",
               "value": "100"
             }
           ],
@@ -27859,6 +28515,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -28373,6 +29030,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -28574,6 +29232,7 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Map"
             }
           ],
@@ -28618,6 +29277,7 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Top Floor"
             }
           ],
@@ -28662,14 +29322,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Chippy Blipman"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "Chippy Blipman is not moving. His chestplate looks like it can be opened."
             },
             {
               "name": "use",
+              "type": "string",
               "value": "Nothing can be done with Chippy Blipman. His chestplate is opened from elsewhere."
             }
           ],
@@ -28743,14 +29406,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Security Robot"
             },
             {
               "name": "description",
+              "type": "string",
               "value": "The security robot is not moving"
             },
             {
               "name": "use",
+              "type": "string",
               "value": "Nothing can be done with the security robot"
             }
           ],
@@ -28824,14 +29490,17 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "White Board"
             },
             {
               "name": "use",
+              "type": "string",
               "value": ""
             },
             {
               "name": "description",
+              "type": "string",
               "value": "There appears to be a message on this board."
             }
           ],
@@ -28905,6 +29574,7 @@
           "variables": [
             {
               "name": "name",
+              "type": "string",
               "value": "Computer"
             }
           ],
@@ -29017,6 +29687,7 @@
           "variables": [
             {
               "name": "slot",
+              "type": "string",
               "value": "0"
             }
           ],
@@ -29166,10 +29837,12 @@
           "variables": [
             {
               "name": "text2",
+              "type": "string",
               "value": "ThiS evening I came home and the cat\nwas gOne. Can you stufF ours in the car?"
             },
             {
               "name": "text3",
+              "type": "string",
               "value": "Thi[outline=yellow]S even[/outline]ing I came home and the cat\nwas g[outline=yellow]One[/outline]. Can you stuf[outline=yellow]F our[/outline]s in the car?"
             }
           ],
@@ -29203,10 +29876,12 @@
           "variables": [
             {
               "name": "text2",
+              "type": "string",
               "value": ""
             },
             {
               "name": "text3",
+              "type": "string",
               "value": ""
             }
           ],
@@ -31220,6 +31895,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
